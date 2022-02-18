@@ -1,0 +1,56 @@
+.banner {
+	height: 75vh;
+	border-radius: 1rem;
+	background-image: linear-gradient(to right, $primary 0%, rgba($primary, 1) 20%, rgba($primary, .8), rgba($primary, 0) 70%, rgba($primary, 0) 100%),
+		url("../../images/bg-medium.jpg");
+	background-position: center center;
+	position: relative;
+	margin-bottom: 18rem;
+
+	&__content {
+		position: absolute;
+		top: 7rem;
+		left: 10rem;
+		width: 60rem;
+		background: rgba($white, .2);
+		backdrop-filter: blur(10px);
+		padding: 1.5rem 2rem;
+		border-radius: 1rem;
+	}
+
+	&__heading {
+		font-size: 3.8rem;
+		margin-bottom: .8rem;
+		color: $black;
+		font-family: 'Merriweather', sans-serif;
+	}
+
+	&__subheading {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	&__description {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	&__cta {
+		margin-top: 5rem;
+	}
+
+
+	&__float {
+		height: 20rem;
+		width: 90%;
+		border-radius: 2rem;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		right: 0;
+		background: rgba($white, .8);
+		backdrop-filter: blur(10px);
+		transform: translate(-50%, 50%);
+		box-shadow: 0px 1rem 2.5rem rgba(0, 0, 0, .2);
+	}
+}

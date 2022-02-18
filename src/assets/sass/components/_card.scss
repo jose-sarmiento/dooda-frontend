@@ -1,0 +1,49 @@
+.card {
+	box-shadow: 0px .4rem 2rem rgba(0, 0, 0, .2);
+
+	&__img-wrapper {
+		height: 22rem;
+	}
+
+	&__img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center center;
+		cursor: pointer;
+		transition: transform .2s ease;
+
+		&:hover {
+			transform: scaleX(1.05);
+		}
+	}
+
+	&__header {
+		padding: .8rem 2rem;
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: $primary;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__body {
+		text-align: left;
+		padding: 0 2rem 2rem;
+	}
+
+	&__name {
+		font-size: 1.7rem;
+		font-weight: 700;
+		color: $black;
+		margin-bottom: .4rem;
+	}
+
+	&__location {
+		font-size: 1.2rem;
+	}
+
+	&__location-icon {
+		margin-right: 1rem;
+	}
+}
