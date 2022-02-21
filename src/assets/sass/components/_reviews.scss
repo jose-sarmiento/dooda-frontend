@@ -1,0 +1,179 @@
+.section-reviews {
+	padding: 6rem;
+}
+
+.reviews {
+	background: $white;
+	box-shadow: 0px 0px 3rem rgba(0, 0, 0, .1);
+	height: 40rem;
+	width: 90rem;
+	margin: 0 auto;
+	padding: 4rem 6rem;
+}
+
+.review {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+
+	&__left {
+		background: #f2f2f2;
+		text-align: center;
+		padding: 2rem;
+		position: relative;
+	}
+
+	&__left::before {
+		content: "";
+		height: 120%;
+		width: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: $primary-dark;
+		z-index: -1;
+		border-radius: 1rem;
+	}
+
+	&__img-wrapper {
+		height: 20rem;
+		width: 20rem;
+		margin: 0 auto;
+		position: relative;
+		z-index: 2;
+		overflow: hidden;
+		border-radius: 1rem 1rem .5rem .5rem;
+	}
+
+	&__img {
+		z-index: 50!important;
+		width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	&__name {
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: $black;
+		text-transform: uppercase;
+		margin-top: 2rem;
+		letter-spacing: 1px;
+	}
+
+	&__job {
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: $grey;
+	}
+
+	&__content {
+		height: 20rem;
+		width: 100%;
+		position: relative;
+		padding: 1rem 2rem;
+		text-align: center;
+	}
+
+	&__content::before {
+		content: "";
+		position: absolute;
+		height: 5px;
+		width: 20rem;
+		background: $primary-dark;
+		top: 0;
+		left: 0;
+	}
+
+	&__stars {
+		position: absolute;
+		right: 1rem;
+		top: 0;
+		text-align: center;
+	}
+
+	&__star {
+		font-size: 1.2rem;
+		color: $primary-dark;
+		margin-left: .2rem;	
+	}
+
+	&__rating {
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: $primary-dark;
+	}
+
+	&__heading {
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: $black;
+		margin-bottom: 2rem;
+		text-align: left;
+	}
+
+	&__review {
+		padding: 2rem 4rem;
+		position: relative;
+	}
+
+	&__quote {
+		font-size: 4rem;
+		color: #f2f2f2;
+		position: absolute;
+	}
+
+	&__quote--left {
+		left: -1rem;
+		top: 0;
+	}
+
+	&__quote--right {
+		right: -1rem;
+		bottom: 0;
+	}
+
+	&__text {
+		font-size: 1.2rem;
+		color: $grey;
+		line-height: 20px;
+	}
+
+	&__trackers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+
+	&__tracker {
+		display: flex;
+		align-items:center;
+		justify-content: center;
+		margin-right: 1.2rem;
+		height: 1.2rem;
+		width: 1.2rem;
+		border-radius: 50%;
+		border: 2px solid $primary-dark;
+	}
+
+	&__tracker:hover {
+		cursor: pointer;
+	}
+
+	&__tracker--active::before {
+		content: "";
+		height: .6rem;
+		width: .6rem;
+		border-radius: 50%;
+		background: $primary-dark;
+	}
+}
+
+
+
+

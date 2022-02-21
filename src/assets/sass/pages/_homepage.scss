@@ -5,18 +5,25 @@
 }
 
 .section {
-	margin: 2rem;
-	margin-bottom: 30rem;
-	min-height: 40rem;
+	margin: 4rem 0;
+	// min-height: 40rem;
 	text-align: center;
-	padding: 1rem 0;
+	padding: 2rem 0;
+	
+
 
 	&__heading {
-		font-size: 2.8rem;
-		font-family: 'Merriweather', sans-serif;
-		margin-bottom: 4rem;
+		font-size: 2.6rem;
+		font-weight: 600;
+		// font-family: 'Lobster Two', sans-serif;
+		margin-bottom: 3rem;
+		color: $black;
+		display: inline-block;
+		// background: linear-gradient(to right, $primary-bright, $primary-dark);
+		// -webkit-background-clip: text;
 		color: $black;
 	}
+
 }
 
 .card-wrapper {

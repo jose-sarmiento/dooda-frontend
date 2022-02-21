@@ -16,6 +16,80 @@
 	}
 }
 
+.submenu {
+	position: absolute;
+	left: 48.5px;
+	min-height: 10rem;
+	min-width: 25rem;
+	background: $white;
+	box-shadow: 0px 0px 2rem rgba(0, 0, 0, .2);
+	z-index: 100;
+	padding: 2rem 3rem;
+	grid-column-gap: 1.5rem;
+	transform: translateX(-50%);
+	display: none;
+
+	&--show {
+		display: grid;
+	}
+
+	&--grid-1 {
+		grid-template-columns: 1fr;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		height: 1rem;
+		width: 1rem;
+		transform: rotate(45deg) translateY(-50%);
+		background: $white;
+	}
+
+	&__grid-item {
+
+	}
+
+	&__heading {
+		font-size: 1.4rem;
+		font-weight: 600;
+		margin-bottom: 1.6rem;
+	}
+
+	&__links {
+		list-style: none;
+		margin-left: .5rem;
+	}
+
+	&__link-item {
+		font-size: 1.2rem;
+	}
+
+	&__icon {
+		margin-right: 1rem;
+	}
+
+	&__link {
+		padding: .8rem 1.2rem;
+		text-decoration: none;
+		color: #444;
+		font-weight: 600;
+		display: flex!important;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__link:hover {
+		background: #f2f2f2;
+	}
+
+	&__text {
+		flex: 1;
+	}
+}
+
 .collapse {
 	display: flex;
 	justify-content: space-between;
@@ -32,23 +106,55 @@
 		list-style: none;
 	}
 
+	&__item--icons {
+		border-radius: 50%;
+		height: 3rem;
+		width: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #f2f2f2;
+		margin-left: 1rem;
+	}
+
+	&__item--user {
+		display: flex;
+		align-items: center;
+	}
+
 	&__link {
 		padding: .8rem 1.2rem;
-		font-size: 1.6rem;
-		font-weight: 700;
+		font-size: 1.4rem;
+		font-weight: 600;
 		color: $black;
 		display: inline-block;
 	}
 
+	&__user-img {
+		height: 3rem;
+		width: 3rem;
+		border-radius: 50%;
+	}
+
+	&__link--name {
+		padding: 0;
+		margin-left: .5rem;
+		font-weight: 600;
+		color: $grey;
+	}
+
 	&__link--login {
 		padding: .5rem 2rem;
-		border: 1px solid $black;
+		border: none;
 		margin-left: 2rem;
+		border-radius: 3rem;
+		background: $primary;
+		color: $white;
+		transition: all .4s ease;
+		font-weight: 600;
 
 		&:hover {
-			background: $primary;
-			color: $white;
-			border: 1px solid $primary;
+			background: darken($primary, 2%);
 		}
 	}
 }

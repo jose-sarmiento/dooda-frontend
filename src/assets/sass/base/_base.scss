@@ -8,6 +8,7 @@
 
 html {
    font-size: 10px;
+   scroll-behavior: smooth;
 }
  
 body {
@@ -20,7 +21,14 @@ body {
 a, a:active {
 	text-decoration: none;
 }
-
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 .d-flex {
 	display: flex;
 }

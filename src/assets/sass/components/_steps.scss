@@ -1,0 +1,157 @@
+.section--steps {
+	background: #f2f2f2;
+	border-radius: 1rem;
+}
+
+.steps-container {
+
+}
+
+.steps {
+	max-width: 50rem;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 2rem;
+
+	&__progress {
+		max-width: 50rem;
+		margin: 0 auto;
+		height: 6px;
+		border-radius: 1rem;
+		background: $green;
+		position: relative;
+		display: flex;
+		align-items:center;
+	}
+
+	&__progress::before {
+		content: "";
+		height: 2rem;
+		width: 2rem;
+		border-radius: 50%;
+		background: $green;
+		position: absolute;
+		left: 0;
+		animation: progress 4s linear infinite;
+	}
+
+	&__step {
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		flex-direction: column;
+	}
+
+	&__icon {
+		display: inline-block;
+		height: 3rem;
+		width: 3rem;
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		color: $black;
+		border-radius: 50%;
+		background: $green;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $white;
+
+		&--1 {
+			animation: green_first 4s linear forwards infinite;
+		}
+
+		&--2 {
+			animation: green_second 4s linear forwards infinite;
+		}
+
+		&--3 {
+			animation: green_third 4s linear forwards infinite;
+		}
+	}
+
+	&__bar {
+		height: 5px;
+		background: $green;
+	}
+
+	&__description {
+		font-size: 1.4rem;
+	}
+
+	&__number {
+		margin-right: .6rem;
+		color: $green;
+		font-weight: 700;
+	}
+
+}
+
+@keyframes progress {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translate(50rem);
+	}
+}
+
+@keyframes green_first {
+	0% {
+		background: $white;
+		color: $black;
+	}
+	2% {
+		background: $white;
+		color: $black;
+	}
+	3% {
+		background: $green;
+		color: $white;
+	}
+	100% {
+		background: $green;
+		color: $white;
+	}
+}
+
+@keyframes green_second {
+	0% {
+		background: $white;
+		color: $black;
+	}
+	49% {
+		background: $white;
+		color: $black;
+	}
+	50% {
+		background: $green;
+		color: $white;
+	}
+	100% {
+		background: $green;
+		color: $white;
+	}
+}
+
+@keyframes green_third {
+	0% {
+		background: $white;
+		color: $black;
+	}
+	94% {
+		background: $white;
+		color: $black;
+	}
+	95% {
+		background: $green;
+		color: $white;
+	}
+	100% {
+		background: $green;
+		color: $white;
+	}
+}
+

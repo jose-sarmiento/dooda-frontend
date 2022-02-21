@@ -1,5 +1,5 @@
 .btn {
-	padding: 1rem 2.5rem;
+	padding: 1.2rem 3rem;
 	border: none;
 	background: $white;
 	font-size: 1.4rem;
@@ -14,12 +14,12 @@
 	}
 
 	&--primary {
-		background: $pink;
+		background: $primary-dark;
 		color: $white;
 	}
 
 	&:hover {
-		background: darken($pink, 5%);
+		background: lighten($primary-dark, 5%);
 		cursor: pointer;
 	}
 }
