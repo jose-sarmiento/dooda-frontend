@@ -24,7 +24,7 @@ const Reviews = () => {
                   <FaStar className="review__star"/>
                 </div>
                 <span className="review__rating">5.0</span>
-              </div>
+              </div> 
               <h4 className="review__heading">Client reviews</h4>
               <div className="review__review">
                 <i className="fa fa-quote-left review__quote review__quote--left"></i>

@@ -1,5 +1,63 @@
 .section--footer {
-	height: 50rem;
+	min-height: 20rem;
 	background: $grey;
 	margin: 0!important;
+}
+
+.footer {
+	display: grid;
+	grid-template-columns: 1fr 20rem 20rem;
+	padding: 4rem;
+	text-align: left;
+
+	&__about {
+		padding-right: 4rem;
+	}
+
+	&__website {
+		display: flex;
+		align-items: center;
+		padding: 0;
+	}
+
+	&__website-name {
+		color: $primary;
+		font-size: 2.2rem;
+		font-weight: 700;
+		margin-left: 2rem;
+	}
+
+	&__logo {
+		height: 6rem;
+		width: 6rem;
+		margin: 0;
+	}
+
+	&__about-text {
+		color: #ccc;
+	}
+
+	&__help,
+	&__socials {
+		list-style: none;
+		text-align: left;
+	}
+
+	&__item {
+		color: #ccc;
+		font-size: 1.2rem;
+		font-weight: 500;
+		margin-bottom: 1rem;
+	}
+
+	&__item--title {
+		font-size: 1.4rem;
+		color: #f4f4f4;
+		margin-bottom: 1rem;
+	}
+
+	&__copywright {
+		color: #ddd;
+		font-size: 1.2rem;
+	}
 }

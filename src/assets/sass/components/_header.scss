@@ -6,7 +6,7 @@
 
 	&__logo-wrapper {
 		display: block;
-		margin-right: 4rem;
+		margin-right: 4rem; 
 	}
 
 	&__logo {
@@ -108,8 +108,8 @@
 
 	&__item--icons {
 		border-radius: 50%;
-		height: 3rem;
-		width: 3rem;
+		height: 3.5rem;
+		width: 3.5rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -128,6 +128,19 @@
 		font-weight: 600;
 		color: $black;
 		display: inline-block;
+	}
+
+	&__link--btn {
+		border-radius: 50%;
+		height: 3.5rem;
+		width: 3.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #f2f2f2;
+		margin-left: 1rem;
+		font-size: 1.4rem;
+		border: none;
 	}
 
 	&__user-img {

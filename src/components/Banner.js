@@ -1,12 +1,12 @@
-import React, {useState} from "react";
-import { FaSearch, FaBook, FaUmbrellaBeach, FaHotel } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaSearch, FaBook, FaUmbrellaBeach, FaLock } from "react-icons/fa";
 import PriceSlider from "./PriceSlider";
 import girl from "../assets/images/bianca.jpg";
 import boy from "../assets/images/cliford.jpg";
 
 const Banner = () => {
-	const [min, setMin] = useState(15000)
-	const [max, setMax] = useState(40000)
+	const [min, setMin] = useState(15000);
+	const [max, setMax] = useState(40000);
 
 	return (
 		<div className="banner">
@@ -29,23 +29,69 @@ const Banner = () => {
 
 			<div className="banner__float">
 				<div className="banner__float-left">
-					{/*	<div className="statistics">
+					<h4 className="statistics__heading">Why Dooda?</h4>
+					<div className="statistics">
 						<div className="stats">
-							<i className="stats__logo fas fa-book"></i>
-							<h2 className="stats__number">1,290</h2>
-							<h4 className="stats__text">Bookings per week</h4>
+							<span className="stats__icon">
+								<i className="stats__logo fas fa-peso-sign"></i>
+							</span>
+							<h4 className="stats__text">Easy Payments</h4>
 						</div>
 						<div className="stats">
-							<i className="stats__logo fas fa-umbrella-beach"></i>
-							<h2 className="stats__number">15,467</h2>
-							<h4 className="stats__text">Available Resorts</h4>
+							<span className="stats__icon">
+								<i className="stats__logo fas fa-heart"></i>
+							</span>
+							<h4 className="stats__text">Good Customer Service</h4>
 						</div>
 						<div className="stats">
-							<i className="stats__logo fas fa-hotel"></i>
-							<h2 className="stats__number">10,034</h2>
-							<h4 className="stats__text">Available Hotels</h4>
+							<span className="stats__icon">
+								<i className="stats__logo fas fa-book"></i>
+							</span>
+							<h4 className="stats__text">flexibility</h4>
 						</div>
-					</div>*/}
+						<div className="stats">
+							<span className="stats__icon">
+								<i className="stats__logo fa fa-lock"></i>
+							</span>
+							<h4 className="stats__text">Secure transactions</h4>
+						</div>
+					</div>
+					<div className="ratings">
+						<span className="ratings__text">
+							Lucy, John and <span className="red">13,320</span> users recommended Dooda
+						</span>
+						<figure className="ratings__img-wrapper">
+							<img
+								src={girl}
+								alt="lucy"
+								className="ratings__user"
+							/>
+						</figure>
+						<figure className="ratings__img-wrapper">
+							<img
+								src={boy}
+								alt="lucy"
+								className="ratings__user"
+							/>
+						</figure>
+						<figure className="ratings__img-wrapper">
+							<img
+								src={girl}
+								alt="lucy"
+								className="ratings__user"
+							/>
+						</figure>
+						<figure className="ratings__img-wrapper">
+							<img
+								src={boy}
+								alt="lucy"
+								className="ratings__user"
+							/>
+						</figure>
+						<figure className="ratings__img-wrapper">
+							<img src={girl} alt="lucy" className="ratings__user" />
+						</figure>
+					</div>
 				</div>
 
 				<div className="banner__float-rights">
@@ -113,53 +159,17 @@ const Banner = () => {
 								</label>
 							</div>
 						</div>
-						<div className="price">
+
+						<div className="search__price-filter">
 							<h4 className="price__range">Price range:</h4>
-							<div className="price__min-max">
-								<div className="price__group">
-									<span className="price__label">Min:</span>
-									<input
-										type="number"
-										name="min"
-										id="min"
-										value={min}
-										onChange={(e) => {
-											setMin(e.target.value)
-										}}
-										className="price__input price__input--min"
-									/>
-								</div>
-								<div className="price__group">
-									<span className="price__label">Max:</span>
-									<input
-										type="number"
-										name="min"
-										id="min"
-										value={max}
-										onChange={(e) => {
-											setMax(e.target.value)
-										}}
-										className="price__input price__input--min"
-									/>
-								</div>
-							</div>
-							<PriceSlider 
-								min={min} 
-								max={max} 
+							<PriceSlider
+								min={min}
+								max={max}
 								setMin={setMin}
 								setMax={setMax}
 							/>
 						</div>
 					</div>
-
-					{/*	<div className="reviews">
-						<div className="reviews__left">
-							
-						</div>
-						<div className="reviews__right">
-							
-						</div>
-					</div>*/}
 				</div>
 			</div>
 		</div>

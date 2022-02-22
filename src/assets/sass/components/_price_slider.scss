@@ -1,0 +1,40 @@
+.price {
+	background: $white;
+	padding: 1rem;
+
+	&__range {
+		margin-bottom: .5rem;
+	}
+
+	&__min-max {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	&__group {
+		display: flex;	
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__label {
+		margin-right: 1.2rem;
+		font-weight: 400;
+	}
+
+	&__input {
+		border: 1px solid $grey;
+		padding: .5rem 1rem;
+		width: 10rem;
+		border: none;
+		background: #f2f2f2;
+		text-align: center;
+		font-family: inherit;
+	}
+
+	&__input:focus {
+		outline: none;
+	}
+}

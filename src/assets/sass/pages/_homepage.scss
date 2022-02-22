@@ -5,7 +5,7 @@
 }
 
 .section {
-	margin: 4rem 0;
+	margin: 6rem 0;
 	// min-height: 40rem;
 	text-align: center;
 	padding: 2rem 0;
@@ -31,4 +31,9 @@
 	grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
 	justify-content: center;
 	grid-gap: 3rem;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 }
