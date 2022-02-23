@@ -1,8 +1,6 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
-import { Card, PriceSlider } from "../components";
-
-import hotels from "../mocks/hotels";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { Link, NavLink, Routes, Route } from "react-router-dom";
+import { Card, PriceSlider, Loader, Hotels, Pools, Houses, Beaches, Farms, CustomLink } from "../components";
 import { places } from "../mocks/links";
 
 const Places = () => {
@@ -15,12 +13,11 @@ const Places = () => {
 				<ul className="item-categories">
 					{places.map((link, idx) => (
 						<li className="item-categories__item" key={link.id}>
-							<Link
+							<CustomLink
 								to={link.url}
-								className={idx === 0 ? "item-categories__link item-categories__link--active" : "item-categories__link"}
-				 			>
+							>
 								{link.text}
-							</Link>
+							</CustomLink>
 						</li>
 					))}
 				</ul>
@@ -53,13 +50,25 @@ const Places = () => {
 				</div>*/}
 			</div>
 
-			<section className="list-items-wrapper">
+			<Routes>
+				<Route path="hotels" element={<Hotels />} />
+				<Route path="houses" element={<Houses />} />
+				<Route path="pools" element={<Pools />} />
+				<Route path="beach" element={<Beaches />} />
+				<Route path="farms" element={<Farms />} />
+			</Routes>
+
+			{/*<section className="list-items-wrapper">
 				<div className="card-wrapper">
-					{hotels.map((hotel) => (
-						<Card key={hotel.id} data={hotel} />
-					))}
+					{results.map((data, idx) => {
+						if(idx === results.length -1) {
+							return <Card ref={lastElementRef} key={data.id} data={data} />
+						}
+						return <Card key={data.id} data={data} />
+					})}
+					{loading && <Loader/>}
 				</div>
-			</section>
+			</section>*/}
 		</>
 	);
 };

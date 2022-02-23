@@ -11,7 +11,7 @@ const Homepage = () => {
 			<section className="section section--steps">
 				<h2 className="section__heading">
 					3 Easy Step Booking Process
-				</h2>
+			</h2>
 				<Steps />
 			</section>
 
@@ -19,7 +19,7 @@ const Homepage = () => {
 				<h2 className="section__heading">Popular Hotels and Resorts</h2>
 
 				<div className="card-wrapper">
-					{hotels.map((hotel) => (
+					{hotels.slice(0, 3).map((hotel) => (
 						<Card key={hotel.id} data={hotel} />
 					))}
 				</div>

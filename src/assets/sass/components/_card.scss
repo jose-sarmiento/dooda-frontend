@@ -1,6 +1,10 @@
 .card {
 	box-shadow: 0px .4rem 2rem rgba(0, 0, 0, .2);
 
+	&--noshadow {
+		box-shadow: none;
+	}
+
 	&__img-wrapper {
 		height: 22rem;
 	}
@@ -30,6 +34,13 @@
 	&__body {
 		text-align: left;
 		padding: 0 2rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	&__body-container {
+		flex: 1;
 	}
 
 	&__name {
@@ -47,3 +58,4 @@
 		margin-right: 1rem;
 	}
 }
+
