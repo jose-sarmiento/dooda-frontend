@@ -7,6 +7,7 @@ import Reviews from "./Reviews"
 import Steps from "./Steps"
 import Footer from "./Footer"
 import Loader from "./Loader"
+import Stars from "./Stars"
 import Hotels from "./Hotels"
 import Houses from "./Houses"
 import Pools from "./Pools"
@@ -14,6 +15,14 @@ import Beaches from "./Beaches"
 import Farms from "./Farms"
 import CustomLink from "./CustomLink"
 import CardSkeletonLoading from "./CardSkeletonLoading"
+import SectionHeader from "./SectionHeader"
+import HotelList from "./HotelList"
+import ViewHotel from "./ViewHotel"
+import ViewHouse from "./ViewHouse"
+import ViewBeach from "./ViewBeach"
+import ViewPool from "./ViewPool"
+import ViewFarm from "./ViewFarm"
+import MyMap from "./MyMap"
 
 
 export {
@@ -26,11 +35,20 @@ export {
 	Steps,
 	Footer,
 	Loader,
+	Stars,
 	Pools,
 	Hotels,
 	Houses,
 	Beaches,
 	Farms,
 	CustomLink,
-	CardSkeletonLoading
+	CardSkeletonLoading,
+	SectionHeader,
+	HotelList,
+	ViewHotel,
+	ViewHouse,
+	ViewBeach,
+	ViewPool,
+	ViewFarm,
+	MyMap
 }

@@ -1,27 +1,20 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import { FaStar, FaMapMarkerAlt } from "react-icons/fa";
 import { pesoFormat } from "../utils/pesoFormat";
+import Stars from "./Stars"
 
 const Card = React.forwardRef((props, ref) => {
     const {data} = props
 
     return (
         <div className="card fadein" ref={ ref || null}>
-            <figure className="card__img-wrapper">
+            <Link to={`${data.id}`} className="card__img-wrapper">
                 <img src={data.image.medium} alt="img1" className="card__img" />
-            </figure>
+            </Link>
             <div className="card__header">
                 <span className="card__price">{pesoFormat(data.price)}</span>
-                <span className="card__stars">
-                    <FaStar className="card__star" />
-                    <FaStar className="card__star" />
-                    <FaStar className="card__star" />
-                    <FaStar className="card__star" />
-                    <FaStar className="card__star" />
-                    <span className="card__stars__average">
-                        ({" " + data.stars})
-                    </span>
-                </span>
+                <Stars count={data.stars} />
             </div>
             <div className="card__body">
                 <div className="card__body-container">

@@ -1,0 +1,169 @@
+.hotel {
+	border-bottom: 1px solid #eee;
+	margin-top: 2rem;
+
+	&__name {
+		text-transform: capitalize;
+		font-size: 2.4rem;
+		color: $black;
+		font-weight: 500;
+		font-family: 'Quicksand', sans-serif;
+
+	}
+
+	&__location {
+		margin-top: 2rem;
+		font-size: 1.3rem;
+		color: $grey;
+		font-weight: 500;
+	}
+
+	&__location-icon {
+		margin-right: 1.3rem;
+		color: $primary-dark;
+	}
+
+	&__favorite {
+		color: $primary-dark;
+		font-size: 1.4rem;	
+	}
+
+	&__price {
+		font-size: 1.6rem;
+		$color: $grey;
+		font-weight: 500;
+		margin-top: .5rem;
+	}
+
+	&__images {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		height: 45rem;
+		grid-gap: 1rem;
+		margin: 2rem 0;
+	}
+
+	&__image {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	&__img-wrapper {
+		background: #eee;
+
+		&--1 {
+			grid-column: 1/2;
+			grid-row: 1/-1;
+		}
+	}
+
+	&__details {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		min-height: 55rem;
+		grid-column-gap: 2rem;
+		max-width: 1000px;
+		margin: 4rem auto;
+	}
+
+	&__description {
+		padding: 4rem;
+		// background: #f1f1f1;
+		border-radius: 1rem 0 0 1rem;
+		box-shadow: 0px 0px 2rem rgba(0, 0, 0, .1);
+	}
+
+	&__description-heading,
+	&__description-heading-2 {
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $black;
+		margin-bottom: 2rem;
+	}
+
+	&__description-heading-2 {
+		font-size: 1.3rem;
+		margin-top: 2rem;
+		color: $grey;
+		font-weight: 500;
+	}
+
+	&__paragraph {
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: $grey;
+		text-indent: 3rem;
+		line-height: 2rem;
+	}
+
+	&__offers {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-row-gap: 1rem;
+		width: 80%;
+		margin: 0 auto;
+		justify-content: center;
+	}
+
+	&__offer {
+		font-size: 1.3rem;
+		font-weight: 400;
+		color: #111;
+		position: relative;
+	}
+
+	&__offer::before {
+		content: "\003E";
+		position: absolute;
+		left: -2rem;
+		height: 1.5rem;
+		width: 1.5rem;
+		background: $primary-dark;
+		-webkit-background-clip: text;
+		font-size: 1.6rem;
+		font-weight: 700;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: transparent;
+	}
+
+	&__map-wrapper {
+		background: #f2f2f2;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		border-radius: 0 1rem 1rem 0;
+		height: 55rem;
+	}
+
+	&__reviews {
+		margin: 4rem 0;
+	}
+
+}
+
+.hotel-header {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 2rem 0;
+
+	&__left {
+
+	}
+
+	&__right {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	&__book-now {
+		align-self: flex-end;
+	}
+}
+

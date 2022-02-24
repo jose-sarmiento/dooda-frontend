@@ -1,11 +1,11 @@
 import React from "react";
 import hotels from "../mocks/hotels";
-
+import Layout from "./Layout"
 import {Banner, Card, Reviews, Steps, Features} from "../components";
 
 const Homepage = () => {
 	return (
-		<>
+		<Layout>
 			<Banner />
 
 			<section className="section section--steps">
@@ -32,7 +32,7 @@ const Homepage = () => {
 			<section className="section section--features">
 				<Features />
 			</section>
-		</>
+		</Layout>
 	);
 };
 

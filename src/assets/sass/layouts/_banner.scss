@@ -54,7 +54,7 @@
 
 	&__content {
 		position: absolute;
-		top: 10rem;
+		top: 6rem;
 		left: 15rem;
 		width: 50rem;
 		background: rgba($white, .8);
@@ -62,6 +62,7 @@
 		backdrop-filter: blur(10px);
 		padding: 6rem 3rem;
 		border-radius: 1rem;
+		animation: slidefromleft .6s ease-in;
 	}
 
 	&__heading {
@@ -104,6 +105,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 2rem;
 		padding: 2rem 2.5rem;
+		animation: fromBelow .6s ease .5s backwards;
 	}
 
 	&__float-left {

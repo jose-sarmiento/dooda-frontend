@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Card, Loader, CardSkeletonLoading } from "../components";
+import { NavLink } from "react-router-dom";
+import { Card, CardSkeletonLoading, SectionHeader } from "../components";
 import usePaginateFetch from "../hooks/usePaginateFetch";
+import { places } from "../mocks/links";
 
 const Hotels = () => {
 	const [page, setPage] = useState(1);
@@ -19,20 +21,23 @@ const Hotels = () => {
 			if (node) observer.current.observe(node);
 		},
 		[loading, hasNext]
-	);
+	); 
 
 	return (
-		<section className="list-items-wrapper">
-			<div className="card-wrapper">
-				{results.map((data, idx) => {
-					if (idx === results.length - 1) {
-						return <Card ref={lastElementRef} key={data.id} data={data} />;
-					}
-					return <Card key={data.id} data={data} />;
-				})}
-				{loading && <CardSkeletonLoading/>}
-			</div>
-		</section>
+		<>
+			<SectionHeader/>
+			<section className="list-items-wrapper">
+				<div className="card-wrapper">
+					{results.map((data, idx) => {
+						if (idx === results.length - 1) {
+							return <Card ref={lastElementRef} key={data.id} data={data} />;
+						}
+						return <Card key={data.id} data={data} />;
+					})}
+					{loading && <CardSkeletonLoading />}
+				</div>
+			</section>
+		</>
 	);
 };
 

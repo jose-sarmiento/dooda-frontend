@@ -29,10 +29,8 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
-.d-flex {
-	display: flex;
-}
 
-.flex-between {
-	justify-content: space-between;
+.modal-isOpen {
+	overflow: hidden;
+	// position: fixed;
 }

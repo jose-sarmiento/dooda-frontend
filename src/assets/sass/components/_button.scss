@@ -22,4 +22,14 @@
 		background: lighten($primary-dark, 5%);
 		cursor: pointer;
 	}
+
+	&--back {
+		// border: 1px solid $primary-dark;
+		color: $grey;
+		&:hover {
+			background: none;
+			color: $grey;
+			border: none;
+		}
+	}
 }

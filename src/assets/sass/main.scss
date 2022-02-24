@@ -1,21 +1,27 @@
-@import "base/variables";
+@import "abstracts/animations";
+@import "abstracts/variables";
+@import "abstracts/helpers";
+
 @import "base/base";
 @import "base/typography";
 
-@import "components/banner";
-@import "components/header";
+@import "layouts/banner";
+@import "layouts/features";
+@import "layouts/footer";
+@import "layouts/header";
+@import "layouts/reviews";
+@import "layouts/hotel_details";
+
 @import "components/button";
 @import "components/card";
-@import "components/slider";
-@import "components/reviews";
 @import "components/steps";
-@import "components/footer";
-@import "components/features";
 @import "components/page-header";
 @import "components/price_slider";
 @import "components/loader";
 @import "components/skeleton";
-@import "components/animations";
+@import "components/slider";
+@import "components/stars";
+@import "components/modal";
 
 
 @import "pages/homepage";
