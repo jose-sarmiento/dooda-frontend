@@ -1,0 +1,31 @@
+.payment-preview {
+	margin-top: 2rem;
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	&__label,
+	&__value {
+		font-size: 1.3rem;
+		font-weight: 500;
+		color: $grey;
+	}
+
+	&__label {
+		text-align: right;
+	}
+
+	&__value {
+		text-align: left;
+	}
+
+	&__label--bold,
+	&__value--bold {
+		font-size: 1.4rem;
+		font-weight: 700;
+	}
+}

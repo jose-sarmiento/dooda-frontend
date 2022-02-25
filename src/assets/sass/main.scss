@@ -1,5 +1,5 @@
-@import "abstracts/animations";
 @import "abstracts/variables";
+@import "abstracts/animations";
 @import "abstracts/helpers";
 
 @import "base/base";
@@ -22,6 +22,9 @@
 @import "components/slider";
 @import "components/stars";
 @import "components/modal";
+@import "components/payment-preview";
+@import "components/multistep-form";
+@import "components/svg";
 
 
 @import "pages/homepage";

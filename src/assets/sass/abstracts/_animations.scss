@@ -2,6 +2,8 @@
 	animation: fadein .6s ease-in;
 }
 
+
+
 @keyframes fadein {
 	from {
 		transform: translateY(20px);
@@ -21,6 +23,54 @@
 	to {
 		transform: translate(-50%, 60%);
 		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateX(25rem);
+		opacity: 0;
+		pointer-events: none;
+		z-index: 50rem;
+	}
+	88% {
+		transform: scale(1.1);
+		pointer-events: none;
+	}
+	100% {
+		transform: translateX(1) scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInPrev {
+	0% {
+		transform: translateX(-25rem);
+		opacity: 0;
+		pointer-events: none;
+		z-index: 50rem;
+	}
+	88% {
+		transform: scale(1.1);
+		pointer-events: none;
+	}
+	100% {
+		transform: translateX(1) scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes scaleDown {
+	0% {
+		opacity: 1;
+		pointer-events: none;
+		z-index: 50rem;
+		background: $white;
+	}
+	100% {
+		transform: scale(0);
+		opacity: 0;
+		background: #f1f1f1;
 	}
 }
 

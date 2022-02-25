@@ -23,6 +23,8 @@ import ViewBeach from "./ViewBeach"
 import ViewPool from "./ViewPool"
 import ViewFarm from "./ViewFarm"
 import MyMap from "./MyMap"
+import ViewPlace from "./ViewPlace"
+import Review from "./Review"
 
 
 export {
@@ -50,5 +52,7 @@ export {
 	ViewBeach,
 	ViewPool,
 	ViewFarm,
-	MyMap
+	MyMap,
+	ViewPlace,
+	Review
 }

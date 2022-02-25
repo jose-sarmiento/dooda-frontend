@@ -62,7 +62,7 @@
 		backdrop-filter: blur(10px);
 		padding: 6rem 3rem;
 		border-radius: 1rem;
-		animation: slidefromleft .6s ease-in;
+		// animation: slidefromleft .6s ease-in;
 	}
 
 	&__heading {
@@ -105,7 +105,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 2rem;
 		padding: 2rem 2.5rem;
-		animation: fromBelow .6s ease .5s backwards;
+		// animation: fromBelow .6s ease .5s backwards;
 	}
 
 	&__float-left {
@@ -189,11 +189,11 @@
 		border-radius: 5rem;
 		color: $grey;
 		text-align: center;
-		transition: text-align .7s ease;
+		transition: text-align .4s ease;
 		position: relative;
 		background: rgba($white, .4);
 		box-shadow: 0px 0rem 1rem rgba(0, 0, 0, .05);
-		transition: all .4s ease;
+		transition: background .4s ease;
 	}
 
 	&__input:focus {

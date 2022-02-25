@@ -1,0 +1,259 @@
+.form {
+	display: flex;
+	width: 50rem;
+	min-height: 55rem;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	// overflow: hidden;
+
+	&__heading {
+		color: $primary-dark;
+		font-weight: 700;
+		font-size: 2rem;
+		font-size: 2.4rem;
+		margin-bottom: 1rem;
+	}
+
+	&__subheading {
+		margin-bottom: 4rem;
+		color: $grey;
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+
+	&__step {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		border: none;
+		box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
+		width: 100%;
+		margin: 0 auto;
+		padding: 4rem 3rem;
+		text-align: center;
+		background: $white;
+		border-radius: 1rem;
+		
+
+	}
+	&__step--previous {
+		opacity: 0;
+		pointer-events: none;
+		animation: scaleDown .6s forwards;
+	}
+
+	&__step--current {
+		pointer-events: all;
+		animation: slideIn 1s linear .2s backwards;
+	}
+	&__step--next {
+		transform: translateX(15rem);
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	&__step--3 {
+		margin-top: 2rem;
+		width: 30rem;
+		height: 25rem;
+		padding: 0;
+		padding: 4rem 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	&__step--3::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 15rem;
+		width: 100%;
+		// background: linear-gradient(to bottom, $primary-light, lighten($primary-light, 4%));
+		clip-path: ellipse(98% 60% at 50% 38%);
+		z-index: 1;
+	}
+
+	&__success-logo-wrapper {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		transform: translate(-50%, -50%);
+	}
+
+	&__success-logo {
+		font-size: 4rem;
+		background: linear-gradient(to right, $primary-dark, darken($primary-dark, 5%));
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+
+
+	&__back {
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: $grey-light;
+		position: absolute;
+		left: 2rem;
+		top: 2rem;
+		border: none;
+		background: transparent;
+		cursor: pointer;
+	}	
+
+	&__back-icon {
+		margin-right: .5rem;
+	}
+
+	&__group {
+		width: 100%;
+		text-align: left;
+		margin-bottom: 2rem;
+	}
+
+	&__group-label {
+		font-size: 1.4rem;
+		font-weight: 700;
+		color: $grey-light;
+		display: inline-block;
+		margin-bottom: 1rem;
+	}
+
+	&__label {
+		font-size: 1.4rem;
+		font-weight: 700;
+		color: $grey-light;
+		display: inline-block;
+		margin-bottom: 1rem;
+	}
+
+	&__input-group {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	&__input-group:not(:last-child) {
+	}
+
+	&__input-icon {
+		z-index: 5;
+		position: absolute;
+		left: 0;
+		height: 1.5rem;
+		width: 4rem;
+		border-right: 2px solid $primary-light;
+		align-grow: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $primary-light;
+		font-size: 1.4rem;
+	}
+
+	&__input-icon--paymongo {
+		width: 2rem;
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		border: 2px solid $primary-light;
+		padding: 1rem 2rem 1rem 4.5rem;
+		border-radius: .5rem;
+		font-family: inherit;
+		font-size: 1.2rem;
+		font-weight: 600;
+		color: $grey-light;
+		height: 4rem;
+
+
+		&:focus {
+			outline: none;
+			border: 2px solid $primary-bright;
+			padding-left: 3.7rem;
+		}
+
+		&:focus ~ .form__input-icon {
+			border: none;
+			color: $primary-dark;
+		}
+	}
+
+	&__radio-group:not(:last-child) {
+		margin-bottom: 1.5rem;
+	}
+
+	&__radio-label {
+		width: 100%;
+		border: 2px solid $primary-light;
+		padding: 1rem 2rem 1rem 5.5rem;
+		border-radius: .5rem;
+		font-family: inherit;
+		font-size: 1.3rem;
+		font-weight: 600;
+		color: $grey-light;
+		height: 4rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+
+	// &__radio-label:hover {
+	// 	border: 2px solid $primary-dark;
+	// }
+
+	// &__radio-label:hover .form__input-icon {
+	// 	background: linear-gradient(to right, $primary-dark, darken($primary-dark, 5%));
+	// 	height: 100%;
+	// 	color: $white;
+	// }
+
+	&__radio-input {
+		display: none;
+	}
+
+	&__radio-input:checked ~ .form__radio-label {
+		border: 2px solid $primary-dark;
+		background: linear-gradient(to right, $primary-dark, darken($primary-dark, 5%));
+		color: $white;
+	}
+
+	&__radio-input:checked ~ .form__radio-label .form__input-icon {
+		height: 100%;
+		background: $white;
+		color: $primary-dark;
+		border-radius: .4rem 0 0 .4rem;
+	}
+
+
+
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__action {
+		display: inline-block;
+		height: 4rem;
+		width: 10rem;
+		background: linear-gradient(to right, $primary-dark, darken($primary-dark, 5%));
+		border: none;
+		border-radius: .5rem;
+		text-transform: capitalize;
+		font-weight: 600;
+		color: $white;
+		margin-top: 1rem;
+
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
+}

@@ -14,7 +14,7 @@ import img5 from "../assets/images/5.jpg"
 
 import {pesoFormat} from "../utils/pesoFormat"
 
-const ViewHotel = () => {
+const ViewPlace = () => {
 	const {id} = useParams()
 	const [isOpenModal, setIsOpenModal] = useState(false)
 
@@ -101,11 +101,15 @@ const ViewHotel = () => {
 			</div>
 
 			<div className="hotel__reviews">
-				<Reviews/>
+				<div className="hotel__active-review">
+					{/*<Reviews small={true}/>*/}
+				</div>
+				<div className="hotel__review"></div>
+				<div className="hotel__review"></div>
 			</div>
 		</div>
 		</>
 	)
 }
 
-export default ViewHotel
+export default ViewPlace

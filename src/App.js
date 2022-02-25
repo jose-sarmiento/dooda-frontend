@@ -13,6 +13,7 @@ import {
     ViewBeach,
     ViewPool,
     ViewFarm,
+    ViewPlace
 } from "./components";
 
 function App() {
@@ -21,15 +22,15 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/p/*" element={<PlacesToStay />}>
                 <Route path="hotels" element={<Hotels />} />
-                <Route path="hotels/:id" element={<ViewHotel />} />
+                <Route path="hotels/:id" element={<ViewPlace />} />
                 <Route path="houses" element={<Houses />} />
-                <Route path="houses/:id" element={<ViewHouse />} />
+                <Route path="houses/:id" element={<ViewPlace />} />
                 <Route path="beach" element={<Beaches />} />
-                <Route path="beach/:id" element={<ViewBeach />} />
+                <Route path="beach/:id" element={<ViewPlace />} />
                 <Route path="pools" element={<Pools />} />
-                <Route path="pools/:id" element={<ViewPool />} />
+                <Route path="pools/:id" element={<ViewPlace />} />
                 <Route path="farms" element={<Farms />} />
-                <Route path="farms/:id" element={<ViewFarm />} />
+                <Route path="farms/:id" element={<ViewPlace />} />
             </Route>
             <Route path="/about" element={<h1>About Page</h1>} />
             <Route path="/*" element={<h1>404 Not Found</h1>} />
