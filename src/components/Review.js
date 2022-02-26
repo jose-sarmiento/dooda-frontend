@@ -31,7 +31,7 @@ const Review = ({ small = false }) => {
                     <p className="review__text">
                         {small
                             ? "The Dooda team represents among the highest levels of customer service I have experienced. Information was accurate, responses to queries were turned around very fast. "
-                            : "The Dooda team represents among the highest levels of customer service have experienced. Information was accurate, responses to queries were turned around very fast. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non officia ipsa quia sunt, aut fugiat ipsam, voluptates autem perspiciatis voluptatibus commodi placeat praesentium vero provident eius ea, et possimus blanditiis."}
+                            : "The Dooda team represents among the highest levels of customer service have experienced. Information was accurate, responses to queries were turned around very fast. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non officia ipsa quia sunt, aut fugiat ipsam, voluptates autem perspiciatis voluptatibus."}
                     </p>
                 </div>
                 <div className="review__trackers">

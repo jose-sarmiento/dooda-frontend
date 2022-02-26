@@ -7,6 +7,9 @@ import boy from "../assets/images/cliford.jpg";
 const Banner = () => {
 	const [min, setMin] = useState(15000);
 	const [max, setMax] = useState(40000);
+	const [category, setCategory] = useState("all");
+
+	const handleCategoryChange = (e) => setCategory(e.target.value)
 
 	return (
 		<div className="banner">
@@ -35,25 +38,25 @@ const Banner = () => {
 							<span className="stats__icon">
 								<i className="stats__logo fas fa-peso-sign"></i>
 							</span>
-							<h4 className="stats__text">Easy Payments</h4>
+							<span className="stats__text">Easy Payments</span>
 						</div>
 						<div className="stats">
 							<span className="stats__icon">
 								<i className="stats__logo fas fa-heart"></i>
 							</span>
-							<h4 className="stats__text">Good Customer Service</h4>
+							<span className="stats__text">Customer Service</span>
 						</div>
 						<div className="stats">
 							<span className="stats__icon">
-								<i className="stats__logo fas fa-book"></i>
+								<i className="stats__logo fas fa-chart-line"></i>
 							</span>
-							<h4 className="stats__text">flexibility</h4>
+							<span className="stats__text">In demand</span>
 						</div>
 						<div className="stats">
 							<span className="stats__icon">
 								<i className="stats__logo fa fa-lock"></i>
 							</span>
-							<h4 className="stats__text">Secure transactions</h4>
+							<span className="stats__text">Secure</span>
 						</div>
 					</div>
 					<div className="ratings">
@@ -111,14 +114,17 @@ const Banner = () => {
 					</small>*/}
 
 					<div className="search-filter">
-						<div className="categories">
+						<form className="categories">
 							<h4 className="categories__type">Type:</h4>
 							<div className="categories__category">
 								<input
 									type="radio"
 									name="category"
-									id="all"
 									className="categories__input"
+									id="all"
+									value="all"
+									checked={"all" === category}
+									onChange={handleCategoryChange}
 								/>
 								<label
 									htmlFor="all"
@@ -134,9 +140,13 @@ const Banner = () => {
 									name="category"
 									id="resort"
 									className="categories__input"
+									value="resort"
+									checked={"resort" === category}
+									onChange={handleCategoryChange}
 								/>
 								<label
 									htmlFor="resort"
+									name="category"
 									className="categories__label"
 								>
 									<div className="categories__circle"></div>
@@ -149,6 +159,9 @@ const Banner = () => {
 									name="category"
 									id="hotel"
 									className="categories__input"
+									value="hotel"
+									checked={"hotel" === category}
+									onChange={handleCategoryChange}
 								/>
 								<label
 									htmlFor="hotel"
@@ -158,7 +171,7 @@ const Banner = () => {
 									Hotel
 								</label>
 							</div>
-						</div>
+						</form>
 
 						<div className="search__price-filter">
 							<h4 className="price__range">Price range:</h4>

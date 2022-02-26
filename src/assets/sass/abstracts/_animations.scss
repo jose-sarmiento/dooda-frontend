@@ -95,3 +95,12 @@
 		background: #eee;
 	}
 }
+
+@keyframes slidehorizontal {
+	from {
+		transform: translateX(0);
+	}	
+	to {
+		transform: translateX(10px);
+	}
+}

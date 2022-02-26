@@ -24,12 +24,14 @@
 	}
 
 	&__header {
-		padding: .8rem 2rem;
-		font-size: 1.2rem;
+		padding: 1rem 2rem;
+		font-size: 1.4rem;
 		font-weight: 600;
 		color: $primary;
 		display: flex;
 		justify-content: space-between;
+		background: #fff1f1;
+		margin-bottom: 1rem;
 	}
 
 	&__body {
@@ -45,18 +47,17 @@
 	}
 
 	&__name {
-		font-size: 1.7rem;
-		font-weight: 700;
-		color: $black;
-		margin-bottom: .4rem;
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+		font-weight: 600;
 	}
 
 	&__location {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 
 	&__location-icon {
-		margin-right: 1rem;
+		margin-right: .6rem;
 	}
 }
 

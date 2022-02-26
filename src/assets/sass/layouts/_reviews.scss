@@ -14,9 +14,13 @@
 .review {
 	display: flex;
 	height: 100%;
-	align-items: center;
+	align-items: flex-start;
 	position: relative;
 	z-index: 1;
+
+	&--sm {
+		align-items: center;
+	}
 
 	&__left {
 		background: #f2f2f2;
@@ -88,6 +92,7 @@
 		position: relative;
 		padding: 1rem 2rem;
 		text-align: center;
+		margin-top: 2rem;
 	
 	}
 
@@ -115,14 +120,18 @@
 	}
 
 	&__rating {
-		font-size: 1.8rem;
-		font-weight: 700;
+		font-size: 2.8rem;
+		font-weight: 500;
 		color: $primary-dark;
+	}
+
+	&--sm &__rating {
+		font-size: 2.6rem;
 	}
 
 	&__heading {
 		font-size: 1.8rem;
-		font-weight: 700;
+		font-weight: 600;
 		color: $black;
 		margin-bottom: 2rem;
 		text-align: left;
@@ -150,9 +159,9 @@
 	}
 
 	&__text {
-		font-size: 1.2rem;
-		color: $grey;
-		line-height: 20px;
+		font-size: 1.4rem;
+		line-height: 2rem;
+		text-align: left;
 	}
 
 	&__trackers {

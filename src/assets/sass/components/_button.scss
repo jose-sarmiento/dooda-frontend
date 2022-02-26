@@ -31,15 +31,21 @@
 		font-weight: 600;
 		color: $primary-dark;
 		transition: all .3s ease;
+		cursor: pointer;
 	}
+
 	&--direction__icon {
 		margin-left: 1rem;
 	}
 
-	&--direction:hover {
-		color: $white;
-		background: $primary-dark;
+	&--direction:hover .btn--direction__icon {
+		animation: slidehorizontal .4s linear infinite alternate;
 	}
+
+	// &--direction:hover {
+	// 	color: $white;
+	// 	background: $primary-dark;
+	// }
 
 	&--back {
 		// border: 1px solid $primary-dark;

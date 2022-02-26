@@ -1,8 +1,6 @@
 .banner {
 	height: 75vh;
 	border-radius: 1rem;
-	// background-image: linear-gradient(to right, $primary 0%, rgba($primary, .9) 20%, rgba($primary, .6), rgba($primary, 0) 70%, rgba($primary, 0) 100%),
-	// 	url("../../images/bg-medium.jpg");
 	background-image: linear-gradient(315deg, transparent 0%, transparent 60%, rgba($primary, .8) 60%, rgba($primary, .8) 100%),
 		url("../../images/bg-medium.jpg");
 	background-position: center center;
@@ -24,7 +22,6 @@
 
 	&__photo-wrapper {
 		position: absolute;
-		// border: 10px solid $primary-dark;
 		box-sizing: content-box;
 
 		&--1 {
@@ -56,30 +53,30 @@
 		position: absolute;
 		top: 6rem;
 		left: 15rem;
-		width: 50rem;
+		width: 60rem;
 		background: rgba($white, .8);
-		// background: linear-gradient(to right, $primary 0%, $primary 50%, transparent 50%, transparent 100%);
 		backdrop-filter: blur(10px);
 		padding: 6rem 3rem;
 		border-radius: 1rem;
-		// animation: slidefromleft .6s ease-in;
 	}
 
 	&__heading {
 		font-size: 1.8rem;
 		color: $primary-dark;
-		// margin-bottom: .5rem;
+		margin-bottom: .5rem;
 		font-weight: 600;
 	}
 
 	&__subheading {
-		font-size: 2.8rem;
+		font-weight: 600;
+		font-size: 3.2rem;
 		margin-bottom: 1.2rem;
+		color: $black;
 	}
 
 	&__description {
-		font-size: 1.2rem;
-		font-weight: 400;
+		font-size: 1.4rem;
+		font-weight: 500;
 		// line-height: 5px;
 	}
 
@@ -96,16 +93,14 @@
 		bottom: 0;
 		left: 50%;
 		right: 0;
-		background: rgba($white, .8);
+		background: $white;
 		backdrop-filter: blur(10px);
 		transform: translate(-50%, 60%);
 		box-shadow: 0px 1rem 2.5rem rgba(0, 0, 0, .2);
 		display: grid;
-		// align-items: center;
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 2rem;
 		padding: 2rem 2.5rem;
-		// animation: fromBelow .6s ease .5s backwards;
 	}
 
 	&__float-left {
@@ -119,14 +114,10 @@
 
 .statistics {
 	display: flex;
-	justify-content: space-between;
-	// grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-	// grid-gap: 2rem;
+	justify-content: space-evenly;
 
 	&__heading {
 		font-size: 1.6rem;
-		font-weight: 600;
-		color: $black;
 		margin-bottom: 2rem;
 	}
 }
@@ -136,6 +127,7 @@
 	flex-direction: column;
 	align-items: center;
 	border-radius: 1rem;
+	width: 25%;
 
 	&__icon {
 		height: 4rem;
@@ -153,11 +145,6 @@
 	&__logo {
 		font-size: 1.6rem;
 		color: $primary-dark;
-		// display: inline-block;
-		// background: linear-gradient(to right, $primary, $primary-bright);
-		// -webkit-background-clip: text;
-		// color: transparent;
-		// margin-bottom: 2rem;
 	}
 
 	&__number {
@@ -167,9 +154,7 @@
 	}
 
 	&__text {
-		font-size: 1.2rem;
-		color: $grey;
-		font-weight: 600;
+		font-size: 1.4rem;
 	}
 }
 
@@ -179,34 +164,43 @@
 	position: relative;
 
 	&__input {
-		border: 1px solid rgba($white, .4);
+		border: none;
 		display: block;
 		flex: 1;
 		padding: 1rem 2.5rem;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
+		font-weight: 500;
 		font-family: inherit;
-		font-weight: 700;
 		border-radius: 5rem;
-		color: $grey;
+		color: $grey-light;
 		text-align: center;
-		transition: text-align .4s ease;
 		position: relative;
-		background: rgba($white, .4);
-		box-shadow: 0px 0rem 1rem rgba(0, 0, 0, .05);
-		transition: background .4s ease;
+		height: 4rem;
+		border: 2px solid $primary-light;
 	}
 
 	&__input:focus {
 		outline: none;		
-		background: rgba($white, 1.0);
-		color: $black;
+		border: 2px solid $primary-dark;
+	}
+
+	&__input::placeholder {
+		color: #ccc;
 	}
 
 	&__label {
 		position: absolute;
-		right: 1.5rem;
+		right: 0;
 		font-size: 1.2rem;
 		font-weight: 700;
+		color: $primary-dark;
+		display: inline-block;
+		height: 4rem;
+		width: 4rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	&__note {
@@ -227,20 +221,12 @@
 	display: flex;
 }
 
-
-
 .categories {
 	padding: 0;
-	// align-items: center;
-	// margin-top: 1.2rem;
-	// background: rgba($white, 1);
-	// box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .2);
 	background: $white;
 	padding: 1rem;
 	margin-top: 1rem;
 	border-radius: 1rem;
-	box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
-
 
 	&__category {
 		display: flex;
@@ -251,10 +237,10 @@
 
 	&__label {
 		font-size: 1.2rem;
-		color: $black;
 		position: relative;
 		padding: .5rem .5rem .5rem 2.5rem;
 		margin-left: 1rem;
+		z-index: 50;
 	}
 
 	&__circle {
@@ -262,12 +248,16 @@
 		left: 0;
 		height: 1.4rem;
 		width: 1.4rem;
-		border: 2px solid $primary-dark;
+		border: 2px solid $primary-light;
 		border-radius: 50%;
 	}
 
 	&__input {
 		display: none;
+	}
+
+	&__input:checked ~ &__label &__circle {
+		border: 2px solid $primary-dark;
 	}
 
 	&__input:checked ~ &__label &__circle::after {
@@ -284,13 +274,9 @@
 }
 .search__price-filter {
 	margin-top: 1rem;
-	box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
 	flex: 1;
 	margin-left: 2rem;
-	overflow: hidden;
-	border-radius: 1rem;
 	padding: 1rem;
-
 }
 
 
@@ -302,7 +288,6 @@
 	border-top: 1px solid #f2f2f2;
 
 	&__text {
-		font-weight: 500;
 		flex: 1;
 	}
 
