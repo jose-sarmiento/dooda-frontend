@@ -23,6 +23,24 @@
 		cursor: pointer;
 	}
 
+	&--direction {
+		display: inline-block;
+		border-bottom: 2px solid $primary-dark;
+		padding: .7rem 1.2rem .5rem .5rem;
+		text-align: left;
+		font-weight: 600;
+		color: $primary-dark;
+		transition: all .3s ease;
+	}
+	&--direction__icon {
+		margin-left: 1rem;
+	}
+
+	&--direction:hover {
+		color: $white;
+		background: $primary-dark;
+	}
+
 	&--back {
 		// border: 1px solid $primary-dark;
 		color: $grey;

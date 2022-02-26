@@ -59,7 +59,7 @@
 		width: 100%;
 		object-fit: cover;
 		object-position: center center;
-		background: red;
+		animation: pulsate .3s linear infinite;
 	}
 
 	&__details {
@@ -80,7 +80,7 @@
 
 	&__description-heading,
 	&__description-heading-2 {
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		font-weight: 600;
 		color: $black;
 		margin-bottom: 2rem;
@@ -95,8 +95,8 @@
 
 	&__paragraph {
 		margin-bottom: 1rem;
-		font-size: 1.2rem;
-		font-weight: 500;
+		font-size: 1.4rem;
+		font-weight: 400;
 		color: $grey;
 		text-indent: 3rem;
 		line-height: 2rem;
@@ -143,29 +143,102 @@
 		height: 55rem;
 	}
 
+	&__review-section {
+		background: #f1f1f1;
+		padding: 3rem 0;
+		margin-bottom: 3rem;
+	}
+
 	&__reviews {
 		margin: 4rem auto;
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		grid-gap: 2rem;
+		grid-column-gap: 2rem;
+		grid-row-gap: 2rem;
 		max-width: 1000px;
 		height: 40rem;
-
 	}
 
 	&__active-review {
-		background: #eee;
+		background: $white;
 		grid-column: 1/2;
 		grid-row: 1/-1;
 		border-radius: 1rem;
+		padding: 2rem;
 	}
 
-	&__review {
-		background: #eee;
-		border-radius: 1rem;
+
+}
+.hotel-review {
+	background: $white;
+	border-radius: 1rem;
+	display: flex;
+	padding: 2rem;
+	flex-direction: column;
+	position: relative;
+
+	&__quote {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 6rem;
+		fill: #fff1f1;
+		z-index: 1;
 	}
 
+	&__text-wrapper {
+		flex: 1;
+		z-index: 5;
+		padding: 1rem;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+		color: $grey;
+		line-height: 2rem
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+	}
+
+	&__user {
+		height: 3.5rem;
+		width: 3.5rem;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	&__middle {
+		flex: 1;
+		margin-left: 1.5rem;
+	}
+
+	&__name {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: $grey;
+	}
+
+	&__date {
+		font-weight: 400;
+		font-size: 1.2rem;
+	}
+
+	&__rating {
+		color: $primary-dark;
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
 }
 
 .hotel-header {

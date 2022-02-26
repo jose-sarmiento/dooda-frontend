@@ -5,10 +5,10 @@
 .reviews {
 	background: $white;
 	box-shadow: 0px 0px 3rem rgba(0, 0, 0, .1);
-	height: 40rem;
+	height: 42rem;
 	width: 90rem;
 	margin: 0 auto;
-	padding: 4rem 6rem;
+	padding: 6rem 6rem;
 }
 
 .review {
@@ -48,12 +48,23 @@
 		border-radius: 1rem 1rem .5rem .5rem;
 	}
 
+	&--sm &__img-wrapper {
+		height: 16rem;
+		width: 16rem;
+	}
+
 	&__img {
 		z-index: 50!important;
 		width: 100%;
 		max-height: 100%;
 		object-fit: cover;
 		object-position: center center;
+	}
+
+	&--sm &__img {
+		object-fit: fill;
+		max-height: 100%;
+		max-width: 100%;
 	}
 
 	&__name {
@@ -77,6 +88,7 @@
 		position: relative;
 		padding: 1rem 2rem;
 		text-align: center;
+	
 	}
 
 	&__content::before {
@@ -171,6 +183,12 @@
 		width: .6rem;
 		border-radius: 50%;
 		background: $primary-dark;
+	}
+
+	&__see-all {
+		position: absolute;
+		bottom: 2rem;
+		right: 0;
 	}
 }
 

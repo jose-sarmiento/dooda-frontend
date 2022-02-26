@@ -1,5 +1,5 @@
 .skeleton {
-	animation: pulsate .6s linear infinite alternate;
+	animation: pulsate .4s linear infinite alternate;
 
 	&:hover {
 		background: #eee;
@@ -36,12 +36,3 @@
 	}
 }
 
-
-@keyframes pulsate {
-	from {
-		background: #eee;
-	}	
-	to {
-		background: lighten(#eee, 2%);
-	}
-}
