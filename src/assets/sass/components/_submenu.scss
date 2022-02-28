@@ -1,0 +1,172 @@
+.submenu {
+	position: absolute;
+	top: 6.6rem;
+	left: 50%;
+	transform: translateX(-50%) scale(.95);
+	min-width: 20rem;
+	min-height: 10rem;
+	background: $white;
+	opacity: 0;
+	pointer-events: none;
+	transform-origin: top;
+	transition: all .3s cubic-bezier(.21,.93,.34,.94);
+	border-radius: .5rem;
+	box-shadow: 0px 1rem 2rem rgba(0, 0, 0, .2);
+	padding: 2rem;
+	display: grid;
+	grid-gap: 1.5rem;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 0;
+		height: 10px;
+		width: 10px;
+		background: $white;
+		transform: rotate(45deg) translateY(-50%);
+	}
+
+	&--account {
+		grid-template-columns: repeat(2, 20rem);
+	}
+
+	&--places {
+		grid-template-columns: repeat(4, 20rem);
+	}
+
+	&--experiences {
+		grid-template-columns: repeat(4, 20rem);
+	}
+
+	&__group {
+
+	}
+
+	&__group-header {
+		grid-column: 1/-1;
+	}
+
+	&__group--categories {
+		grid-column: 1/-1;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	&__group--filters {
+		grid-column: 1/-1;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	&__group--topplaces {
+		grid-column: 1/-1;
+		// display: grid;
+		// grid-template-columns: repeat(3, 1fr);
+		// justify-items: start;
+	}
+
+
+	&__group--grid {
+		display: grid;
+		grid-template-columns: repeat(3, 20rem);
+	}
+
+	&__heading {
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $grey;
+	}
+
+	&__description {
+		font-size: 1.4rem;
+		color: $grey-light;
+		font-weight: 500;
+	}
+
+	&__row {
+		list-style: none;
+		display: grid;
+		grid-template-columns: 2.5rem 1fr;
+		grid-column-gap: .5rem;
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $grey;
+		padding: .4rem 0;
+		width: 100%;
+		
+	}
+
+	&__icon {
+		font-family: inherit;
+		background: $primary-bright;
+		-webkit-background-clip: text;
+		color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__text {
+		color: $grey-light;
+		font-family: inherit;
+	}
+
+	&__text:hover {
+		text-decoration: underline;
+	}
+}
+
+.top-place {
+	margin-top: 1.5rem;
+
+	&__places {
+		list-style: none;
+		margin-top: 1rem;
+	}
+
+	&__place {
+		text-align: left;
+		padding: .6rem 1.5rem;
+		margin-bottom: .7rem;
+		border-radius: 3px;
+		cursor: pointer;
+	}
+
+	&__place:hover {
+		background: #eee;
+	}
+
+	&__name {
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $grey;
+	}
+
+	&__count {
+		font-size: 1.2rem;
+		color: $grey-light;
+		font-weight: 500;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

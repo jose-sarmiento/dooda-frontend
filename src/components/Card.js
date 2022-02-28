@@ -10,7 +10,7 @@ const Card = React.forwardRef((props, ref) => {
     return (
         <div className="card fadein" ref={ ref || null}>
             <Link to={`${data.id}`} className="card__img-wrapper">
-                <img src={data.image.medium} alt="img1" className="card__img" />
+                <img src={data.image.large} alt="img1" className="card__img" />
             </Link>
             <div className="card__header">
                 <span className="card__price">{pesoFormat(data.price)}</span>
@@ -18,7 +18,7 @@ const Card = React.forwardRef((props, ref) => {
             </div>
             <div className="card__body">
                 <div className="card__body-container">
-                    <h3 className="card__name">{data.name.length > 60 ? data.name.slice(0, 60) + "..." : data.name}</h3>
+                    <h3 className="card__name">{data.name.length > 50 ? data.name.slice(0, 50) + "..." : data.name}</h3>
                     <h6 className="card__location">
                         <FaMapMarkerAlt className="card__location-icon" />
                         {data.address.street + " " + data.address.city }

@@ -14,7 +14,7 @@ import {
     ViewPool,
     ViewFarm,
     ViewPlace
-} from "./components";
+} from "./components"; 
 
 function App() {
     return (

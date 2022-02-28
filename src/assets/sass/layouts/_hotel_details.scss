@@ -1,18 +1,21 @@
+.sub-page {
+	margin-top: 8rem;
+}
+
 .hotel {
 	border-bottom: 1px solid #eee;
 	margin-top: 2rem;
 
 	&__name {
 		text-transform: capitalize;
-		font-size: 2.4rem;
+		font-size: 2.4rem; 
 		color: $black;
 		font-weight: 500;
 		font-family: 'Quicksand', sans-serif;
-
 	}
 
 	&__location {
-		margin-top: 2rem;
+		margin-top: 1.5rem;
 		font-size: 1.3rem;
 		color: $grey;
 		font-weight: 500;
@@ -25,7 +28,14 @@
 
 	&__favorite {
 		color: $primary-dark;
-		font-size: 1.4rem;	
+		font-size: 1.6rem;	
+		margin-bottom: .5rem;
+		display: flex;
+		align-items: center;
+	}
+
+	&__favorite-icon {
+		margin-right: .5rem;
 	}
 
 	&__price {
@@ -244,7 +254,7 @@
 .hotel-header {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 2rem 0;
+	margin-bottom: 3rem;
 
 	&__left {
 

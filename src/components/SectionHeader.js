@@ -6,7 +6,7 @@ const SectionHeader = () => {
 	// const [min, setMin] = useState(15000);
 	// const [max, setMax] = useState(40000);
 	return (
-		<div className="section-header">
+		<div className="section-header container">
 				<ul className="item-categories">
 					{places.map((link, idx) => (
 						<li className="item-categories__item" key={link.id}>

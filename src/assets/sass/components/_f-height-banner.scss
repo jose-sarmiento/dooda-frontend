@@ -1,0 +1,192 @@
+
+
+
+.fh-banner {
+	height: 100vh;
+	background: $dark-1;
+	z-index: -1;
+	// font-family: 'Qucik', serif;
+	
+	&__content {
+		position: relative;
+		height: 100vh;
+	}
+
+	&__text {
+		position: absolute;
+		top: 54%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 55;
+		text-align: center;
+		width: 70rem;
+		height: 30rem;
+		padding-top: 1rem;
+		background: rgba($dark-1, .05);
+		// clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0);
+	}
+
+	&__heading {
+		font-size: 4.2rem;
+		text-transform: capitalize;
+		font-weight: 500;
+		color: $primary-dark;
+		// color: #f2e6eb;
+		margin-bottom: 1rem;
+	}
+
+	&__subheading {
+		font-size: 1.6rem;
+		font-weight: 300;
+		color: #d4c5cb;
+	}
+
+	&__cta {
+		display: inline-block;
+		margin-top: 5rem;
+		padding: 1.4rem 4rem;
+		border: none;
+		border-radius: 5rem;
+		background: $white;
+		// background: linear-gradient(to right, darken($primary-dark, 15%), darken($primary-dark, 10%));
+		// background: #fc7e3f;
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: $grey;
+	}
+
+	.stagger {
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		opacity: 0;
+	}
+
+	&__image {
+		z-index: 50;
+		position: absolute;
+		height: 100%;
+		width: 50%;
+	}
+
+	&__image--mountain {
+		right: 0;
+		bottom: 0;
+		top: 0;
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	&__image--swimming {
+		left: 0;
+		left: 0;
+		top: 0;
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	&__image::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		background: radial-gradient(rgba($darkgreen, .6), rgba($dark-1, .95));
+		z-index: 50;
+	}
+
+	&__img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		// object-position: right;
+	}
+
+	&__logo {
+		position: absolute;
+		display: block;
+		bottom: 0;
+		left: 0;
+		opacity: .01;
+		height: 70%;
+	}
+
+	&__footer {
+		z-index: 50;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		font-size: 1.2rem;
+		padding: 1rem;
+	}
+
+	&__social {
+		margin-left: 1rem;
+	}
+
+	&__search {
+		width: 40rem;
+		margin: 0 auto;
+		display: flex;
+		margin-top: 4rem;
+		position: relative;
+	}
+
+	&__input {
+		flex: 1;
+		border: none;
+		height: 4.5rem;
+		border-radius: 5rem;
+		background: rgba($white, .1);
+		padding: 0 4rem 0 2rem;
+		color: $white;
+		font-family: inherit;
+		font-size: 1.4rem;
+		border-bottom: 2px solid transparent;
+	}
+
+
+	&__input::placeholder {
+		color: #d4c5cb;
+		text-align: center;
+	}
+
+	&__input:focus {
+		outline: none;
+		border-bottom: 2px solid $primary;
+	}
+
+	&__input:focus ~ .fh-banner__submit-btn {
+		color: $primary;
+	}
+
+	&__submit-btn {
+		position: absolute;
+		font-size: 1.4rem;
+		height: 4.5rem;
+		width: 4.5rem;
+		border: none;
+		right: 0;
+		border: none;
+		border-radius: 50%;
+		color: #d4c5cb;
+		background: transparent;
+		// background: darken($primary-dark, 25%);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

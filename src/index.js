@@ -7,17 +7,15 @@ import "./assets/basic.css";
 import "./assets/ecommerce.css";
 import App from "./App";
 
-export const AppContext = React.createContext({});
-
-const value = {};
+import AppProvider from "./context"
 
 ReactDOM.render(
     <React.StrictMode>
-        <AppContext.Provider value={value}>
+        <AppProvider>
             <BrowserRouter>
                 <App />
             </BrowserRouter>
-        </AppContext.Provider>
+        </AppProvider>
     </React.StrictMode>,
     document.getElementById("root")
 );

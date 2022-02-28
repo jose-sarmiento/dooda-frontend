@@ -15,7 +15,11 @@
 }
 
 .card {
-	&__price--skeleton {
+
+	&__header--skeleton {
+		background: none;
+	}
+	&__price--skeleton { 
 		width: 10rem;
 	}
 

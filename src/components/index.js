@@ -25,6 +25,11 @@ import ViewFarm from "./ViewFarm"
 import MyMap from "./MyMap"
 import ViewPlace from "./ViewPlace"
 import Review from "./Review"
+import HomeSubmenu from "./HomeSubmenu"
+import PlacesSubmenu from "./PlacesSubmenu"
+import MyAccountSubmenu from "./MyAccountSubmenu"
+import ExperiencesSubmenu from "./ExperiencesSubmenu"
+import SearchForm from "./SearchForm"
 
 
 export {
@@ -54,5 +59,10 @@ export {
 	ViewFarm,
 	MyMap,
 	ViewPlace,
-	Review
+	Review,
+	HomeSubmenu,
+	PlacesSubmenu,
+	ExperiencesSubmenu,
+	MyAccountSubmenu,
+	SearchForm
 }

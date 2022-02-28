@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { FaSearch, FaBook, FaUmbrellaBeach, FaLock } from "react-icons/fa";
+import React, { useState, useRef, useEffect } from "react";
+import { FaSearch, FaBook, FaUmbrellaBeach, FaLock, FaChevronDown } from "react-icons/fa";
 import PriceSlider from "./PriceSlider";
 import girl from "../assets/images/bianca.jpg";
 import boy from "../assets/images/cliford.jpg";
@@ -8,26 +8,37 @@ const Banner = () => {
 	const [min, setMin] = useState(15000);
 	const [max, setMax] = useState(40000);
 	const [category, setCategory] = useState("all");
+	const [isOpenOptions, setIsOpenOptions] = useState(false);
 
-	const handleCategoryChange = (e) => setCategory(e.target.value)
+	const customSelectRef = useRef();
+
+	useEffect(() => {
+		customSelectRef.current.tabIndex = 0;
+		customSelectRef.current.addEventListener("click", handleCustomSelectClick);
+		customSelectRef.current.addEventListener("blur", () => setIsOpenOptions(false));
+	}, []);
+
+	useEffect(() => {
+		if (isOpenOptions) customSelectRef.current.classList.toggle("focus");
+		else customSelectRef.current.classList.remove("focus");
+	}, [isOpenOptions]);
+
+	const handleCustomSelectClick = (e) => setIsOpenOptions((prev) => !prev);
+
+	const handleOptionSelect = (e) => setCategory(e.target.getAttribute("data-value"));
 
 	return (
 		<div className="banner">
 			<div className="banner__content">
 				<h2 className="banner__heading">Dooda</h2>
-				<h1 className="banner__subheading">
-					Book for Resorts & Hotels Online{" "}
-				</h1>
+				<h1 className="banner__subheading">Book for Resorts & Hotels Online </h1>
 
 				<p className="banner__description">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-					Quidem in nisi, veritatis ab ex, aperiam! Explicabo, a?
-					Reprehenderit ex vero
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem in nisi,
+					veritatis ab ex, aperiam! Explicabo, a? Reprehenderit ex vero
 				</p>
 
-				<button className="btn btn--primary banner__cta">
-					Book now
-				</button>
+				<button className="btn btn--primary banner__cta">Book now</button>
 			</div>
 
 			<div className="banner__float">
@@ -61,35 +72,20 @@ const Banner = () => {
 					</div>
 					<div className="ratings">
 						<span className="ratings__text">
-							Lucy, John and <span className="red">13,320</span> users recommended Dooda
+							Lucy, John and <span className="red">13,320</span> users recommended
+							Dooda
 						</span>
 						<figure className="ratings__img-wrapper">
-							<img
-								src={girl}
-								alt="lucy"
-								className="ratings__user"
-							/>
+							<img src={girl} alt="lucy" className="ratings__user" />
 						</figure>
 						<figure className="ratings__img-wrapper">
-							<img
-								src={boy}
-								alt="lucy"
-								className="ratings__user"
-							/>
+							<img src={boy} alt="lucy" className="ratings__user" />
 						</figure>
 						<figure className="ratings__img-wrapper">
-							<img
-								src={girl}
-								alt="lucy"
-								className="ratings__user"
-							/>
+							<img src={girl} alt="lucy" className="ratings__user" />
 						</figure>
 						<figure className="ratings__img-wrapper">
-							<img
-								src={boy}
-								alt="lucy"
-								className="ratings__user"
-							/>
+							<img src={boy} alt="lucy" className="ratings__user" />
 						</figure>
 						<figure className="ratings__img-wrapper">
 							<img src={girl} alt="lucy" className="ratings__user" />
@@ -98,23 +94,62 @@ const Banner = () => {
 				</div>
 
 				<div className="banner__float-rights">
-					<form action="#" className="search">
+					<form action="#" className="search" spellCheck={false}>
 						<input
 							type="text"
 							className="search__input"
 							id="search"
-							placeholder="Search for hotel & resort name or location"
+							placeholder="Start searching"
 						/>
 						<label htmlFor="search" className="search__label">
 							<FaSearch />
 						</label>
+						<div className="custom-select" ref={customSelectRef}>
+							<span className="custom-select__value">{category}</span>
+							<FaChevronDown className="custom-select__arrow" />
+							<div className="custom-select__options">
+								<div
+									className={
+										category === "all"
+											? "custom-select__option custom-select__option--selected"
+											: "custom-select__option"
+									}
+									data-value="all"
+									onClick={handleOptionSelect}
+								>
+									All
+								</div>
+								<div
+									className={
+										category === "places"
+											? "custom-select__option custom-select__option--selected"
+											: "custom-select__option"
+									}
+									data-value="places"
+									onClick={handleOptionSelect}
+								>
+									Places
+								</div>
+								<div
+									className={
+										category === "experiences"
+											? "custom-select__option custom-select__option--selected"
+											: "custom-select__option"
+									}
+									data-value="experiences"
+									onClick={handleOptionSelect}
+								>
+									Experiences
+								</div>
+							</div>
+						</div>
 					</form>
 					{/*	<small className="search__note">
 						Note: Use filters below to narrow result
 					</small>*/}
 
 					<div className="search-filter">
-						<form className="categories">
+						{/*<form className="categories">
 							<h4 className="categories__type">Type:</h4>
 							<div className="categories__category">
 								<input
@@ -172,15 +207,10 @@ const Banner = () => {
 								</label>
 							</div>
 						</form>
-
+*/}
 						<div className="search__price-filter">
 							<h4 className="price__range">Price range:</h4>
-							<PriceSlider
-								min={min}
-								max={max}
-								setMin={setMin}
-								setMax={setMax}
-							/>
+							<PriceSlider min={min} max={max} setMin={setMin} setMax={setMax} />
 						</div>
 					</div>
 				</div>

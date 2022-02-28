@@ -101,6 +101,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 2rem;
 		padding: 2rem 2.5rem;
+		display: none;
 	}
 
 	&__float-left {
@@ -158,120 +159,12 @@
 	}
 }
 
-.search {
-	display: flex;
-	align-items: center;
-	position: relative;
 
-	&__input {
-		border: none;
-		display: block;
-		flex: 1;
-		padding: 1rem 2.5rem;
-		font-size: 1.4rem;
-		font-weight: 500;
-		font-family: inherit;
-		border-radius: 5rem;
-		color: $grey-light;
-		text-align: center;
-		position: relative;
-		height: 4rem;
-		border: 2px solid $primary-light;
-	}
-
-	&__input:focus {
-		outline: none;		
-		border: 2px solid $primary-dark;
-	}
-
-	&__input::placeholder {
-		color: #ccc;
-	}
-
-	&__label {
-		position: absolute;
-		right: 0;
-		font-size: 1.2rem;
-		font-weight: 700;
-		color: $primary-dark;
-		display: inline-block;
-		height: 4rem;
-		width: 4rem;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	&__note {
-		font-size: 1rem;
-		font-weight: 400;
-	}
-
-	&__by-price,
-	&__by-type {
-		font-size: 1.2rem;
-		color: $black;
-		margin-top: 1.2rem;
-		margin-bottom: 1rem;
-	}
-}
 
 .search-filter {
 	display: flex;
 }
 
-.categories {
-	padding: 0;
-	background: $white;
-	padding: 1rem;
-	margin-top: 1rem;
-	border-radius: 1rem;
-
-	&__category {
-		display: flex;
-		align-items: center;
-		margin-right: 1rem;
-		width: 10rem;
-	}
-
-	&__label {
-		font-size: 1.2rem;
-		position: relative;
-		padding: .5rem .5rem .5rem 2.5rem;
-		margin-left: 1rem;
-		z-index: 50;
-	}
-
-	&__circle {
-		position: absolute;
-		left: 0;
-		height: 1.4rem;
-		width: 1.4rem;
-		border: 2px solid $primary-light;
-		border-radius: 50%;
-	}
-
-	&__input {
-		display: none;
-	}
-
-	&__input:checked ~ &__label &__circle {
-		border: 2px solid $primary-dark;
-	}
-
-	&__input:checked ~ &__label &__circle::after {
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		height: .6rem;
-		width: .6rem;
-		background: $primary-dark;
-		border-radius: 50%;
-	}
-}
 .search__price-filter {
 	margin-top: 1rem;
 	flex: 1;

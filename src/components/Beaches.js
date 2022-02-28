@@ -23,9 +23,9 @@ const Beaches = () => {
 	);
 
 	return (
-		<>
+		<div className="sub-page">
 			<SectionHeader />
-			<section className="list-items-wrapper">
+			<section className="list-items-wrapper container">
 				<div className="card-wrapper">
 					{results.map((data, idx) => {
 						if (idx === results.length - 1) {
@@ -36,7 +36,7 @@ const Beaches = () => {
 					{loading && <CardSkeletonLoading />}
 				</div>
 			</section>
-		</>
+		</div>
 	);
 };
 

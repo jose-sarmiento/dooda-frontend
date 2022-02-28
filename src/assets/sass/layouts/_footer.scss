@@ -1,7 +1,8 @@
 .section--footer {
 	min-height: 20rem;
-	background: $grey;
+	background: $dark-1;
 	margin: 0!important;
+	padding: 2rem 0;
 }
 
 .footer {
@@ -61,4 +62,8 @@
 		color: #ddd;
 		font-size: 1.2rem;
 	}
+
 }
+	.text-center {
+		text-align: center;
+	}

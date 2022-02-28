@@ -6,7 +6,7 @@ import { places } from "../mocks/links";
 
 const PlacesToStay = () => {
 	return (
-		<Layout>
+		<Layout> 
 			<Outlet />
 		</Layout>
 	);

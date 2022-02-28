@@ -31,18 +31,19 @@ const ViewPlace = () => {
 	const toggleModalClass = () => document.body.classList.toggle("modal-isOpen");
 
 	return (
-		<>
+		<div className="sub-page">
 			<Modal isOpenModal={isOpenModal} close={closeModal} />
-			<div className="hotel">
+			<div className="hotel container">
 				<Link to="/p/hotels" className="btn btn--back">
 					Go Back
 				</Link>
 				<div className="hotel-header">
-					<div className="d-flex flex-between">
+					<div className="d-flex flex-between mb-1">
 						<Stars count={5} />
-						<div className="hotel__favorite">
+						{/*<div className="hotel__favorite">
 							<FaHeart className="hotel__favorite-icon" />
-						</div>
+							add to wishlist
+						</div>*/}
 					</div>
 					<div className="d-flex flex-between">
 						<div className="hotel-header__left">
@@ -169,7 +170,7 @@ const ViewPlace = () => {
 					</div>
 				</section>
 			</div>
-		</>
+		</div>
 	);
 };
 
