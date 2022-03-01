@@ -8,11 +8,6 @@ import {
     Beaches,
     Pools,
     Farms,
-    ViewHotel,
-    ViewHouse,
-    ViewBeach,
-    ViewPool,
-    ViewFarm,
     ViewPlace
 } from "./components"; 
 

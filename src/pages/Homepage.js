@@ -1,14 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
-import { FaFacebook, FaSearch } from "react-icons/fa";
+import React, { useRef, useEffect } from "react";
+import { FaSearch } from "react-icons/fa";
 import { gsap } from "gsap";
+import {Link} from "react-router-dom"
 import hotels from "../mocks/hotels";
 import Layout from "./Layout";
-import { Banner, Card, Reviews, Steps, Features, SearchForm } from "../components";
+import { Card, Reviews, Steps, Features } from "../components";
 import useAppContext from "../hooks/useAppContext";
 
 import manmountain from "../assets/images/contrasted.jpg";
 import manswimming from "../assets/images/contrasted2.jpg";
-import logo from "../assets/images/logo.png";
 
 const Homepage = () => {
 	const { closeSubmenu, isSubmenuOpen } = useAppContext();
@@ -46,7 +46,7 @@ const Homepage = () => {
 				ease: "expo.out",
 				stagger: 0.4,
 			});
-	}, [bannerRef]);
+	}, [bannerRef, q]);
 
 	useEffect(() => {
 		let observer = new IntersectionObserver((entries) => {
@@ -74,7 +74,7 @@ const Homepage = () => {
 						<h2 className="fh-banner__subheading stagger">
 							Trusted by over 200,000 users all over Philippines
 						</h2>
-						<button className="fh-banner__cta stagger">Browse Now</button>
+						<Link to="/p/hotels" className="fh-banner__cta stagger">Browse Now</Link>
 						<div className="fh-banner__line-break stagger">
 							<span className="fh-banner__or">OR</span>
 						</div>

@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import { FaStar, FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import { pesoFormat } from "../utils/pesoFormat";
 import Stars from "./Stars"
 

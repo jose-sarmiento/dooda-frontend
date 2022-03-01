@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link} from "react-router-dom"
 import img1 from "../assets/images/cliford.jpg";
 import img2 from "../assets/images/edward.jpg";
 import img3 from "../assets/images/lens.jpg";
@@ -26,9 +27,9 @@ const Features = () => {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores
 					vitae, accusantium qui minima exercitationem.
 				</p>
-				<a href="#" className="features__cta">
+				<Link to="/p/hotels" className="features__cta">
 					Browse now <i className="fa fa-arrow-right-long features__cta-arrow"></i>
-				</a>
+				</Link>
 			</div>
 			<div className="features__right">
 				<figure

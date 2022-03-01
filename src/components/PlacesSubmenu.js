@@ -1,5 +1,4 @@
 import React from "react";
-import { FaUser, FaBook, FaBell, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const PlacesSubmenu = () => {
@@ -11,7 +10,7 @@ const PlacesSubmenu = () => {
 					<span className="submenu__icon">
 						<i className="fa-solid fa-bed"></i>
 					</span>
-					<Link to="/link" className="submenu__text">
+					<Link to="/p/hotels" className="submenu__text">
 						Hotel
 					</Link>
 				</li>
@@ -20,7 +19,7 @@ const PlacesSubmenu = () => {
 					<span className="submenu__icon">
 						<i className="fa-solid fa-house-chimney"></i>
 					</span>
-					<Link to="/link" className="submenu__text">
+					<Link to="/p/houses" className="submenu__text">
 						Mini House
 					</Link>
 				</li>
@@ -28,7 +27,7 @@ const PlacesSubmenu = () => {
 					<span className="submenu__icon">
 						<i className="fa-solid fa-water-ladder"></i>
 					</span>
-					<Link to="/link" className="submenu__text">
+					<Link to="/p/pools" className="submenu__text">
 						Pools
 					</Link>
 				</li>
@@ -36,7 +35,7 @@ const PlacesSubmenu = () => {
 					<span className="submenu__icon">
 						<i className="fa-solid fa-person-swimming"></i>
 					</span>
-					<Link to="/link" className="submenu__text">
+					<Link to="/p/beaches" className="submenu__text">
 						Beach Resorts
 					</Link>
 				</li>
@@ -44,17 +43,8 @@ const PlacesSubmenu = () => {
 					<span className="submenu__icon">
 						<i className="fa-solid fa-leaf"></i>
 					</span>
-					<Link to="/link" className="submenu__text">
+					<Link to="/p/farms" className="submenu__text">
 						Farm
-					</Link>
-				</li>
-
-				<li className="submenu__row">
-					<span className="submenu__icon">
-						<i className="fa-solid fa-cabin"></i>
-					</span>
-					<Link to="/link" className="submenu__text">
-						Cabins
 					</Link>
 				</li>
 			</ul>
