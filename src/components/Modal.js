@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { FaTimes, FaCheck } from "react-icons/fa";
 import MultiStepForm from "./MultiStepForm";
+import useAppContext from "../hooks/useAppContext"
 
-const Modal = ({ isOpenModal, close }) => {
+const Modal = () => {
+	const { isOpenModal, closeModal } = useAppContext()
 	const [currStep, setCurrStep] = useState(1);
 
 	return (
 		<div className={isOpenModal ? "modal modal--show" : "modal"}>
 			<div className="modal__content">
-				<button className="modal__close" onClick={() => close()}>
+				<button className="modal__close" onClick={() => closeModal()}>
 					<FaTimes />
 				</button>
 				<div className="modal__body">
@@ -44,7 +46,7 @@ const Modal = ({ isOpenModal, close }) => {
 						</div>
 					</div>
 
-					<MultiStepForm currStep={currStep} setCurrStep={setCurrStep} closeModal={close} />
+					<MultiStepForm currStep={currStep} setCurrStep={setCurrStep} closeModal={closeModal} />
 				</div>
 				<div className="modal__footer"></div>
 			</div>

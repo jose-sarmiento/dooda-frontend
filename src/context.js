@@ -3,21 +3,17 @@ import React, {useState} from 'react'
 export const AppContext = React.createContext()
 
 const AppProvider = ({children}) => {
-	const [isSubmenuOpen, setIsSubmenuOpen] = useState(false)
-	const [location, setLocation] = useState({})
+	const [isOpenModal, setIsOpenModal] = useState(false);
 
-	const openSubmenu = (page, coordinates) => {
-		setLocation(coordinates)
-		setIsSubmenuOpen(true)
-	}
-	const closeSubmenu = () => setIsSubmenuOpen(false)
+	const openModal = () => setIsOpenModal(true)
+
+	const closeModal = () => setIsOpenModal(false)
 	
 	return (
 		<AppContext.Provider value={{
-			isSubmenuOpen,
-			openSubmenu,
-			closeSubmenu,
-			location
+			isOpenModal,
+			openModal,
+			closeModal
 		}}>
 			{children}
 		</AppContext.Provider>

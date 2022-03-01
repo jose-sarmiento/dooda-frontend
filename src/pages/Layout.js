@@ -1,13 +1,12 @@
 import React from "react";
-import { Header, Footer, Submenu } from "../components";
+import { Header, Footer, Submenu, Modal } from "../components";
 
 const Layout = React.forwardRef((props, ref) => {
 	return (
 		<>
 			<Header ref={ref || null} />
-			<div className="main">
-				{props.children}
-			</div>
+			<Modal />
+			<div className="main">{props.children}</div>
 			<Footer />
 		</>
 	);

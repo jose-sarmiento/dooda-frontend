@@ -31,6 +31,7 @@ import MyAccountSubmenu from "./MyAccountSubmenu"
 import HostSubmenu from "./HostSubmenu"
 import SearchForm from "./SearchForm"
 import FilterDraggable from "./FilterDraggable"
+import Modal from "./Modal"
 
 
 export {
@@ -66,5 +67,6 @@ export {
 	HostSubmenu,
 	MyAccountSubmenu,
 	SearchForm,
-	FilterDraggable
+	FilterDraggable,
+	Modal,
 }

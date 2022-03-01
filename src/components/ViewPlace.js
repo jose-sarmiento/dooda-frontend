@@ -14,26 +14,15 @@ import img4 from "../assets/images/4.jpg";
 import img5 from "../assets/images/5.jpg";
 
 import { pesoFormat } from "../utils/pesoFormat";
+import useAppContext from "../hooks/useAppContext"
 
 const ViewPlace = () => {
-	const { id } = useParams();
-	const [isOpenModal, setIsOpenModal] = useState(false);
+	const {openModal} = useAppContext()
 
-	const handleModalOpen = () => {
-		setIsOpenModal(true);
-		// toggleModalClass()
-	};
-
-	const closeModal = () => {
-		setIsOpenModal(false);
-		// toggleModalClass()
-	};
-
-	const toggleModalClass = () => document.body.classList.toggle("modal-isOpen");
+	const handleModalOpen = () => openModal()
 
 	return (
 		<div className="sub-page">
-			<Modal isOpenModal={isOpenModal} close={closeModal} />
 			<div className="hotel container">
 				<Link to="/p/hotels" className="btn btn--back">
 					Go Back

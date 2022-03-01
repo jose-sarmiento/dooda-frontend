@@ -98,11 +98,11 @@ const Homepage = () => {
 						/>
 					</figure>
 
-					<div className="fh-banner__footer">
+				{/*	<div className="fh-banner__footer">
 						<FaFacebook className="fh-banner__social" />
 						<FaFacebook className="fh-banner__social" />
 						<FaFacebook className="fh-banner__social" />
-					</div>
+					</div>*/}
 				</div>
 			</section>
 
@@ -124,7 +124,6 @@ const Homepage = () => {
 					<Steps />
 				</div>
 			</section>
-
 
 			<section className="section section-reviews">
 				<div className="container">

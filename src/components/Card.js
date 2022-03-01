@@ -4,12 +4,15 @@ import { FaStar, FaMapMarkerAlt } from "react-icons/fa";
 import { pesoFormat } from "../utils/pesoFormat";
 import Stars from "./Stars"
 
+import useAppContext from "../hooks/useAppContext"
+
 const Card = React.forwardRef((props, ref) => {
     const {data} = props
+    const { openModal } = useAppContext()
 
     return (
         <div className="card fadein" ref={ ref || null}>
-            <Link to={`${data.id}`} className="card__img-wrapper">
+            <Link to={`/p/hotels/${data.id}`} className="card__img-wrapper">
                 <img src={data.image.large} alt="img1" className="card__img" />
             </Link>
             <div className="card__header">
@@ -24,7 +27,7 @@ const Card = React.forwardRef((props, ref) => {
                         {data.address.street + " " + data.address.city }
                     </h6>
                 </div>
-                <button className="btn btn--small btn--primary">Book now</button>
+                <button className="btn btn--small btn--primary" onClick={() => openModal()}>Book now</button>
             </div>
         </div>
     );
