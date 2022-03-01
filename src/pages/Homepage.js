@@ -75,8 +75,10 @@ const Homepage = () => {
 							Trusted by over 200,000 users all over Philippines
 						</h2>
 						<button className="fh-banner__cta stagger">Browse Now</button>
-
-						<form className="fh-banner__search">
+						<div className="fh-banner__line-break stagger">
+							<span className="fh-banner__or">OR</span>
+						</div>
+						<form className="fh-banner__search stagger">
 							<input type="text" id="search-form" className="fh-banner__input"
 							placeholder="e.g Twin Rock Beach Resort" />
 							<button className="fh-banner__submit-btn">
@@ -104,26 +106,33 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className=" section section--steps">
-				<h2 className="section__heading">3 Easy Step Booking Process</h2>
-				<Steps />
-			</section>
-
-			<section className="section section-reviews">
-				<Reviews />
-			</section>
-
-			<section className="section ">
-				<h2 className="section__heading">Popular Hotels and Resorts</h2>
+			<section className="section section--popular">
+				<div className="container">
+					<h2 className="section__heading">Popular Hotels and Resorts</h2>
 
 				<div className="card-wrapper">
 					{hotels.slice(0, 3).map((hotel) => (
 						<Card key={hotel.id} data={hotel} />
 					))}
 				</div>
+				</div>
 			</section>
 
-			<section className="section section--features ">
+			<section className=" section section--steps">
+				<div className="container">
+					<h2 className="section__heading">3 Easy Step Booking Process</h2>
+					<Steps />
+				</div>
+			</section>
+
+
+			<section className="section section-reviews">
+				<div className="container">
+					<Reviews />
+				</div>
+			</section>
+
+			<section className="section section--features">
 				<Features />
 			</section>
 		</Layout>

@@ -27,17 +27,17 @@
 	}
 
 	&__heading {
-		font-size: 4.2rem;
+		font-size: 4.6rem;
 		text-transform: capitalize;
-		font-weight: 500;
-		color: $primary-dark;
+		font-weight: 600;
+		color: $white;
 		// color: #f2e6eb;
 		margin-bottom: 1rem;
 	}
 
 	&__subheading {
 		font-size: 1.6rem;
-		font-weight: 300;
+		font-weight: 400;
 		color: #d4c5cb;
 	}
 
@@ -47,12 +47,41 @@
 		padding: 1.4rem 4rem;
 		border: none;
 		border-radius: 5rem;
-		background: $white;
-		// background: linear-gradient(to right, darken($primary-dark, 15%), darken($primary-dark, 10%));
+		background: $primary;
+		background: linear-gradient(to right, darken($primary-dark, 15%), darken($primary-dark, 10%));
 		// background: #fc7e3f;
 		font-size: 1.4rem;
 		font-weight: 600;
-		color: $grey;
+		color: $white;
+		font-family: inherit;
+	}
+
+	&__line-break {
+		text-align: center;
+		margin: 2rem auto;
+	}
+
+	&__or {
+		position: relative;
+	}
+
+	&__or::before,
+	&__or::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 4px;
+		width: 20rem;
+		background: rgba($darkgreen, .3);
+		border-radius: 1rem;
+	}
+
+	&__or::before {
+		right: 3rem;
+	}
+	&__or::after {
+		left: 3rem;
 	}
 
 	.stagger {
@@ -133,7 +162,6 @@
 		width: 40rem;
 		margin: 0 auto;
 		display: flex;
-		margin-top: 4rem;
 		position: relative;
 	}
 
@@ -158,7 +186,7 @@
 
 	&__input:focus {
 		outline: none;
-		border-bottom: 2px solid $primary;
+		border: 2px solid $primary-dark;
 	}
 
 	&__input:focus ~ .fh-banner__submit-btn {

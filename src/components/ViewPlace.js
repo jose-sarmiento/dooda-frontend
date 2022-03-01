@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaMapMarkerAlt, FaHeart } from "react-icons/fa";
+
 import Stars from "./Stars";
 import MyMap from "./MyMap";
 import Review from "./Review";
@@ -67,6 +68,7 @@ const ViewPlace = () => {
 					</div>
 				</div>
 
+				
 				<div className="hotel__images">
 					<figure className="hotel__img-wrapper hotel__img-wrapper--1">
 						<img src={img1} alt="first image" className="hotel__image" />

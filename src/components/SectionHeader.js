@@ -2,7 +2,7 @@ import React from 'react'
 import CustomLink from "./CustomLink"
 import { places } from "../mocks/links";
 
-const SectionHeader = () => {
+const SectionHeader = ({toggle}) => {
 	// const [min, setMin] = useState(15000);
 	// const [max, setMax] = useState(40000);
 	return (
@@ -20,13 +20,13 @@ const SectionHeader = () => {
 				</ul>
 
 				<div className="filters">
-					<select name="filter" id="filter" className="filters__select">
+					{/*<select name="filter" id="filter" className="filters__select">
 						<option value="nearest">Nearest</option>
 						<option value="price">Price</option>
 						<option value="rating">Rating</option>
 						<option value="nearest">Nearest</option>
-					</select>
-					<button className="filters__price-toggler">Filters</button>
+					</select>*/}
+					<button type="button" className="filters__price-toggler" onClick={toggle}>Filters</button>
 				</div>
 				{/*<div className="filters">
 					<h4 className="filters__heading">Filters:</h4>

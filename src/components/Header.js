@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import useAppContext from "../hooks/useAppContext";
 import PlacesSubmenu from "./PlacesSubmenu";
 import HomeSubmenu from "./HomeSubmenu";
-import ExperiencesSubmenu from "./ExperiencesSubmenu";
+import HostSubmenu from "./HostSubmenu";
 import MyAccountSubmenu from "./MyAccountSubmenu";
 
 import logo from "../assets/images/logo.png";
@@ -23,7 +23,7 @@ const Header = React.forwardRef((props, ref) => {
 			y: 0,
 			opacity: 1,
 			pointerEvents: "all",
-			delay: 2.4,
+			delay: 3.4,
 			ease: "expo.out",
 		});
 	}, []);
@@ -62,15 +62,15 @@ const Header = React.forwardRef((props, ref) => {
 					</li>
 					<li className="nav__item">
 						<Link to="/p/hotels" className="nav__link">
-							Places to stay
+							Destinations
 						</Link>
 						<PlacesSubmenu />
 					</li>
 					<li className="nav__item">
 						<Link to="/experiences" className="nav__link">
-							Adventure
+							Become a Host
 						</Link>
-						<ExperiencesSubmenu />
+						<HostSubmenu />
 					</li>
 					<li className="nav__item">
 						<Link to="/experiences" className="nav__link">
@@ -89,9 +89,7 @@ const Header = React.forwardRef((props, ref) => {
 					</li>*/}
 
 					<li className="header-right__item">
-						<Link to="new" className="header-right__link">
-							Become a host
-						</Link>
+						<button className="nav__cta">Login</button>
 					</li>
 
 					<li className="header-right__item">
@@ -105,7 +103,7 @@ const Header = React.forwardRef((props, ref) => {
 							<FaCaretDown/>
 						</button>
 					</li>*/}
-						{/*<button className="nav__cta">Signin</button>*/}
+					
 				</ul>
 			</div>
 		</header>

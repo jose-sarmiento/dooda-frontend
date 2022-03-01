@@ -1,26 +1,26 @@
 .section--features {
-	box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .2);
 	position: relative;
 
-	&::before {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient(to right, $primary-dark, darken($primary-dark, 5%));
-		clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);
-	}
+	// &::before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 0;
+	// 	top: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	background: linear-gradient(to right, $primary-dark, darken($primary-dark, 5%));
+	// 	clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);
+	// }
 }
 
 .features {
 	display: flex;
 	align-items: center;
-	height: 40rem;
-	width: 80%;
+	height: 80vh;
 	margin: 4rem auto;
 	border-radius: 1rem;
+	width: 1200px;
+	margin: 0 auto;
 
 	&__left {
 		text-align: left;
@@ -65,12 +65,13 @@
 	&__cta {
 		margin-top: 4rem;
 		display: inline-block;
-		background: $white;
-		padding: 1rem 1.2rem 1rem 1rem;
+		background: $primary-bright;
+		padding: 1.2rem 2rem;
 		text-align: left;
 		font-weight: 600;
-		color: $black;
+		color: $white;
 		cursor: pointer;
+		border-radius: 3rem;
 	}
 
 	&__cta:hover .features__cta-arrow {
@@ -96,9 +97,9 @@
 		position: absolute;
 		box-sizing: content-box;
 		transition: all .4s ease;
-		box-shadow: 0px 0px 2.5rem rgba(0, 0, 0, .2);
+		// box-shadow: 0px 0px 2.5rem rgba(0, 0, 0, .2);
 		overflow: hidden;
-		border-radius: 1rem;
+		border-radius: .5rem;
 	}
 
 	&__img-wrap:hover {
@@ -106,28 +107,27 @@
 	}
 
 	&__img-wrap--1 {
-		bottom: -2rem;
-		left: 50%;
-		width: 40rem;
+		bottom: 4rem;
+		left: 40%;
+		width: 42rem;
 		height: 25rem;
-		z-index: 8;
+		z-index: 5;
 		transform: translateX(-50%);
 	}
 
 	&__img-wrap--2 {
-		right: -6rem;
-		top: -2rem;
+		right: 0;
+		top: 10%;
 		width: 28rem;
 		height: 35rem;
-		z-index: 5;
+		z-index: 15;
 
 	}
 
 	&__img-wrap--3 {
-		left: 30%;
-		top: 30%;
-		transform: translate(-50%, -50%);
-		width: 35rem;
+		left: -3rem;
+		top: 0;
+		width: 40rem;
 		height: 25rem;
 		z-index: 10;
 	}
@@ -140,7 +140,7 @@
 	}
 
 	&__img-wrap .features__img {
-		filter: brightness(85%) blur(2px);
+		filter: brightness(85%) blur(1px);
 	}
 
 	.features__img-wrap--focus {

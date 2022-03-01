@@ -10,7 +10,7 @@ const Features = () => {
 		if (n === focus) return;
 		setFocus(n);
 	};
-
+ 
 	return (
 		<div className="features">
 			<div className="features__left">

@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { NavLink } from "react-router-dom";
-import { Card, CardSkeletonLoading, SectionHeader } from "../components";
+import { Card, CardSkeletonLoading, SectionHeader, FilterDraggable } from "../components";
 import usePaginateFetch from "../hooks/usePaginateFetch";
 
 const Beaches = () => {
+	const [isOpen, setIsOpen] = useState(false)
+
 	const [page, setPage] = useState(1);
 	const { results, loading, error, hasNext } = usePaginateFetch("beach", page, 9);
 	const observer = useRef();
@@ -22,9 +24,15 @@ const Beaches = () => {
 		[loading, hasNext]
 	);
 
+	const close = (e) => setIsOpen(false)
+	const toggle = (e) => {
+		setIsOpen(prev => !prev)
+	}
+
 	return (
 		<div className="sub-page">
-			<SectionHeader />
+			<FilterDraggable isOpen={isOpen} close={close} />
+			<SectionHeader toggle={toggle} />
 			<section className="list-items-wrapper container">
 				<div className="card-wrapper">
 					{results.map((data, idx) => {

@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.png";
 const Footer = () => {
 	return (
 		<section className="section--footer">
-			<div className="container">
+			<div className="container footer-container">
 				<div className="footer">
 					<div className="footer__about">
 						<div className="footer__website">

@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 const PlacesSubmenu = () => {
 	return (
 		<div className="submenu submenu--places">
-			<div className="submenu__group-header">
-				<h3 className="submenu__heading">What place you are looking?</h3>
-			</div>
 			<ul className="submenu__group submenu__group--categories">
+				<h3 className="submenu__heading submenu__heading--categories">What place you are looking?</h3>
 				<li className="submenu__row">
 					<span className="submenu__icon">
-						<i class="fa-solid fa-bed"></i>
+						<i className="fa-solid fa-bed"></i>
 					</span>
 					<Link to="/link" className="submenu__text">
 						Hotel
@@ -20,7 +18,7 @@ const PlacesSubmenu = () => {
 
 				<li className="submenu__row">
 					<span className="submenu__icon">
-						<i class="fa-solid fa-house-chimney"></i>
+						<i className="fa-solid fa-house-chimney"></i>
 					</span>
 					<Link to="/link" className="submenu__text">
 						Mini House
@@ -28,7 +26,7 @@ const PlacesSubmenu = () => {
 				</li>
 				<li className="submenu__row">
 					<span className="submenu__icon">
-						<i class="fa-solid fa-water-ladder"></i>
+						<i className="fa-solid fa-water-ladder"></i>
 					</span>
 					<Link to="/link" className="submenu__text">
 						Pools
@@ -36,7 +34,7 @@ const PlacesSubmenu = () => {
 				</li>
 				<li className="submenu__row">
 					<span className="submenu__icon">
-						<i class="fa-solid fa-person-swimming"></i>
+						<i className="fa-solid fa-person-swimming"></i>
 					</span>
 					<Link to="/link" className="submenu__text">
 						Beach Resorts
@@ -44,7 +42,7 @@ const PlacesSubmenu = () => {
 				</li>
 				<li className="submenu__row">
 					<span className="submenu__icon">
-						<i class="fa-solid fa-leaf"></i>
+						<i className="fa-solid fa-leaf"></i>
 					</span>
 					<Link to="/link" className="submenu__text">
 						Farm
@@ -53,7 +51,7 @@ const PlacesSubmenu = () => {
 
 				<li className="submenu__row">
 					<span className="submenu__icon">
-						<i class="fa-solid fa-cabin"></i>
+						<i className="fa-solid fa-cabin"></i>
 					</span>
 					<Link to="/link" className="submenu__text">
 						Cabins
@@ -67,7 +65,7 @@ const PlacesSubmenu = () => {
 				</div>
 				<li className="submenu__row">
 					<span className="submenu__icon">
-						<i class="fa-solid fa-map-location-dot"></i>
+						<i className="fa-solid fa-map-location-dot"></i>
 					</span>
 					<Link to="/link" className="submenu__text">
 						Nearest
@@ -76,7 +74,7 @@ const PlacesSubmenu = () => {
 
 				<li className="submenu__row">
 					<span className="submenu__icon">
-						<i class="fa-solid fa-star"></i>
+						<i className="fa-solid fa-star"></i>
 					</span>
 					<Link to="/link" className="submenu__text">
 						Highest Rated
@@ -84,7 +82,7 @@ const PlacesSubmenu = () => {
 				</li>
 				<li className="submenu__row">
 					<span className="submenu__icon">
-						<i class="fa-solid fa-dollar-sign"></i>
+						<i className="fa-solid fa-dollar-sign"></i>
 					</span>
 					<Link to="/link" className="submenu__text">
 						Cheapest

@@ -28,8 +28,9 @@ import Review from "./Review"
 import HomeSubmenu from "./HomeSubmenu"
 import PlacesSubmenu from "./PlacesSubmenu"
 import MyAccountSubmenu from "./MyAccountSubmenu"
-import ExperiencesSubmenu from "./ExperiencesSubmenu"
+import HostSubmenu from "./HostSubmenu"
 import SearchForm from "./SearchForm"
+import FilterDraggable from "./FilterDraggable"
 
 
 export {
@@ -62,7 +63,8 @@ export {
 	Review,
 	HomeSubmenu,
 	PlacesSubmenu,
-	ExperiencesSubmenu,
+	HostSubmenu,
 	MyAccountSubmenu,
-	SearchForm
+	SearchForm,
+	FilterDraggable
 }
