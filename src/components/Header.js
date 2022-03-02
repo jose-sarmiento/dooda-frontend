@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { gsap } from "gsap";
 import PlacesSubmenu from "./PlacesSubmenu";
@@ -10,6 +10,9 @@ import logo from "../assets/images/logo.png";
 
 const Header = React.forwardRef((props, ref) => {
 	const headerRef = useRef();
+	const location = useLocation()
+
+	console.log(location)
 
 	useEffect(() => {
 		gsap.to(headerRef.current, {
@@ -27,7 +30,7 @@ const Header = React.forwardRef((props, ref) => {
 	}, [headerRef, ref])
 
 	return (
-		<header className="header" ref={headerRef}>
+		<header className={location.pathname === "/" ? "header header--start-transparent" : "header"} ref={(location.pathname === "/") ? headerRef : null}>
 			<div className="header__container">
 				<Link to="/" className="header__logo-wrapper">
 					<img src={logo} alt="Dooda logo" className="header__logo" />
