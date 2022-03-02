@@ -47,7 +47,7 @@ const Header = React.forwardRef((props, ref) => {
 						<PlacesSubmenu />
 					</li>
 					<li className="nav__item">
-						<Link to="/new/host" className="nav__link">
+						<Link to="/host/guide" className="nav__link">
 							Become a Host
 						</Link>
 						<HostSubmenu />

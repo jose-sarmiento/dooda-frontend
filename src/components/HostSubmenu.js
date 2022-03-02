@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import womanwithcomputer from "../assets/images/woman-with-computer.jpg";
+
+import scrollWithOffset from "../utils/scrollWithOffset"
 
 const HostSubmenu = () => {
 	return (
@@ -21,19 +24,38 @@ const HostSubmenu = () => {
 
 					<ul className="hosting__links">
 						<li className="hosting__item">
-							<Link to="#" className="hosting__link">Learn How to Start Hosting.</Link>
+							<NavHashLink 
+								smooth 
+								to="/host/guide#hosting" 
+								scroll={el => scrollWithOffset(el, -80)}
+								className="hosting__link">
+								Learn How to Start Hosting.
+							</NavHashLink>
 						</li>
 						<li className="hosting__item">
-							<Link to="#" className="hosting__link">Terms and Conditions</Link>
+							<NavHashLink smooth to="/host/guide#terms" scroll={el => scrollWithOffset(el, -80)} className="hosting__link">
+								Terms and Conditions
+							</NavHashLink>
 						</li>
 						<li className="hosting__item">
-							<Link to="#" className="hosting__link">Read more about hosting</Link>
+							<NavHashLink
+								smooth
+								to="/host/guide#getstarted"
+								scroll={el => scrollWithOffset(el, -80)}
+								className="hosting__link"
+							>
+								Read more about hosting
+							</NavHashLink>
 						</li>
 					</ul>
 				</div>
 
 				<div className="hosting__image-wrapper">
-					<img src={womanwithcomputer} alt="woman in front of computer" className="hosting__image" />
+					<img
+						src={womanwithcomputer}
+						alt="woman in front of computer"
+						className="hosting__image"
+					/>
 				</div>
 			</div>
 		</div>

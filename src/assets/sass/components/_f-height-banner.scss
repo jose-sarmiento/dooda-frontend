@@ -51,8 +51,9 @@
 		background: $primary;
 		background: linear-gradient(to right, darken($primary-dark, 15%), darken($primary-dark, 10%));
 		// background: #fc7e3f;
-		font-size: 1.4rem;
-		font-weight: 600;
+		font-size: 1.6rem;
+		// text-transform: uppercase;
+		font-weight: 700;
 		color: $white;
 		font-family: inherit;
 	}
@@ -174,6 +175,7 @@
 		background: rgba($white, .1);
 		padding: 0 4rem 0 2rem;
 		color: $white;
+		font-weight: 600;
 		font-family: inherit;
 		font-size: 1.4rem;
 		border-bottom: 2px solid transparent;
