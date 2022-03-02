@@ -14,8 +14,26 @@ const MyAccountSubmenu = () => {
 						<span className="submenu__icon">
 							<i className="fa-solid fa-user"></i>
 						</span>
-						<Link to="/link" className="submenu__text">
+						<Link to="/account/profile" className="submenu__text">
 							Profile
+						</Link>
+					</li>
+
+					<li className="submenu__row">
+						<span className="submenu__icon">
+							<i className="fa-solid fa-bell"></i>
+						</span>
+						<Link to="/account/notifications" className="submenu__text">
+							Notifications
+						</Link>
+					</li>
+
+					<li className="submenu__row">
+						<span className="submenu__icon">
+							<i className="fa-solid fa-bell"></i>
+						</span>
+						<Link to="/account/wishlists" className="submenu__text">
+							Wishlists
 						</Link>
 					</li>
 
@@ -23,18 +41,11 @@ const MyAccountSubmenu = () => {
 						<span className="submenu__icon">
 							<i className="fa-solid fa-book"></i>
 						</span>
-						<Link to="/link" className="submenu__text">
-							Bookings
+						<Link to="/account/recent" className="submenu__text">
+							Recent Bookings
 						</Link>
 					</li>
-					<li className="submenu__row">
-						<span className="submenu__icon">
-							<i className="fa-solid fa-bell"></i>
-						</span>
-						<Link to="/link" className="submenu__text">
-							Notifications
-						</Link>
-					</li>
+					
 				</ul>
 				<div className="account__me">
 					<figure className="account__picture-wrapper">

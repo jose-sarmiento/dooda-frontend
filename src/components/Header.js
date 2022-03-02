@@ -11,9 +11,7 @@ import logo from "../assets/images/logo.png";
 const Header = React.forwardRef((props, ref) => {
 	const headerRef = useRef();
 	const location = useLocation()
-
-	console.log(location)
-
+	
 	useEffect(() => {
 		gsap.to(headerRef.current, {
 			y: 0,
@@ -56,7 +54,7 @@ const Header = React.forwardRef((props, ref) => {
 						<HostSubmenu />
 					</li>
 					<li className="nav__item">
-						<Link to="/account" className="nav__link">
+						<Link to="/account/profile" className="nav__link">
 							My Account
 						</Link>
 						<MyAccountSubmenu />
@@ -68,11 +66,11 @@ const Header = React.forwardRef((props, ref) => {
 						<Link to="/signin" className="nav__cta">Login</Link>
 					</li>
 
-					<li className="header-right__item">
+					{/*<li className="header-right__item">
 						<button className="header-right__button">
 							<FiMenu className="header-right__icon" />
 						</button>
-					</li>
+					</li>*/}
 				</ul>
 			</div>
 		</header>

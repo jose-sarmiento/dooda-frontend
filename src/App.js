@@ -5,6 +5,7 @@ import PlacesToStay from "./pages/PlacesToStay";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import HostingGuide from "./pages/HostingGuide";
+import MyAccount from "./pages/MyAccount";
 import {
     Hotels,
     Houses,
@@ -32,6 +33,7 @@ function App() {
             </Route>
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/account/*" element={<MyAccount />} />
             <Route path="/host/guide" element={<HostingGuide />} />
             <Route path="/about" element={<h1>About Page</h1>} />
             <Route path="/*" element={<h1>404 Not Found</h1>} />

@@ -1,0 +1,95 @@
+.myaccount {
+	margin: 0 auto;
+	margin-top: 8rem;
+	max-width: 1200px;
+	min-height: 80vh;
+	display: grid;
+	grid-template-columns: 22rem 1fr;
+
+	&__left {
+		background: #f1f1f1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 2rem 1rem;
+	}
+
+	&__profile-image-wrapper {
+		height: 12rem;
+		width: 12rem;
+		overflow: hidden;
+		border-radius: 4px;
+	}
+
+	&__profile-image {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	&__name {
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $primary-dark;
+		margin-top: 1.5rem;
+	}
+
+	&__job {
+		font-weight: 500;
+		color: $grey;
+	}
+
+	&__links {
+		flex: 1;
+		align-self: stretch;
+		text-align: left;
+		margin-top: 1.5rem;
+	}
+
+	&__item {
+		
+	}
+
+
+	&__link {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: inherit;
+		display: block;
+		width: 100%;
+		padding: .5rem;
+		display: grid;
+		grid-template-columns: 3rem 1fr;
+	}
+
+	&__link:hover {
+		background: #eee;
+	}
+
+	&__link--active {
+		color: $primary-dark;
+	}
+
+	&__right {
+		padding: 2rem 1rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

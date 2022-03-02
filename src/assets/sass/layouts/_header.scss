@@ -139,8 +139,8 @@
 	}
 
 	&__cta {
-		padding: .4rem 2.5rem;
-		font-size: 1.3rem;
+		padding: .6rem 2.5rem;
+		font-size: 1.5rem;
 		background: none;
 		font-weight: 600;
 		border: 2px solid $primary-dark;
@@ -181,6 +181,11 @@
 .header--dark {
 	box-shadow: none;
 	
+	.header__container {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	
 	.nav__link {
 		color: #deced5;
 	}
@@ -194,8 +199,12 @@
 	}
 
 	.nav__cta {
-		border: 2px solid primary-dark;
+		border: 2px solid darken($primary-dark, 10%);
 		background: transparent;
+	}
+
+	.header-right__button {
+		background: #ccc;
 	}
 }
 
