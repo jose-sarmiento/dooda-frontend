@@ -1,0 +1,173 @@
+
+
+.signin {
+	height: 100vh;
+	background: $lightblue;
+	position: relative;
+
+	&__container {
+		z-index: 1000;
+		width: 1200px;
+		height: 90vh;
+		border-radius: 3rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: linear-gradient(
+				to right, 
+				$darkblue 0%, 
+				$darkblue 30%, 
+				rgba($darkblue, 1) 45%, 
+				rgba($darkblue, .9) 60%, 
+				rgba($darkblue, 0) 100%, 
+			) , url(../../images/woman-with-computer.jpg);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position:center right;
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__heading,
+	&__sub1,
+	&__sub2 {
+		margin: 0px;
+		padding: 0px;
+		margin-bottom: 1rem;
+		font-size: 1.4rem;
+		color: #cfcfcf;
+	}
+
+	&__heading {
+		font-size: 3.2rem;
+		color: $white;
+	}
+
+	&__sub1 {
+	}
+
+	&__sub2 {
+		margin-bottom: 3rem;
+	}
+
+	&__link {
+		color: $primary-dark;
+	}
+}
+
+._form {
+   display: block;
+   width: 40rem;
+
+   &__group {
+  
+   }
+
+   &__group:not(:last-child) {
+      margin-bottom: 1rem;
+   }
+
+   &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+   }
+
+   &__input {
+      font-size: 1.3rem;
+      padding: 1rem 2rem;
+      font-family: inherit;
+      color: $white;
+      border-radius: 2px;
+      background: #323644;
+      border: none;
+      border-bottom: 2px solid transparent;
+      width: 100%;
+      display: block;
+      transition: all .3s;
+
+      &:focus {
+         outline: none;
+         border-bottom: 2px solid $green;
+      }
+
+      &:focus:invalid {
+         border-bottom: 2px solid red;
+      }
+
+      &::-webkit-input-placeholder {
+         color: #c7d3d6;
+      }
+   }
+
+   &__label {
+      color: $white;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-left: 2rem;
+      margin-top: .5rem;
+      display: block;
+      transition: all .3s;
+   }
+
+   &__grid-label {
+      font-size: 1.2rem;
+      color: blue;
+      font-weight: 700;
+   }
+
+   &__input:placeholder-shown + &__label {
+       opacity: 0;
+       visibility: hidden;
+       transform: translateY(-2.5rem);
+   }
+
+   textarea {
+   	resize: none;
+   	height: 8rem;
+   }
+
+   &__submit {
+   		padding: 1.2rem 3rem;
+   		display: inline-block;
+  		text-align: center;
+	    font-weight: 600;
+  		background: linear-gradient(to right, darken($primary-dark, 10%), darken($primary-dark, 5%));
+  		border: none;
+  		cursor: pointer;
+  		border-radius: 3rem;
+  		color: $white;
+  		font-family: inherit;
+   }
+
+   &__submit-btn:disabled {
+      background: blue;
+      cursor: default;
+      pointer-events: none;
+   }
+
+   &__submit--back {
+   		margin-left: 2rem;
+   		background: transparent;
+   		border: 1px solid $primary-dark;
+   }
+
+   &__submit:hover {
+   		background: darken($primary-dark, 20%);
+   }
+
+
+}
+
+
+
+
+
+

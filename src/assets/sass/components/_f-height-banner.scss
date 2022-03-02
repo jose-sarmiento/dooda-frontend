@@ -3,8 +3,9 @@
 
 .fh-banner {
 	height: 100vh;
-	background: $dark-1;
+	background: $darkblue;
 	z-index: -1;
+	overflow: hidden;
 	// font-family: 'Qucik', serif;
 	
 	&__content {
@@ -121,7 +122,7 @@
 		bottom: 0;
 		height: 100%;
 		width: 100%;
-		background: radial-gradient(rgba($darkgreen, .6), rgba($dark-1, .95));
+		background: radial-gradient(rgba($darkblue, .6), rgba($darkblue, .95));
 		z-index: 50;
 	}
 

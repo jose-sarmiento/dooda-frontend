@@ -62,7 +62,7 @@ const Header = React.forwardRef((props, ref) => {
 
 				<ul className="header-right">
 					<li className="header-right__item">
-						<button className="nav__cta">Login</button>
+						<Link to="/signin" className="nav__cta">Login</Link>
 					</li>
 
 					<li className="header-right__item">
