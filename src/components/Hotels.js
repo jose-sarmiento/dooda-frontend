@@ -6,7 +6,7 @@ import { places } from "../mocks/links";
 
 const Hotels = () => {
 	const [isOpen, setIsOpen] = useState(false)
-
+ 
 	const [page, setPage] = useState(1);
 	const { results, loading, error, hasNext } = usePaginateFetch("hotel", page, 9);
 	const observer = useRef();

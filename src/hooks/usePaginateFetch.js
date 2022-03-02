@@ -7,9 +7,9 @@ export default function usePaginateFetch(query, page, limit) {
    const [results, setResults] = useState([]);
    const [hasNext, setHasNext] = useState(false);
 
-   useEffect(() => {
-      setResults([]);
-   }, [query]);
+   // useEffect(() => {
+   //    setResults([]);
+   // }, [query]);
 
    useEffect(() => {
       setLoading(true);
