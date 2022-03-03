@@ -7,6 +7,7 @@
 	margin: 0 auto;
 	z-index: -1;
 	overflow: hidden;
+	// display: none;
 	// font-family: 'Qucik', serif;
 	
 	&__content {
@@ -16,7 +17,7 @@
 
 	&__text {
 		position: absolute;
-		top: 54%;
+		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 55;
@@ -124,7 +125,7 @@
 		bottom: 0;
 		height: 100%;
 		width: 100%;
-		background: radial-gradient(rgba($darkblue, .6), rgba($darkblue, .95));
+		background: radial-gradient(rgba($darkblue, .9), rgba($darkblue, .9));
 		z-index: 50;
 	}
 

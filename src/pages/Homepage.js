@@ -106,6 +106,10 @@ const Homepage = () => {
 				</div>
 			</section>
 
+			<section className="section section--features">
+				<Features />
+			</section>
+
 			<section className="section section--popular">
 				<div className="container">
 					<h2 className="section__heading">Popular Places This month</h2>
@@ -131,9 +135,6 @@ const Homepage = () => {
 				</div>
 			</section>
 
-			<section className="section section--features">
-				<Features />
-			</section>
 		</Layout>
 	);
 };

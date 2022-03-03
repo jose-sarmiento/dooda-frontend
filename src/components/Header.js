@@ -6,16 +6,16 @@ import PlacesSubmenu from "./PlacesSubmenu";
 import HostSubmenu from "./HostSubmenu";
 import MyAccountSubmenu from "./MyAccountSubmenu";
 
-import useAppContext from "../hooks/useAppContext"
+import useAppContext from "../hooks/useAppContext";
 
 import logo from "../assets/images/logo.png";
-import user from "../assets/images/woman.jpg"
+import user from "../assets/images/woman.jpg";
 
 const Header = React.forwardRef((props, ref) => {
 	const headerRef = useRef();
 	const location = useLocation();
 
-	const {openSidebar} = useAppContext()
+	const { openSidebar } = useAppContext();
 
 	useEffect(() => {
 		gsap.to(headerRef.current, {
@@ -31,6 +31,21 @@ const Header = React.forwardRef((props, ref) => {
 		if (!ref) return;
 		ref.current = headerRef.current;
 	}, [headerRef, ref]);
+
+	useEffect(() => {
+		let lastScrollTop = 0
+		const hideHeaderOnScroll = () => {
+			const scrollTop = window.pageYOffset ||document.documentElement.scrollTop
+			if(scrollTop > lastScrollTop) {
+				headerRef.current.style.opacity = 0
+			} else {
+				headerRef.current.style.opacity = 1
+			}
+			lastScrollTop = scrollTop
+		}
+		window.addEventListener("scroll", hideHeaderOnScroll)
+		// return window.removeEventListener("scroll", hideHeaderOnScroll)
+	})
 
 	return (
 		<header
@@ -103,7 +118,7 @@ const Header = React.forwardRef((props, ref) => {
 					</figure>
 					<h6 className="header__username">JaneDoe</h6>
 					<button className="header__hamburger" onClick={() => openSidebar()}>
-						<i class="fa-solid fa-bars header__hamburger-icon"></i>
+						<i className="fa-solid fa-bars header__hamburger-icon"></i>
 					</button>
 				</div>
 			</div>

@@ -31,7 +31,7 @@ const MyAccount = () => {
 										: "myaccount__link"
 								}
 							>
-								<i class="fa-solid fa-user"></i>
+								<i className="fa-solid fa-user"></i>
 								Profile
 							</NavLink>
 						</li>
@@ -44,7 +44,7 @@ const MyAccount = () => {
 										: "myaccount__link"
 								}
 							>
-								<i class="fa-solid fa-bell"></i>
+								<i className="fa-solid fa-bell"></i>
 								Notifications
 							</NavLink>
 						</li>
@@ -57,7 +57,7 @@ const MyAccount = () => {
 										: "myaccount__link"
 								}
 							>
-								<i class="fa-solid fa-heart"></i>
+								<i className="fa-solid fa-heart"></i>
 								Wishlists
 							</NavLink>
 						</li>
@@ -70,7 +70,7 @@ const MyAccount = () => {
 										: "myaccount__link"
 								}
 							>
-								<i class="fa-solid fa-book"></i>
+								<i className="fa-solid fa-book"></i>
 								Recent Bookings
 							</NavLink>
 						</li>

@@ -16,7 +16,7 @@ const Sidebar = () => {
 								isActive ? "sidebar__link sidebar__link--active" : "sidebar__link"
 							}
 						>
-							<i class="fa-solid fa-house"></i>
+							<i className="fa-solid fa-house"></i>
 							Home
 						</NavLink>
 					</li>
@@ -28,7 +28,7 @@ const Sidebar = () => {
 								isActive ? "sidebar__link sidebar__link--active" : "sidebar__link"
 							}
 						>
-							<i class="fa-solid fa-shoe-prints"></i>
+							<i className="fa-solid fa-shoe-prints"></i>
 							Destinations
 						</NavLink>
 					</li>
@@ -40,7 +40,7 @@ const Sidebar = () => {
 								isActive ? "sidebar__link sidebar__link--active" : "sidebar__link"
 							}
 						>
-							<i class="fa-solid fa-user-plus"></i>
+							<i className="fa-solid fa-user-plus"></i>
 							Become a Host
 						</NavLink>
 					</li>
@@ -52,7 +52,7 @@ const Sidebar = () => {
 								isActive ? "sidebar__link sidebar__link--active" : "sidebar__link"
 							}
 						>
-							<i class="fa-solid fa-user"></i>
+							<i className="fa-solid fa-user"></i>
 							My Account
 						</NavLink>
 					</li>
@@ -60,7 +60,7 @@ const Sidebar = () => {
 			
 			<div className="sidebar__item">
 				<Link to="#" className="sidebar__link">
-					<i class="fa-solid fa-gear sidebar__cog"></i>
+					<i className="fa-solid fa-gear sidebar__cog"></i>
 					Settings
 				</Link>
 			</div>

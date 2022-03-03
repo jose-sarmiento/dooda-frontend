@@ -1,0 +1,22 @@
+.hero {
+	background: $lightblue;
+	margin-top: 8rem;
+
+	&__container {
+		height: calc(100vh - 80px);
+		width: 1200px;
+		border-radius: 5rem;
+		margin: 0 auto;
+		background: linear-gradient(
+				to right, 
+				$darkblue 0%, 
+				$darkblue 30%, 
+				rgba($darkblue, 1) 45%, 
+				rgba($darkblue, .9) 60%, 
+				rgba($darkblue, 0) 100%, 
+			) , url(../../images/bg-medium.jpg);
+		background-repeat: no-repeat;
+		background-position:center right;
+		background-size: cover;
+	}
+}
