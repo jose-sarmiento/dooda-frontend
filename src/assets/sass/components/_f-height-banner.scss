@@ -4,6 +4,7 @@
 .fh-banner {
 	height: 100vh;
 	background: $darkblue;
+	margin: 0 auto;
 	z-index: -1;
 	overflow: hidden;
 	// font-family: 'Qucik', serif;
@@ -53,7 +54,7 @@
 		// background: #fc7e3f;
 		font-size: 1.6rem;
 		// text-transform: uppercase;
-		font-weight: 700;
+		font-weight: 500;
 		color: $white;
 		font-family: inherit;
 	}

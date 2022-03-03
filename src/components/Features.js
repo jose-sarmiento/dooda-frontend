@@ -31,7 +31,7 @@ const Features = () => {
 					Browse now <i className="fa fa-arrow-right-long features__cta-arrow"></i>
 				</Link>
 			</div>
-			<div className="features__right">
+			{/*<div className="features__right">
 				<figure
 					className={
 						focus === 1
@@ -66,7 +66,7 @@ const Features = () => {
 						className="features__img features__img--active features__img--3"
 					/>
 				</figure>
-			</div>
+			</div>*/}
 		</div>
 	);
 };

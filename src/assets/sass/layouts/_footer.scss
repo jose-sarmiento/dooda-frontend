@@ -11,6 +11,7 @@
 }
 
 .footer {
+	overflow: hidden;
 	display: grid;
 	grid-template-columns: 1fr 20rem 20rem;
 	padding: 4rem;
@@ -49,6 +50,7 @@
 	&__socials {
 		list-style: none;
 		text-align: left;
+		overflow: hidden;
 	}
 
 	&__item {

@@ -108,11 +108,11 @@ const Homepage = () => {
 
 			<section className="section section--popular">
 				<div className="container">
-					<h2 className="section__heading">Popular Hotels and Resorts</h2>
+					<h2 className="section__heading">Popular Places This month</h2>
 
 				<div className="card-wrapper">
 					{hotels.slice(0, 3).map((hotel) => (
-						<Card key={hotel.id} data={hotel} />
+						<Card key={hotel.id} data={hotel} discounted={true} />
 					))}
 				</div>
 				</div>

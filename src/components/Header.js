@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { gsap } from "gsap";
 import PlacesSubmenu from "./PlacesSubmenu";
@@ -10,8 +10,8 @@ import logo from "../assets/images/logo.png";
 
 const Header = React.forwardRef((props, ref) => {
 	const headerRef = useRef();
-	const location = useLocation()
-	
+	const location = useLocation();
+
 	useEffect(() => {
 		gsap.to(headerRef.current, {
 			y: 0,
@@ -23,12 +23,15 @@ const Header = React.forwardRef((props, ref) => {
 	}, []);
 
 	useEffect(() => {
-		if(!ref) return;
-		ref.current = headerRef.current
-	}, [headerRef, ref])
+		if (!ref) return;
+		ref.current = headerRef.current;
+	}, [headerRef, ref]);
 
 	return (
-		<header className={location.pathname === "/" ? "header header--start-transparent" : "header"} ref={(location.pathname === "/") ? headerRef : null}>
+		<header
+			className={location.pathname === "/" ? "header header--start-transparent" : "header"}
+			ref={location.pathname === "/" ? headerRef : null}
+		>
 			<div className="header__container">
 				<Link to="/" className="header__logo-wrapper">
 					<img src={logo} alt="Dooda logo" className="header__logo" />
@@ -36,34 +39,56 @@ const Header = React.forwardRef((props, ref) => {
 
 				<ul className="nav nav--left">
 					<li className="nav__item">
-						<Link to="/" className="nav__link nav__link--active">
+						<NavLink
+							to="/"
+							className={({ isActive }) =>
+								isActive ? "nav__link nav__link--active" : "nav__link"
+							}
+						>
 							Home
-						</Link>
+						</NavLink>
 						{/*<HomeSubmenu />*/}
 					</li>
 					<li className="nav__item">
-						<Link to="/p/hotels" className="nav__link">
+						<NavLink
+							to="/p/hotels"
+							className={({ isActive }) =>
+								isActive ? "nav__link nav__link--active" : "nav__link"
+							}
+						>
 							Destinations
-						</Link>
+						</NavLink>
 						<PlacesSubmenu />
 					</li>
 					<li className="nav__item">
-						<Link to="/host/guide" className="nav__link">
+						<NavLink
+							to="/host/guide"
+							className={({ isActive }) =>
+								isActive ? "nav__link nav__link--active" : "nav__link"
+							}
+						>
 							Become a Host
-						</Link>
+						</NavLink>
 						<HostSubmenu />
 					</li>
 					<li className="nav__item">
-						<Link to="/account/profile" className="nav__link">
+						<NavLink
+							to="/account/profile"
+							className={({ isActive }) =>
+								isActive ? "nav__link nav__link--active" : "nav__link"
+							}
+						>
 							My Account
-						</Link>
+						</NavLink>
 						<MyAccountSubmenu />
 					</li>
 				</ul>
 
 				<ul className="header-right">
 					<li className="header-right__item">
-						<Link to="/signin" className="nav__cta">Login</Link>
+						<Link to="/signin" className="nav__cta">
+							Login
+						</Link>
 					</li>
 
 					{/*<li className="header-right__item">

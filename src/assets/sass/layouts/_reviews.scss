@@ -13,6 +13,12 @@
 	padding: 6rem 6rem;
 }
 
+@media (max-width: 90rem) {
+	.reviews {
+		width: 100%;
+	}
+}
+
 .review {
 	display: flex;
 	height: 100%;

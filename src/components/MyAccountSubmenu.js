@@ -8,7 +8,7 @@ import woman from "../assets/images/woman.jpg"
 const MyAccountSubmenu = () => {
 	return (
 		<div className="submenu submenu--account">
-			<div className="account">
+			<div className="account"> 
 				<ul className="account__links">
 					<li className="submenu__row">
 						<span className="submenu__icon">
@@ -51,17 +51,9 @@ const MyAccountSubmenu = () => {
 					<figure className="account__picture-wrapper">
 						<img src={woman} alt="picture" className="account__picture" />
 					</figure>
-					<h4 className="account__name">Jane Doe</h4>
-
-					<p className="account__active-heading">Active Booking/s</p>
-					<div className="account__active-booked">
-						<figure className="account__place">
-							<img src={place} alt="place" className="account__picture" />
-						</figure>
-						<div>
-							<p className="account__placename">Twin Rock Beach Resort</p>
-							<p className="account__date">March 14 - 28<span className="account__remaining">2 days left</span></p>
-						</div>
+					<div className="account__info">
+						<h4 className="account__name">Jane Doe</h4>
+						<h4 className="account__job">Tourist</h4>
 					</div>
 				</div>
 			</div>

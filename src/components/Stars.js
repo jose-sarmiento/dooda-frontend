@@ -9,9 +9,9 @@ const Stars = ({count}) => {
             <FaStar className="stars__star" />
             <FaStar className="stars__star" />
             <FaStar className="stars__star" />
-            <span className="stars__average">
+            {/*<span className="stars__average">
                 ({count})
-            </span>
+            </span>*/}
         </span>
 	)
 }
