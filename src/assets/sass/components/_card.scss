@@ -173,21 +173,6 @@
 	}
 }
 
-@media (max-width: 702px) {
-	.card__img-wrapper {
-		height: 20rem;
-	}
-
-	.card__body {
-		flex-direction: column;
-	}
-
-	.card__book-now {
-		width: 100%;
-		text-align: center;
-	}
-}
-
 @media (max-width: 650px) {
 	.card__img-wrapper {
 		height: 22rem;

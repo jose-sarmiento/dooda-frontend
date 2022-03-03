@@ -23,6 +23,7 @@ import MyAccountSubmenu from "./MyAccountSubmenu"
 import HostSubmenu from "./HostSubmenu"
 import FilterDraggable from "./FilterDraggable"
 import Modal from "./Modal"
+import Sidebar from "./Sidebar"
 
 
 export {
@@ -51,4 +52,5 @@ export {
 	MyAccountSubmenu,
 	FilterDraggable,
 	Modal,
+	Sidebar
 }

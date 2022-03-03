@@ -31,39 +31,58 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	justify-content: center;
-	grid-gap: 2rem;
-	grid-row-gap: 4rem;
-}
-
-@media (max-width: 950px) {
-	.card-wrapper {
-		grid-gap: 1rem;
-		grid-row-gap: 2rem;
-	}
-}
-
-@media (max-width: 850px) {
-	.card-wrapper {
-		grid-gap: 1rem;
-		grid-row-gap: 2rem;
-	}
+	grid-gap: 4rem;
 }
 
 @media (max-width: 1200px) { 
 	.container {
 		width: 100%;
+		padding: 2rem;
+	}
+
+	.card-wrapper {
 		padding: 0 2rem;
 	}
+
 }
 
-@media (max-width: 652px) { 
+@media (max-width: 950px) {
+	// .card-wrapper {
+	// 	grid-gap: 1rem;
+	// }
+}
+
+@media (max-width: 850px) {
+	// .card-wrapper {
+	// 	grid-gap: 1rem;
+	// 	grid-row-gap: 2rem;
+	// }
+}
+
+
+
+@media (max-width: 720px) { 
 	.card-wrapper {
-		grid-template-columns: 40rem;
-		grid-row-gap: 4rem;
+		grid-template-columns: 45rem;
+		padding-top: 0;
 	}
 }
 
+@media (max-width: 450px) {
+	.card-wrapper {
+		padding: 1rem;
+		margin: 0 auto;
+		width: 100%;
+		grid-template-columns: 1fr;
+		grid-column-gap: 0;
+	}
+}
 
+@media (max-width: 400px) {
+	.card-wrapper {
+		padding: .5rem;
+	}
+}
 
 
 

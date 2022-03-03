@@ -6,11 +6,16 @@ import PlacesSubmenu from "./PlacesSubmenu";
 import HostSubmenu from "./HostSubmenu";
 import MyAccountSubmenu from "./MyAccountSubmenu";
 
+import useAppContext from "../hooks/useAppContext"
+
 import logo from "../assets/images/logo.png";
+import user from "../assets/images/woman.jpg"
 
 const Header = React.forwardRef((props, ref) => {
 	const headerRef = useRef();
 	const location = useLocation();
+
+	const {openSidebar} = useAppContext()
 
 	useEffect(() => {
 		gsap.to(headerRef.current, {
@@ -90,13 +95,17 @@ const Header = React.forwardRef((props, ref) => {
 							Login
 						</Link>
 					</li>
-
-					{/*<li className="header-right__item">
-						<button className="header-right__button">
-							<FiMenu className="header-right__icon" />
-						</button>
-					</li>*/}
 				</ul>
+
+				<div className="header__mobile">
+					<figure className="header__user">
+						<img src={user} alt="profile" className="header__user-image" />
+					</figure>
+					<h6 className="header__username">JaneDoe</h6>
+					<button className="header__hamburger" onClick={() => openSidebar()}>
+						<i class="fa-solid fa-bars header__hamburger-icon"></i>
+					</button>
+				</div>
 			</div>
 		</header>
 	);
