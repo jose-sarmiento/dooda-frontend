@@ -7,11 +7,13 @@ export default function usePaginateFetch(query, page, limit) {
    const [results, setResults] = useState([]);
    const [hasNext, setHasNext] = useState(false);
 
+
    // useEffect(() => {
    //    setResults([]);
    // }, [query]);
 
    useEffect(() => {
+      console.log("fetching")
       setLoading(true);
       setError(false);
 
@@ -21,7 +23,7 @@ export default function usePaginateFetch(query, page, limit) {
          method: "GET",
          url: `${process.env.REACT_APP_API_BASE_URL}/mocks`,
          params: { q: query, page: page, limit: limit },
-         cancelToken: new axios.CancelToken((c) => (cancel = c)),
+         // cancelToken: new axios.CancelToken((c) => (cancel = c)),
       })
          .then((res) => {
             setResults((prevResults) => {
@@ -31,13 +33,13 @@ export default function usePaginateFetch(query, page, limit) {
             setLoading(false);
          })
          .catch((e) => {
-            if (axios.isCancel(e)) return;
+            // if (axios.isCancel(e)) return;
             setLoading(false);
             setError(true);
          });
-      return () => {
-         cancel();
-      };
+      // return () => {
+      //    cancel();
+      // };
    }, [query, page, limit]);
 
    return { loading, error, results, hasNext };
