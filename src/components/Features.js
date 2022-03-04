@@ -35,42 +35,6 @@ const Features = () => {
 			<div className="features__image-wrapper">
 				<img src={img2} alt="img1" className="features__image" />
 			</div>
-			{/*<div className="features__right">
-				<figure
-					className={
-						focus === 1
-							? "features__img-wrap features__img-wrap--1 features__img-wrap--focus"
-							: "features__img-wrap features__img-wrap--1"
-					}
-					onMouseOver={() => handleMouseOver(1)}
-				>
-					<img src={img3} alt="img1" className="features__img features__img--1" />
-				</figure>
-				<figure
-					className={
-						focus === 2
-							? "features__img-wrap features__img-wrap--2 features__img-wrap--focus"
-							: "features__img-wrap features__img-wrap--2"
-					}
-					onMouseOver={() => handleMouseOver(2)}
-				>
-					<img src={img2} alt="img1" className="features__img features__img--2" />
-				</figure>
-				<figure
-					className={
-						focus === 3
-							? "features__img-wrap features__img-wrap--3 features__img-wrap--focus"
-							: "features__img-wrap features__img-wrap--3"
-					}
-					onMouseOver={() => handleMouseOver(3)}
-				>
-					<img
-						src={img1}
-						alt="img1"
-						className="features__img features__img--active features__img--3"
-					/>
-				</figure>
-			</div>*/}
 		</div>
 	);
 };

@@ -9,7 +9,7 @@ import useAppContext from "../hooks/useAppContext";
 
 import manmountain from "../assets/images/contrasted.jpg";
 import manswimming from "../assets/images/contrasted2.jpg";
-import outdoor from "../assets/images/brady.jpg";
+import outdoor from "../assets/images/cliford.jpg";
 import room from "../assets/images/4.jpg";
 
 const Homepage = () => {
@@ -107,12 +107,12 @@ const Homepage = () => {
 			</section>
 
 			<section className="section section--gallery">
-				<div className="gallery">
+				<div className="gallery gallery--outdoor">
 					<div className="gallery__image-wrapper">
 						<img src={outdoor} alt="img1" className="gallery__image" />
 					</div>
 
-					<div className="gallery__left ml-2">
+					<div className="gallery__left ml-2 gallery__left--act">
 						<h2 className="gallery__title">Looking for Activities Outdoor?</h2>
 						<h3 className="gallery__heading">Explore thousands of place to have fun with</h3>
 						<p className="gallery__paragraph">
@@ -128,7 +128,7 @@ const Homepage = () => {
 					</div>
 				</div>
 
-				<div className="gallery">
+				<div className="gallery gallery--places">
 					<div className="gallery__left">
 						<h2 className="gallery__title">Looking for Places to Stay?</h2>
 						<h3 className="gallery__heading">Dooda has hotel rooms and small houses you can try now</h3>

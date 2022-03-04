@@ -36,7 +36,7 @@ const Header = React.forwardRef((props, ref) => {
 		let lastScrollTop = 0
 		const hideHeaderOnScroll = () => {
 			const scrollTop = window.pageYOffset ||document.documentElement.scrollTop
-			if(scrollTop > lastScrollTop) {
+			if(scrollTop > lastScrollTop && headerRef.current) {
 				headerRef.current.style.opacity = 0
 			} else {
 				headerRef.current.style.opacity = 1
@@ -67,6 +67,7 @@ const Header = React.forwardRef((props, ref) => {
 						>
 							Home
 						</NavLink>
+						
 						{/*<HomeSubmenu />*/}
 					</li>
 					<li className="nav__item">

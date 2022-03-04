@@ -3,18 +3,6 @@
 	padding: 0!important;
 	background: $white;
 	height: 85vh;
-	// margin-bottom: 4rem!important;
-
-	// &::before {
-	// 	content: "";
-	// 	position: absolute;
-	// 	left: 0;
-	// 	top: 0;
-	// 	right: 0;
-	// 	bottom: 0;
-	// 	background: linear-gradient(to right, $primary-dark, darken($primary-dark, 5%));
-	// 	clip-path: polygon(0 0, 60% 0, 40% 100%, 0% 100%);
-	// }
 }
 
 .features {
@@ -108,78 +96,6 @@
 		object-position: center center;
 		z-index: 55;
 	}
-
-	&__right {
-		width: 50%;
-		height: 100%;
-		position: relative;
-	}
-
-	&__img-wrap {
-		height: 20rem;
-		width: 10rem;
-		object-fit: cover;
-		object-position: center center;
-		position: absolute;
-		box-sizing: content-box;
-		transition: all .4s ease;
-		// box-shadow: 0px 0px 2.5rem rgba(0, 0, 0, .2);
-		overflow: hidden;
-		border-radius: .5rem;
-	}
-
-	&__img-wrap:hover {
-		z-index: 15;
-	}
-
-	&__img-wrap--1 {
-		bottom: 4rem;
-		left: 40%;
-		width: 42rem;
-		height: 25rem;
-		z-index: 5;
-		transform: translateX(-50%);
-	}
-
-	&__img-wrap--2 {
-		right: 0;
-		top: 10%;
-		width: 28rem;
-		height: 35rem;
-		z-index: 15;
-
-	}
-
-	&__img-wrap--3 {
-		left: -3rem;
-		top: 0;
-		width: 40rem;
-		height: 25rem;
-		z-index: 10;
-	}
-
-	&__img {
-		height: 100%;
-		width: 100%;
-		transform: scale(1.2);
-		transition: transform .4s ease;
-	}
-
-	&__img-wrap .features__img {
-		filter: brightness(85%) blur(1px);
-	}
-
-	.features__img-wrap--focus {
-		z-index: 55;
-	}
-
-	.features__img-wrap--focus &__img {
-		filter: brightness(100%) blur(0);
-		transform: scale(1);
-	}
-
-	
-
 }
 
 
@@ -194,4 +110,77 @@
 }
 
 
+@media (max-width: 916px) {
+	.features {
+	}
 
+	.features__left {
+		padding: 2rem 0;
+	}
+
+	.features__image-wrapper {
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 880px) {
+	.features {
+		padding: 2rem;
+	}
+
+	.features__left {
+		padding: 2rem 0;
+	}
+}
+@media (max-width: 750px) {
+	.features {
+
+		&__features__left {
+			padding: 0;
+		}
+
+		&__title {
+			font-size: 2.2rem;
+		}
+
+		&__heading {
+			font-weight: 600;
+			font-size: 1.4rem;
+		}
+
+		&__paragraph {
+			font-size: 1.4rem;
+			font-weight: 400;
+		}
+
+		&__cta {
+			margin-top: 3.5rem;
+			padding: 1rem 2rem;
+			text-align: left;
+			font-weight: 500;
+			font-size: 1.4rem;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.features {
+		width: 100%;
+		// height: 100vh;
+		padding: 0;
+
+		&__left {
+			background: linear-gradient(to right, $white, 
+			rgba($white, 1) 50%, rgba($white, .5)), 
+			url(../../images/woman-with-computer.jpg);
+			background-size: contain;
+			background-position: center right;
+			background-repeat: no-repeat;
+			padding: 2rem 2rem;
+		}
+
+		&__image-wrapper {
+			display: none;
+		}
+	}
+}
