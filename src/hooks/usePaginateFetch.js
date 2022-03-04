@@ -13,7 +13,6 @@ export default function usePaginateFetch(query, page, limit) {
    // }, [query]);
 
    useEffect(() => {
-      console.log("fetching")
       setLoading(true);
       setError(false);
 
@@ -21,7 +20,7 @@ export default function usePaginateFetch(query, page, limit) {
 
       axios({
          method: "GET",
-         url: `${process.env.REACT_APP_API_BASE_URL}/mocks`,
+         url: `https://dooda-api.herokuapp.com/mocks`,
          params: { q: query, page: page, limit: limit },
          // cancelToken: new axios.CancelToken((c) => (cancel = c)),
       })
