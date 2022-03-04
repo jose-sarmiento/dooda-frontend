@@ -30,9 +30,9 @@
 	}
 
 	&__heading {
-		font-size: 4.6rem;
+		font-size: 4.4rem;
 		text-transform: capitalize;
-		font-weight: 600;
+		font-weight: 500;
 		color: $white;
 		// color: #f2e6eb;
 		margin-bottom: 1rem;
@@ -40,7 +40,7 @@
 
 	&__subheading {
 		font-size: 1.6rem;
-		font-weight: 400;
+		font-weight: 500;
 		color: #d4c5cb;
 	}
 
@@ -50,8 +50,8 @@
 		padding: 1.4rem 4rem;
 		border: none;
 		border-radius: 5rem;
-		background: $primary;
-		background: linear-gradient(to right, darken($primary-dark, 15%), darken($primary-dark, 10%));
+		background: $primary-dark;
+		background: linear-gradient(to right, $primary-dark, darken($primary-dark, 5%));
 		// background: #fc7e3f;
 		font-size: 1.6rem;
 		// text-transform: uppercase;
@@ -174,7 +174,7 @@
 		border: none;
 		height: 4.5rem;
 		border-radius: 5rem;
-		background: rgba($white, .1);
+		background: rgba($white, .06);
 		padding: 0 4rem 0 2rem;
 		color: $white;
 		font-weight: 600;
@@ -185,8 +185,9 @@
 
 
 	&__input::placeholder {
-		color: #d4c5cb;
+		color: #777;
 		text-align: center;
+		font-weight: 400;
 	}
 
 	&__input:focus {

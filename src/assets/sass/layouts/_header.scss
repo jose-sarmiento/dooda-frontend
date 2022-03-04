@@ -81,7 +81,7 @@
 	}
 
 	&__link--active {
-		color: darken($primary-dark, 5%)!important;
+		color: $primary-dark!important;
 	}
 
 	&__link:hover {
@@ -225,7 +225,7 @@
 	}
 
 	.nav__cta {
-		border: 2px solid darken($primary-dark, 10%);
+		border: 2px solid $primary-dark;
 		background: transparent;
 	}
 

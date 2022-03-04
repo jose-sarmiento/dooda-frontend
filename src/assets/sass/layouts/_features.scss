@@ -1,7 +1,8 @@
 .section--features {
 	position: relative;
 	padding: 0!important;
-	background: $darkblue;
+	background: $white;
+	height: 95vh;
 	// margin-bottom: 4rem!important;
 
 	// &::before {
@@ -17,84 +18,59 @@
 }
 
 .features {
+	height: 100%;
 	display: flex;
 	align-items: center;
-	height: 100vh;
+	justify-content: center;
 	margin: 4rem auto;
-	border-radius: 1rem;
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
-	background: linear-gradient(
-				to right, 
-				$darkblue 0%, 
-				$darkblue 30%, 
-				rgba($darkblue, 1) 45%, 
-				rgba($darkblue, .9) 60%, 
-				rgba($darkblue, 0) 100%, 
-			) , url(../../images/edward.jpg);
-	background-repeat: no-repeat;
-	background-position:center right;
 	padding: 2rem 0;
-
-	@media (max-width: 1200px) { 
-		& {
-			width: 100%;
-		}
-	}
+	position: relative;
+	z-index: 20;
 
 	&__left {
 		text-align: left;
 		color: $grey;
-		width: 50%;
 		padding: 1rem 2rem;
-		position: relative;
-		padding-right: 4rem;
-		margin-left: 7rem;
-	}
-
-	&__left::before {
-		content: "";
-		height: 5px;
-		width: 20rem;
-		background: $primary-dark;
-		position: absolute;
-		left: 0;
-		top: 0;
+		width: 50rem;
 	}
 
 	&__title {
-		font-weight: 600;
+		font-weight: 500;
 		margin-bottom: 4rem;
-		font-size: 2rem;
-		color: $white;
+		font-size: 2.4rem;
+		color: $black;
+		font-family: 'Poppins';
 	}
 
 	&__heading {
 		font-weight: 600;
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		text-transform: uppercase;
-		color: $grey-light;
+		color: $grey;
 	}
 
 	&__paragraph {
 		margin: .8rem 0 2rem;
-		color: $grey-light;
-		font-size: 1.4rem;
+		color: $grey;
+		font-size: 1.6rem;
 		font-weight: 400;
+		line-height: 2rem;
 	}
 
 	&__cta {
 		margin-top: 4rem;
 		display: inline-block;
-		background: transparent;
+		background: $primary-dark;
 		padding: 1.2rem 2rem;
-		padding-left: 0;
 		text-align: left;
 		font-weight: 600;
 		font-size: 1.6rem;
 		color: $white;
 		cursor: pointer;
 		border-radius: 3rem;
+		box-shadow: $shadow-light;
 	}
 
 	&__cta:hover {
@@ -107,6 +83,31 @@
 
 	&__cta-arrow {
 		margin-left: 1rem;
+	}
+
+	&__image-wrapper {
+		height: 80%;
+		width: 35rem;
+		position: relative;
+	}
+
+	&__image-wrapper::before {
+		content: "";
+		position: absolute;
+		bottom: -2rem;
+		right: -2rem;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		background: $primary-light;
+	}
+
+	&__image {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center center;
+		z-index: 55;
 	}
 
 	&__right {

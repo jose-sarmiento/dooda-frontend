@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom"
 import img1 from "../assets/images/cliford.jpg";
-import img2 from "../assets/images/edward.jpg";
+import img2 from "../assets/images/woman-with-computer.jpg";
 import img3 from "../assets/images/lens.jpg";
 
 const Features = () => {
@@ -30,6 +30,10 @@ const Features = () => {
 				<Link to="/p/hotels" className="features__cta">
 					Browse now <i className="fa fa-arrow-right-long features__cta-arrow"></i>
 				</Link>
+			</div>
+
+			<div className="features__image-wrapper">
+				<img src={img2} alt="img1" className="features__image" />
 			</div>
 			{/*<div className="features__right">
 				<figure

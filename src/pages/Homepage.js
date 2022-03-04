@@ -63,7 +63,6 @@ const Homepage = () => {
 
 	return (
 		<Layout ref={headerRef}>
-			{/*<Banner />*/}
 			<section className="fh-banner" onMouseOver={handleMouseOver}>
 				<div className="container fh-banner__content" ref={bannerRef}>
 
@@ -98,35 +97,11 @@ const Homepage = () => {
 						/>
 					</figure>
 
-				{/*	<div className="fh-banner__footer">
-						<FaFacebook className="fh-banner__social" />
-						<FaFacebook className="fh-banner__social" />
-						<FaFacebook className="fh-banner__social" />
-					</div>*/}
 				</div>
 			</section>
 
 			<section className="section section--features">
 				<Features />
-			</section>
-
-			<section className="section section--popular">
-				<div className="container">
-					<h2 className="section__heading">Popular Places This month</h2>
-
-				<div className="card-wrapper">
-					{hotels.slice(0, 3).map((hotel) => (
-						<Card key={hotel.id} data={hotel} discounted={true} />
-					))}
-				</div>
-				</div>
-			</section>
-
-			<section className=" section section--steps">
-				<div className="container">
-					<h2 className="section__heading">3 Easy Step Booking Process</h2>
-					<Steps />
-				</div>
 			</section>
 
 			<section className="section section-reviews">
