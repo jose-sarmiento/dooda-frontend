@@ -2,7 +2,7 @@
 	position: relative;
 	padding: 0!important;
 	background: $white;
-	height: 95vh;
+	height: 85vh;
 	// margin-bottom: 4rem!important;
 
 	// &::before {
@@ -22,7 +22,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin: 4rem auto;
+	margin: 0 auto;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 2rem 0;
@@ -37,16 +37,15 @@
 	}
 
 	&__title {
-		font-weight: 500;
+		font-weight: 600;
 		margin-bottom: 4rem;
 		font-size: 2.4rem;
 		color: $black;
-		font-family: 'Poppins';
 	}
 
 	&__heading {
 		font-weight: 600;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		text-transform: uppercase;
 		color: $grey;
 	}

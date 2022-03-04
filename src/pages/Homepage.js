@@ -9,6 +9,8 @@ import useAppContext from "../hooks/useAppContext";
 
 import manmountain from "../assets/images/contrasted.jpg";
 import manswimming from "../assets/images/contrasted2.jpg";
+import outdoor from "../assets/images/brady.jpg";
+import room from "../assets/images/4.jpg";
 
 const Homepage = () => {
 	const { closeSubmenu, isSubmenuOpen } = useAppContext();
@@ -102,6 +104,49 @@ const Homepage = () => {
 
 			<section className="section section--features">
 				<Features />
+			</section>
+
+			<section className="section section--gallery">
+				<div className="gallery">
+					<div className="gallery__image-wrapper">
+						<img src={outdoor} alt="img1" className="gallery__image" />
+					</div>
+
+					<div className="gallery__left ml-2">
+						<h2 className="gallery__title">Looking for Activities Outdoor?</h2>
+						<h3 className="gallery__heading">Explore thousands of place to have fun with</h3>
+						<p className="gallery__paragraph">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, dolorem
+							praesentium fuga quas debitis. Quos amet facilis maxime enim dolore repellat
+						</p>
+						<h3 className="gallery__heading">Consectetur adipisicing elit. Doloribus, nesciunt?</h3>
+						<p className="gallery__paragraph">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores
+							vitae, accusantium qui minima exercitationem.
+						</p>
+
+					</div>
+				</div>
+
+				<div className="gallery">
+					<div className="gallery__left">
+						<h2 className="gallery__title">Looking for Places to Stay?</h2>
+						<h3 className="gallery__heading">Dooda has hotel rooms and small houses you can try now</h3>
+						<p className="gallery__paragraph">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, dolorem
+							praesentium fuga quas debitis. Quos amet facilis maxime enim.
+						</p>
+						<h3 className="gallery__heading">Consectetur adipisicing elit. Doloribus, nesciunt?</h3>
+						<p className="gallery__paragraph">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores
+						</p>
+					
+					</div>
+
+					<div className="gallery__image-wrapper ml-2">
+						<img src={room} alt="img1" className="gallery__image" />
+					</div>
+				</div>
 			</section>
 
 			<section className="section section-reviews">
