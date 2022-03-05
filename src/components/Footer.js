@@ -16,10 +16,7 @@ const Footer = () => {
 							<h2 className="footer__website-name">Dooda PH</h2>
 						</div>
 						<p className="footer__about-text">
-							Lorem ipsum dolor sit amet consectetur adipisicing,
-							elit. Beatae earum eveniet voluptatem laudantium
-							aspernatur laborum adipisci incidunt dolores optio
-							dolorum.
+							Dooda Ph was born in 2021. The hosts and travelers can create an account so they can list their space and book unique accommodations anywhere in the Philippines. It helps make sharing easy, enjoyable, and safe. Dooda Ph team verifies profiles and listings, as well as a smart messaging system that allows guests to message hosts directly with security, and a reliable platform for collecting and transferring payments. Learn more about a Listing by reviewing the description and photos, the Host profile, and Guest reviews.
 						</p>
 					</div>
 					<ul className="footer__help">

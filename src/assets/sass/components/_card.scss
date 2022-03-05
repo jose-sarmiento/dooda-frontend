@@ -41,8 +41,8 @@
 
 	&__amount {
 		font-size: 1.8rem;
-		font-weight: 600;
-		color: $black;
+		// font-weight: 600;
+		color: $dark;
 	}
 
 	&__type {
@@ -68,8 +68,7 @@
 
 	&__price {
 		font-size: 1.6rem;
-		font-weight: 600;
-		color: $black;
+		font-weight: 400;
 		text-decoration: none;
 	}
 
@@ -96,12 +95,12 @@
 	&__name {
 		font-size: 1.6rem;
 		margin-bottom: 1rem;
-		font-weight: 600;
-		color: $black;
+		color: $dark;
 	}
 
 	&__location {
 		font-size: 1.4rem;
+		color: $grey3;
 	}
 
 	&__location-icon {

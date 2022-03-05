@@ -77,7 +77,7 @@ const Header = React.forwardRef((props, ref) => {
 								isActive ? "nav__link nav__link--active" : "nav__link"
 							}
 						>
-							Destinations
+							Places to Stay
 						</NavLink>
 						<PlacesSubmenu />
 					</li>

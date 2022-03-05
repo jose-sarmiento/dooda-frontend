@@ -14,7 +14,7 @@ const PlacesSubmenu = () => {
 						Hotel
 					</Link>
 				</li>
-
+ 
 				<li className="submenu__row">
 					<span className="submenu__icon">
 						<i className="fa-solid fa-house-chimney"></i>

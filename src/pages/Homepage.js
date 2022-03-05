@@ -4,13 +4,19 @@ import { gsap } from "gsap";
 import {Link} from "react-router-dom"
 import hotels from "../mocks/hotels";
 import Layout from "./Layout";
-import { Card, Reviews, Steps, Features } from "../components";
+import { Card, Reviews, Steps, Features, Hero } from "../components";
 import useAppContext from "../hooks/useAppContext";
 
 import manmountain from "../assets/images/contrasted.jpg";
 import manswimming from "../assets/images/contrasted2.jpg";
 import outdoor from "../assets/images/cliford.jpg";
 import room from "../assets/images/4.jpg";
+
+import img1 from "../assets/images/1.jpg";
+import img2 from "../assets/images/2.jpg";
+import img3 from "../assets/images/3.jpg";
+import img4 from "../assets/images/lens.jpg";
+import img5 from "../assets/images/img3-small.jpg";
 
 const Homepage = () => {
 	const { closeSubmenu, isSubmenuOpen } = useAppContext();
@@ -56,7 +62,7 @@ const Homepage = () => {
 			else headerRef.current.classList.remove("header--dark");
 		}, {});
 
-		observer.observe(headingRef.current);
+		// observer.observe(headingRef.current);
 	}, [headingRef, headerRef]);
 
 	const handleMouseOver = () => {
@@ -65,94 +71,76 @@ const Homepage = () => {
 
 	return (
 		<Layout ref={headerRef}>
-			<section className="fh-banner" onMouseOver={handleMouseOver}>
-				<div className="container fh-banner__content" ref={bannerRef}>
 
-					<div className="fh-banner__text">
-						<h1 className="fh-banner__heading stagger" ref={headingRef}>
-							Find your next destination
-						</h1>
-						<h2 className="fh-banner__subheading stagger">
-							Trusted by over 200,000 users all over Philippines
-						</h2>
-						<Link to="/p/hotels" className="fh-banner__cta stagger">Browse Now</Link>
-						<div className="fh-banner__line-break stagger">
-							<span className="fh-banner__or">OR</span>
+			<Hero />
+
+			<div className="previews">
+				<div className="previews__container">
+					<div className="previews__header">
+						<h2 className="previews__heading">Most Bookings This Month</h2>
+					</div>
+
+					<div className="preview preview--active">
+						<div className="preview__images">
+							<div className="preview__image-wrap preview__image-wrap--current">
+								<img src={img5} alt="shh" className="preview__image" />
+							</div>
+							<div className="preview__image-wrap preview__image-wrap--prev">
+								<img src={img2} alt="shh" className="preview__image" />
+							</div>
+							<div className="preview__image-wrap preview__image-wrap--next">
+								<img src={img3} alt="shh" className="preview__image" />
+							</div>
 						</div>
-						<form className="fh-banner__search stagger">
-							<input type="text" id="search-form" className="fh-banner__input"
-							placeholder="e.g Twin Rock Beach Resort" />
-							<button className="fh-banner__submit-btn">
-								<FaSearch />
-							</button>
-						</form>
+
+						<div className="preview__prev-btn preview__action">
+							<i className="fa-solid fa-angle-left"></i>
+						</div>
+						<div className="preview__next-btn preview__action">
+							<i className="fa-solid fa-angle-right"></i>
+						</div>
+
+						<div className="preview__footer">
+							<div className="preview__footer-left">
+								<p className="preview__name">Virac Hotel and Resort</p>
+								<p className="preview__location">Virac Catandanes</p>
+							</div>
+							<button className="preview__cta">View</button>
+						</div>
 					</div>
-
-					<figure className="container fh-banner__image fh-banner__image--swimming">
-						<img src={manswimming} alt="manswimming" className="fh-banner__img" />
-					</figure>
-					<figure className="container fh-banner__image fh-banner__image--mountain">
-						<img
-							src={manmountain}
-							alt="man standing on top of mountain"
-							className="fh-banner__img"
-						/>
-					</figure>
-
-				</div>
-			</section>
-
-			<section className="section section--features">
-				<Features />
-			</section>
-
-			<section className="section section--gallery">
-				<div className="gallery gallery--outdoor">
-					<div className="gallery__image-wrapper">
-						<img src={outdoor} alt="img1" className="gallery__image" />
-					</div>
-
-					<div className="gallery__left ml-2 gallery__left--act">
-						<h2 className="gallery__title">Looking for Activities Outdoor?</h2>
-						<h3 className="gallery__heading">Explore thousands of place to have fun with</h3>
-						<p className="gallery__paragraph">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, dolorem
-							praesentium fuga quas debitis. Quos amet facilis maxime enim dolore repellat
-						</p>
-						<h3 className="gallery__heading">Consectetur adipisicing elit. Doloribus, nesciunt?</h3>
-						<p className="gallery__paragraph">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores
-							vitae, accusantium qui minima exercitationem.
-						</p>
-
-					</div>
-				</div>
-
-				<div className="gallery gallery--places">
-					<div className="gallery__left">
-						<h2 className="gallery__title">Looking for Places to Stay?</h2>
-						<h3 className="gallery__heading">Dooda has hotel rooms and small houses you can try now</h3>
-						<p className="gallery__paragraph">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, dolorem
-							praesentium fuga quas debitis. Quos amet facilis maxime enim.
-						</p>
-						<h3 className="gallery__heading">Consectetur adipisicing elit. Doloribus, nesciunt?</h3>
-						<p className="gallery__paragraph">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores
-						</p>
 					
+					<div className="preview-single">
+						<div className="preview-single__image-wrap">
+							<img src={img1} alt="shh" className="preview-single__image" />
+						</div>
+
+						<div className="preview-single__footer preview-single__footer--cream">
+							<p className="preview-single__name">Ocean View Hotel</p>
+							<p className="preview-single__location">Conception Virac Catandanes</p>
+						</div>
 					</div>
 
-					<div className="gallery__image-wrapper ml-2">
-						<img src={room} alt="img1" className="gallery__image" />
+					<div className="preview-single">
+						<div className="preview-single__image-wrap">
+							<img src={img4} alt="shh" className="preview-single__image" />
+						</div>
+
+						<div className="preview-single__footer">
+							<p className="preview-single__name">Island Hopping</p>
+							<p className="preview-single__location">Palawan</p>
+						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 
 			<section className="section section-reviews">
 				<div className="container">
 					<Reviews />
 				</div>
+			</section>
+
+			<section className="section section--features">
+				<Features />
 			</section>
 
 		</Layout>
