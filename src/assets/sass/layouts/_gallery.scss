@@ -132,7 +132,7 @@
 
 		&__paragraph {
 			font-size: 1.4rem;
-			font-weight: 500;
+			font-weight: 400;
 
 		}
 
@@ -159,8 +159,8 @@
 		&--outdoor {
 			background: linear-gradient(
 				to left, 
-				rgba($white, .8), 
-				rgba($white, .8)
+				rgba($white, .7), 
+				rgba($white, .7)
 			), 
 			url(../../images/cliford.jpg);
 			background-size: cover;
@@ -171,8 +171,8 @@
 		&--places {
 			background: linear-gradient(
 				to left, 
-				rgba($white, .8), 
-				rgba($white, .8)
+				rgba($darkblue, .3), 
+				rgba($darkblue, .3)
 			), 
 			url(../../images/4.jpg);
 			background-size: cover;
