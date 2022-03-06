@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import {Link} from "react-router-dom"
 import hotels from "../mocks/hotels";
 import Layout from "./Layout";
-import { Card, Reviews, Steps, Features, Hero } from "../components";
+import { Card, Reviews, Steps, Features, Hero, Previews } from "../components";
 import useAppContext from "../hooks/useAppContext";
 
 import manmountain from "../assets/images/contrasted.jpg";
@@ -12,11 +12,6 @@ import manswimming from "../assets/images/contrasted2.jpg";
 import outdoor from "../assets/images/cliford.jpg";
 import room from "../assets/images/4.jpg";
 
-import img1 from "../assets/images/1.jpg";
-import img2 from "../assets/images/2.jpg";
-import img3 from "../assets/images/3.jpg";
-import img4 from "../assets/images/lens.jpg";
-import img5 from "../assets/images/img3-small.jpg";
 
 const Homepage = () => {
 	const { closeSubmenu, isSubmenuOpen } = useAppContext();
@@ -74,64 +69,7 @@ const Homepage = () => {
 
 			<Hero />
 
-			<div className="previews">
-				<div className="previews__container">
-					<div className="previews__header">
-						<h2 className="previews__heading">Most Bookings This Month</h2>
-					</div>
-
-					<div className="preview preview--active">
-						<div className="preview__images">
-							<div className="preview__image-wrap preview__image-wrap--current">
-								<img src={img5} alt="shh" className="preview__image" />
-							</div>
-							<div className="preview__image-wrap preview__image-wrap--prev">
-								<img src={img2} alt="shh" className="preview__image" />
-							</div>
-							<div className="preview__image-wrap preview__image-wrap--next">
-								<img src={img3} alt="shh" className="preview__image" />
-							</div>
-						</div>
-
-						<div className="preview__prev-btn preview__action">
-							<i className="fa-solid fa-angle-left"></i>
-						</div>
-						<div className="preview__next-btn preview__action">
-							<i className="fa-solid fa-angle-right"></i>
-						</div>
-
-						<div className="preview__footer">
-							<div className="preview__footer-left">
-								<p className="preview__name">Virac Hotel and Resort</p>
-								<p className="preview__location">Virac Catandanes</p>
-							</div>
-							<button className="preview__cta">View</button>
-						</div>
-					</div>
-					
-					<div className="preview-single">
-						<div className="preview-single__image-wrap">
-							<img src={img1} alt="shh" className="preview-single__image" />
-						</div>
-
-						<div className="preview-single__footer preview-single__footer--cream">
-							<p className="preview-single__name">Ocean View Hotel</p>
-							<p className="preview-single__location">Conception Virac Catandanes</p>
-						</div>
-					</div>
-
-					<div className="preview-single">
-						<div className="preview-single__image-wrap">
-							<img src={img4} alt="shh" className="preview-single__image" />
-						</div>
-
-						<div className="preview-single__footer">
-							<p className="preview-single__name">Island Hopping</p>
-							<p className="preview-single__location">Palawan</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<Previews />
 
 			<section className="section section-reviews">
 				<div className="container">
@@ -143,6 +81,15 @@ const Homepage = () => {
 				<Features />
 			</section>
 
+			<section className="section-join-now">
+				<div className="section-join-now__container">
+					<h2 className="section-join-now__heading">Want to Host Your Place ?</h2>
+					<span className="section-join-now__bar"></span>
+					<p className="section-join-now__sub">Join as a host in Dooda now</p>
+					<p className="section-join-now__sub">Benefit from the feautures provided by Dooda to Help your business grow</p>
+					<button className="section-join-now__cta">Learn How to Host Now</button>
+				</div>
+			</section>
 		</Layout>
 	);
 };

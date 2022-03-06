@@ -17,6 +17,15 @@
 			margin-right: .5rem;
 		}
 
+		&__item--more {
+			position: relative;
+		}
+
+		&__icon {
+			font-size: 1.4rem;
+			margin-left: .5rem;
+		}
+
 		&__link {
 			text-transform: capitalize;
 			text-decoration: none;
@@ -26,6 +35,10 @@
 			font-weight: 500;
 			padding: 1rem 1.5rem;
 			position: relative;
+		}
+
+		&__link--more {
+			text-transform: lowercase;
 		}
 
 		&__link::before {
@@ -49,11 +62,47 @@
 			color: $primary-dark;
 		}
 
+		&__link:hover {
+			color: $dark;
+		}
+
 		&__link:hover.item-categories__link::before {
 			transform: scalex(1);
 			transform-origin: center;
 		}
+
+		&__link--more:hover.item-categories__link::before {
+			transform: scalex(0);
+		}
 	}
+
+.sublinks {
+	position: absolute;
+	top: 4rem;
+	left: 0;
+	z-index: 1500;
+	background: $white;
+	padding: 0 .5rem 1rem;
+	opacity: 0;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	pointer-events: none;
+	transition: all .5s;
+
+	&__item {
+		align-self: flex-start;
+	}
+
+	&__link {
+		
+	}
+}
+
+
+.item-categories__item--more:hover .sublinks {
+	opacity: 1!important;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	pointer-events: all;
+}
 
 .filters {
 
@@ -78,33 +127,5 @@
 		border-radius: 5rem;
 	}
 }
-
-// .filters {
-// 	display: flex;
-// 	border: 1px solid red;
-// 	padding: 1rem;
-// 	align-items: flex-start;
-// 	justify-content: flex-end;
-
-// 	&__heading {
-// 		font-size: 1.6rem;
-// 		font-weight: 600;
-// 	}
-
-// 	&__select {
-// 		display: block;
-// 		padding: 1rem 2rem;
-// 		background: #f2f2f2;
-// 		color: $grey;
-// 		font-family: inherit;
-// 		border: none;
-// 		border-radius: 1rem;
-// 	}
-
-// 	&__price {
-// 		// padding: 1rem;
-// 	}
-// }
-
 
 

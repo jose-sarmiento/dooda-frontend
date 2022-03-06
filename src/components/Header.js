@@ -8,7 +8,7 @@ import MyAccountSubmenu from "./MyAccountSubmenu";
 
 import useAppContext from "../hooks/useAppContext";
 
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/doadasvglogo.svg";
 import user from "../assets/images/woman.jpg";
 
 const Header = React.forwardRef((props, ref) => {
@@ -81,6 +81,17 @@ const Header = React.forwardRef((props, ref) => {
 						</NavLink>
 						<PlacesSubmenu />
 					</li>
+					{/*<li className="nav__item">
+						<NavLink
+							to="/p/hotels"
+							className={({ isActive }) =>
+								isActive ? "nav__link nav__link--active" : "nav__link"
+							}
+						>
+							Outdoor Experience
+						</NavLink>
+						<PlacesSubmenu />
+					</li>*/}
 					<li className="nav__item">
 						<NavLink
 							to="/host/guide"
@@ -91,17 +102,6 @@ const Header = React.forwardRef((props, ref) => {
 							Become a Host
 						</NavLink>
 						<HostSubmenu />
-					</li>
-					<li className="nav__item">
-						<NavLink
-							to="/account/profile"
-							className={({ isActive }) =>
-								isActive ? "nav__link nav__link--active" : "nav__link"
-							}
-						>
-							My Account
-						</NavLink>
-						<MyAccountSubmenu />
 					</li>
 				</ul>
 

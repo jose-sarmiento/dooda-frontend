@@ -12,7 +12,12 @@ import {
     Beaches,
     Pools,
     Farms,
-    ViewPlace
+    ViewPlace,
+    Cabins,
+    Campers,
+    HouseBoats,
+    Islands,
+    Treehouses
 } from "./components"; 
 
 function App() {
@@ -30,6 +35,16 @@ function App() {
                 <Route path="pools/:id" element={<ViewPlace />} />
                 <Route path="farms" element={<Farms />} />
                 <Route path="farms/:id" element={<ViewPlace />} />
+                <Route path="cabins" element={<Cabins />} />
+                <Route path="cabins/:id" element={<ViewPlace />} />
+                <Route path="campers" element={<Campers />} />
+                <Route path="campers/:id" element={<ViewPlace />} />
+                <Route path="islands" element={<Islands />} />
+                <Route path="islands/:id" element={<ViewPlace />} />
+                <Route path="treehouses" element={<Treehouses />} />
+                <Route path="treehouses/:id" element={<ViewPlace />} />
+                <Route path="houseboats" element={<HouseBoats />} />
+                <Route path="houseboats/:id" element={<ViewPlace />} />
             </Route>
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />

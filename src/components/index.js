@@ -25,6 +25,12 @@ import FilterDraggable from "./FilterDraggable"
 import Modal from "./Modal"
 import Sidebar from "./Sidebar"
 import Hero from "./Hero"
+import Previews from "./Previews"
+import Cabins from "./Cabins"
+import Campers from "./Campers"
+import Islands from "./Islands"
+import Treehouses from "./Treehouses"
+import HouseBoats from "./HouseBoats"
 
 
 export {
@@ -55,4 +61,10 @@ export {
 	Modal,
 	Sidebar,
 	Hero,
+	Previews,
+	Cabins,
+	Campers,
+	Islands,
+	Treehouses,
+	HouseBoats
 }

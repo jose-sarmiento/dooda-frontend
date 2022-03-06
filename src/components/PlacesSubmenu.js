@@ -47,6 +47,46 @@ const PlacesSubmenu = () => {
 						Farm
 					</Link>
 				</li>
+				<li className="submenu__row">
+					<span className="submenu__icon">
+						<i class="fa-solid fa-house-tree"></i>
+					</span>
+					<Link to="/p/cabins" className="submenu__text">
+						Cabins
+					</Link>
+				</li>
+				<li className="submenu__row">
+					<span className="submenu__icon">
+						<i class="fa-solid fa-campground"></i>
+					</span>
+					<Link to="/p/campers" className="submenu__text">
+						Campers
+					</Link>
+				</li>
+				<li className="submenu__row">
+					<span className="submenu__icon">
+						<i class="fa-solid fa-island-tropical"></i>
+					</span>
+					<Link to="/p/islands" className="submenu__text">
+						Islands
+					</Link>
+				</li>
+				<li className="submenu__row">
+					<span className="submenu__icon">
+						<i class="fa-solid fa-house-tree"></i>
+					</span>
+					<Link to="/p/treehouses" className="submenu__text">
+						Treehouses
+					</Link>
+				</li>
+				<li className="submenu__row">
+					<span className="submenu__icon">
+						<i class="fa-solid fa-ship"></i>
+					</span>
+					<Link to="/p/houseboats" className="submenu__text">
+						HouseBoats
+					</Link>
+				</li>
 			</ul>
 
 			<ul className="submenu__group submenu__group--filters">

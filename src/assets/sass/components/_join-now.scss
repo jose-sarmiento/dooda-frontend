@@ -1,0 +1,57 @@
+.section-join-now {
+	height: 100vh;
+	background: url(../../images/mountainview.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	&__heading {
+		font-size: 4.8rem;
+		letter-spacing: 1px;
+		color: $white;
+		font-family: 'Montserrat', sans-serif;
+		margin-bottom: 3rem;
+		font-weight: 500;
+		text-shadow: 0px 3px 5px rgba(0, 0, 0, .3);
+	}
+
+	&__bar {
+		display: block;
+		height: 4px;
+		width: 10rem;
+		background: $greenish;
+		border-radius: 1rem;
+		margin-bottom: 3rem;
+	}
+
+	&__sub {
+		font-size: 1.8rem;
+		color: #eee;
+		line-height: 2.6rem;
+	}
+
+	&__cta {
+		display: inline-block;
+		padding: 1.2rem 2rem;
+		font-family: inherit;
+		font-size: 1.4rem;
+		margin-top: 2.5rem;
+		border: 2px solid $greenish;
+		border-radius: 1rem;
+		text-transform: uppercase;
+		letter-spacing: .8px;
+		background: transparent;
+		color: $white;
+	}
+
+	&__cta:hover {
+		background: $greenish;
+		color: $dark;
+	}
+}

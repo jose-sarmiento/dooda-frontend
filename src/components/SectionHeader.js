@@ -1,52 +1,43 @@
-import React from 'react'
-import CustomLink from "./CustomLink"
+import React from "react";
+import CustomLink from "./CustomLink";
 import { places } from "../mocks/links";
 
-const SectionHeader = ({toggle}) => {
-	// const [min, setMin] = useState(15000);
-	// const [max, setMax] = useState(40000);
+const SectionHeader = ({ toggle }) => {
 	return (
 		<div className="section-header container">
-				<ul className="item-categories">
-					{places.map((link, idx) => (
-						<li className="item-categories__item" key={link.id}>
-							<CustomLink
-								to={link.url}
-							>
-								{link.text}
-							</CustomLink>
-						</li>
-					))}
-				</ul>
+			<ul className="item-categories">
+				{places.slice(0,8).map((link, idx) => (
+					<li className="item-categories__item" key={link.id}>
+						<CustomLink to={link.url}>{link.text}</CustomLink>
+					</li>
+				))}
+				<li className="item-categories__item item-categories__item--more">
+					<span className="item-categories__link item-categories__link--more">more
 
-				<div className="filters">
-					{/*<select name="filter" id="filter" className="filters__select">
-						<option value="nearest">Nearest</option>
-						<option value="price">Price</option>
-						<option value="rating">Rating</option>
-						<option value="nearest">Nearest</option>
-					</select>*/}
-					<button type="button" className="filters__price-toggler" onClick={toggle}>Filters</button>
-				</div>
-				{/*<div className="filters">
-					<h4 className="filters__heading">Filters:</h4>
-					<select name="filter" id="filter" className="filters__select">
-						<option value="nearest">Nearest</option>
-						<option value="nearest">Price</option>
-						<option value="nearest">Rating</option>
-						<option value="nearest">Nearest</option>
-					</select>
-					<div className="filters__price">
-						<PriceSlider
-								min={min}
-								max={max}
-								setMin={setMin}
-								setMax={setMax}
-							/>
-					</div>
-				</div>*/}
+					<i class="fa-solid fa-angle-down item-categories__icon"></i>
+					</span>
+
+					<ul className="sublinks">
+						{places.slice(8).map((link, idx) => (
+							<li className="sublinks__item">
+								<CustomLink to={link.url}>{link.text}</CustomLink>
+							</li>
+						))}
+					</ul>
+				</li>
+			</ul>
+
+			<div className="filters">
+				<button
+					type="button"
+					className="filters__price-toggler"
+					onClick={toggle}
+				>
+					Filters
+				</button>
 			</div>
-	)
-}
+		</div>
+	);
+};
 
-export default SectionHeader
+export default SectionHeader;
