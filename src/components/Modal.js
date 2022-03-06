@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaTimes, FaCheck } from "react-icons/fa";
 import MultiStepForm from "./MultiStepForm";
 import useAppContext from "../hooks/useAppContext"
@@ -6,6 +6,12 @@ import useAppContext from "../hooks/useAppContext"
 const Modal = () => {
 	const { isOpenModal, closeModal } = useAppContext()
 	const [currStep, setCurrStep] = useState(1);
+
+	useEffect(() => {
+		if (!isOpenModal) {
+			setCurrStep(1)
+		}
+	}, [isOpenModal])
 
 	return (
 		<div className={isOpenModal ? "modal modal--show" : "modal"}>

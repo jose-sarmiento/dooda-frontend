@@ -48,6 +48,7 @@
 	&__heading {
 		font-size: 3.2rem;
 		color: $white;
+		letter-spacing: 1px;
 	}
 
 	&__sub1 {
@@ -81,7 +82,7 @@
    }
 
    &__input {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       padding: 1rem 2rem;
       font-family: inherit;
       color: $white;
@@ -99,7 +100,7 @@
       }
 
       &:focus:invalid {
-         border-bottom: 2px solid red;
+         border-bottom: 2px solid $primary-dark;
       }
 
       &::-webkit-input-placeholder {
@@ -138,13 +139,16 @@
    		padding: 1.2rem 3rem;
    		display: inline-block;
   		text-align: center;
-	    font-weight: 600;
+	    // font-weight: 600;
   		background: linear-gradient(to right, darken($primary-dark, 10%), darken($primary-dark, 5%));
   		border: none;
   		cursor: pointer;
   		border-radius: 3rem;
   		color: $white;
   		font-family: inherit;
+  		text-transform: uppercase;
+  		letter-spacing: .8px;
+  		font-size: 1.2rem;
    }
 
    &__submit-btn:disabled {
@@ -157,6 +161,10 @@
    		margin-left: 2rem;
    		background: transparent;
    		border: 1px solid $primary-dark;
+   		color: $white;
+  		font-family: inherit;
+  		text-transform: uppercase;
+  		letter-spacing: .8px;
    }
 
    &__submit:hover {

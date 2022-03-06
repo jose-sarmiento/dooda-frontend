@@ -71,15 +71,17 @@ const Homepage = () => {
 
 			<Previews />
 
+			<section className="section section--features">
+				<Features />
+			</section>
+
 			<section className="section section-reviews">
 				<div className="container">
 					<Reviews />
 				</div>
 			</section>
 
-			<section className="section section--features">
-				<Features />
-			</section>
+			
 
 			<section className="section-join-now">
 				<div className="section-join-now__container">

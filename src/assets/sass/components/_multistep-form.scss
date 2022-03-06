@@ -9,17 +9,16 @@
 
 	&__heading {
 		color: $primary-dark;
-		font-weight: 700;
-		font-size: 2rem;
+		font-weight: 500;
 		font-size: 2.4rem;
 		margin-bottom: 1rem;
+		letter-spacing: .8px;
 	}
 
 	&__subheading {
 		margin-bottom: 4rem;
-		color: $grey;
+		color: $grey3;
 		font-size: 1.4rem;
-		font-weight: 500;
 	}
 
 	&__step {
@@ -119,16 +118,14 @@
 
 	&__group-label {
 		font-size: 1.4rem;
-		font-weight: 700;
-		color: $grey-light;
+		color: $dark;
 		display: inline-block;
 		margin-bottom: 1rem;
 	}
 
 	&__label {
-		font-size: 1.4rem;
-		font-weight: 700;
-		color: $grey-light;
+		font-size: 1.6rem;
+		color: $grey2;
 		display: inline-block;
 		margin-bottom: 1rem;
 	}
@@ -249,7 +246,7 @@
 		text-transform: capitalize;
 		font-weight: 600;
 		color: $white;
-		margin-top: 1rem;
+		margin-top: 1.5rem;
 
 		&:focus,
 		&:active {
