@@ -1,6 +1,6 @@
 .header {
 	padding: 0 1rem;
-	z-index: 1000;
+	z-index: 1500;
 	height: 7rem;
 	position: fixed;
 	top: 0;
@@ -41,6 +41,9 @@
 	&__logo-wrapper {
 		display: block;
 		margin-right: 4rem; 
+
+		height: 4rem;
+		width: 6rem;
 	}
 
 	&__logo {
@@ -226,6 +229,7 @@
 	.nav__cta {
 		border: 2px solid $primary-dark;
 		background: transparent;
+		color: #dedede;
 	}
 
 	.header-right__button {

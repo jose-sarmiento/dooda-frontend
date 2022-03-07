@@ -3,9 +3,10 @@
 	// background: $white;
 	width: 100%;
 	position: relative;
-	// background: url(../../images/mountainview.jpg);
-	// background-attachment: fixed;
-	// background-size: cover;
+	background: url(../../images/mountainview.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center right;
 
 	.overlay {
 		position: absolute;
@@ -13,27 +14,26 @@
 		width: 100%;
 		top: 0;
 		left: 0;
-		background: $white;
-  		
+  		background: rgba(#001402, .4);
 		opacity: 0;
-		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+		// transform: scale(0);
+		// transform-origin: center;
+		// clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 	}
 
 	&__container {
-		height: 80%;
+		height: 100vh;
 		width: 1200px;
-		position: absolute;
-		top: calc(50% + 20px);
-		left: 50%;
-		transform: translate(-50%, -50%);
-		padding: 2rem;
+		margin: 0 auto;
 		display: flex;
 		align-items: center;
+		position:relative;
 	}
 
 	&__content {
 		z-index: 10;
-		margin-left: 5rem;
+		margin-left: 15rem;
+		transform: translateY(-12%);
 	}
 
 	&__heading-1 {
@@ -43,25 +43,27 @@
 		letter-spacing: normal;
 		line-height: 4rem;
 		text-transform: none;
-		color: $dark;
+		color: #f4f4f4;
 		letter-spacing: .8px;
+		margin-bottom: .5rem;
 	}
 	&__heading-2 {
 		font-family: montserrat, lato, "helvetica neue", Helvetica, Arial, sans-serif;
-		font-size: 4rem;
+		font-size: 3.6rem;
 		font-style: normal;
 		font-weight: 400;
 		letter-spacing: 1px;
-		line-height: 4.5rem;
+		line-height: 4rem;
 		text-transform: capitalize;
-		color: #505358;
+		color: $white;
 	}
 
 	&__bar {
 		display: block;
 		height: 4px;
-		background: $greenish;
-		width: 5rem;
+		background: $primary-dark;
+		width: 6rem;
+		border-radius: 1rem;
 		margin-top: 3.5rem;
 		margin-bottom: 3.5rem;
 	}
@@ -74,16 +76,17 @@
 		letter-spacing: normal;
 		line-height: 2.6rem;
 		text-transform: none;
-		color: #70727A;
+		color: #c7c7c7;
 	}
 
 	&__cta {
-		border: 2px solid $primary-dark;
-		padding: 1.2rem 2.5rem;
+		border: none;
+		padding: 1.5rem 3rem;
 		color: $white;
+		font-weight: 500;
 		font-size: 1.2rem;
 		text-transform: uppercase;
-		border-radius: 3rem;
+		border-radius: 5rem;
 		font-family: inherit;
 		background: $primary-dark;
 		margin-top: 3rem;
@@ -120,23 +123,24 @@
 .float {
 	position: absolute;
 	right: 0;
-	top: 50%;
-	transform: translateY(-50%);
+	bottom: 6rem;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	z-index: 1000;
 
 	&__item {
 		height: 3.6rem;
 		width: 3.6rem;
 		border-radius: 1rem;
-		border: 1px solid #ccc;
+		border: none;
 		font-size: 1.4rem;
-		color: $dark;
+		color: #c7c7c7;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		position: relative;
+		background: rgba($grey, .4);
 	}
 
 	&__item:hover {
@@ -147,6 +151,8 @@
 	&__item--profile {
 		border-radius: 50%;
 		box-shadow: $shadow-light;
+		border: 2px solid $primary-dark!important;
+		box-sizing: content-box;
 	}
 
 	&__user-img {
@@ -174,10 +180,14 @@
 		border-radius: .5rem;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		opacity: 0;
 		transition: all .5s;
-		padding: 1rem 2rem;
 		pointer-events: none;
+		text-transform: uppercase;
+		letter-spacing: .8px;
+		font-size: 1.2rem;
+		text-align: center;
 	}
 
 	&__item:hover &__tooltips {

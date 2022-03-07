@@ -27,9 +27,8 @@ const Homepage = () => {
 		tl.current = gsap
 			.timeline()
 			.to(q(".overlay"), {
-				clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
 				opacity: 1,
-				duration: 1.2,
+				duration: 1,
 				ease: "expo.out",
 			})
 			.delay(1)
@@ -57,7 +56,7 @@ const Homepage = () => {
 			else headerRef.current.classList.remove("header--dark");
 		}, {});
 
-		// observer.observe(headingRef.current);
+		observer.observe(bannerRef.current.querySelector(".hero__heading-1"));
 	}, [headingRef, headerRef]);
 
 	const handleMouseOver = () => {
