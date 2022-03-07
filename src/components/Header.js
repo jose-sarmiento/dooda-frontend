@@ -37,9 +37,9 @@ const Header = React.forwardRef((props, ref) => {
 		const hideHeaderOnScroll = () => {
 			const scrollTop = window.pageYOffset ||document.documentElement.scrollTop
 			if(scrollTop > lastScrollTop && headerRef.current) {
-				headerRef.current.style.opacity = 0
+				headerRef.current.style.clipPath = "polygon(0 0, 100% 0, 100% 0, 0 0)"
 			} else {
-				headerRef.current.style.opacity = 1
+				headerRef.current.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
 			}
 			lastScrollTop = scrollTop
 		}

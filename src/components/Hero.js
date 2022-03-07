@@ -34,33 +34,27 @@ const Hero = React.forwardRef((props, ref) => {
 					<Link to="/p/hotels" className="hero__cta">Explore now</Link>	
 				</div>	
 
-
-
-				<figure className="hero__image-wrapper">
-					<img src={heroimage} alt="travel bag with hat" className="hero__image" />
-				</figure>	
-
 				<div className="float">
-					<div className="float__item float__item--profile">
+					<Link to="/account/profile" className="float__item float__item--profile">
 						<img src={woman} alt="jane doe picture" className="float__user-img" />
 						<div className="float__tooltips">Account</div>
-					</div>
-					<div className="float__item float__item--notifications">
+					</Link>
+					<Link to="/account/notifications" className="float__item float__item--notifications">
 						<i class="fa-solid fa-bell"></i>
 						<div className="float__tooltips">Notifications</div>
-					</div>
-					<div className="float__item float__item--wishlists">
+					</Link>
+					<Link to="/account/wishlists" className="float__item float__item--wishlists">
 						<i class="fa-solid fa-heart"></i>
 						<div className="float__tooltips">Wishlists</div>
-					</div>
-					<div className="float__item float__item--calendar">
+					</Link>
+					<button className="float__item float__item--calendar">
 						<i class="fa-solid fa-calendar-days"></i>
 						<div className="float__tooltips">Calendar</div>
-					</div>
-					<div className="float__item float__item--map">
+					</button>
+					<button className="float__item float__item--map">
 						<i class="fa-solid fa-map"></i>
 						<div className="float__tooltips">Map</div>
-					</div>
+					</button>
 				</div>
 
 			</div>

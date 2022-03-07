@@ -9,8 +9,10 @@ const Review = ({ small = false }) => {
                 <figure className="review__img-wrapper">
                     <img src={girl} alt="girl" className="review__img" />
                 </figure>
-                <h4 className="review__name">Jane Doe</h4>
-                <h6 className="review__job">Tourist</h6>
+                <div className="review__user-details">
+                    <h4 className="review__name">Jane Doe</h4>
+                    <h6 className="review__job">Tourist</h6>
+                </div>
             </div>
 
             <div className="review__content">

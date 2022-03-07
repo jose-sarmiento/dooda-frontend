@@ -1,5 +1,5 @@
 .section--footer {
-	height: 30rem;
+	min-height: 30rem;
 	background: #111;
 	margin: 0!important;
 }
@@ -77,3 +77,29 @@
 	.text-center {
 		text-align: center;
 	}
+
+@media (max-width: 850px) {
+	.footer-container {
+		padding: 0!important;
+	}
+	.footer {
+		grid-template-columns: 1fr 1fr;
+		grid-row-gap: 2rem;
+		padding: 2rem;
+	}
+	.footer__about {
+		grid-column: 1/-1;
+		padding: 0;
+	}
+}
+
+@media (max-width: 530px) {
+	.footer {
+		padding: 1rem;
+
+		&__about-text {
+			font-size: 1.2rem;
+			line-height: 2rem;
+		}
+	}
+}

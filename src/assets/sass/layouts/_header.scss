@@ -12,6 +12,7 @@
 	box-shadow: 0 3px 2px -2px rgba(0, 0, 0, .1);
 	max-width: 100%;
 	transition: opacity .4s;
+	transition: clip-path .5s;
 
 	&--start-transparent {
 		transform: translateY(4rem);
@@ -215,7 +216,11 @@
 	}
 	
 	.nav__link {
-		color: #deced5;
+		color: #c7c7c7;
+	}
+
+	.nav__link--active {
+		color: $white;
 	}
 
 	.nav__link:hover {
@@ -268,12 +273,11 @@
 }
 .header__username {
 	font-size: 1.4rem;
-	font-weight: 600;
-	color: $black;
+	color: $dark;
 	display: inline-block;
 	margin-right: 2rem;
 	margin-left: 1rem;
-	border-bottom: 2px solid $grey;
+	border-bottom: 2px solid $grey3;
 	padding-bottom: .3rem;
 }
 
@@ -284,5 +288,15 @@
 	}
 	.header__mobile {
 		display: flex;
+	}
+	.header__logo-wrapper {
+		height: 4rem;
+		width: 5rem;
+	}
+
+	.header__logo {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
 	}
 }

@@ -29,7 +29,7 @@ const Sidebar = () => {
 							}
 						>
 							<i className="fa-solid fa-shoe-prints"></i>
-							Destinations
+							Places to Stay
 						</NavLink>
 					</li>
 

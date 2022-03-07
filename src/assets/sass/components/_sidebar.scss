@@ -1,11 +1,11 @@
 .sidebar {
 	position: fixed;
 	height: 100vh;
-	width: 30rem;
+	width: 32rem;
 	right: 0;
 	top: 0;
 	bottom: 0;
-	z-index: 1200;
+	z-index: 1500;
 	background: $white;
 	box-shadow: $shadow;
 	padding: 1rem;
@@ -16,10 +16,12 @@
 	transform: scaleX(0);
 	transform-origin: right;
 	transition: all .5s;
+	pointer-events: none;
 
 	&--show {
 		opacity: 1;
 		transform: scaleX(1);
+		pointer-events: all;
 	}
 
 	&__close {

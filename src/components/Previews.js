@@ -35,7 +35,7 @@ const Previews = () => {
 			<div className="previews__container">
 				<div className="previews__header">
 					<h2 className="previews__heading">
-						Most Bookings This Month
+						Recommended
 					</h2>
 				</div>
 
@@ -89,7 +89,7 @@ const Previews = () => {
 					</div>
 				</div>
 
-				<div className="preview-single">
+				<div className="preview-single preview-single--1">
 					<div className="preview-single__image-wrap">
 						<img
 							src={img5}
@@ -106,7 +106,7 @@ const Previews = () => {
 					</div>
 				</div>
 
-				<div className="preview-single">
+				<div className="preview-single preview-single--2">
 					<div className="preview-single__image-wrap">
 						<img
 							src={img4}
