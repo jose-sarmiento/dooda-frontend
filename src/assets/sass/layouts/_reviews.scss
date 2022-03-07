@@ -1,7 +1,9 @@
 .section-reviews {
-	height: 85vh;
+	height: 100vh;
 	// padding: 6rem;
-	background: $white;
+	background: linear-gradient(to right, rgba($white, .8), rgba($white, .8)), url(../../images/group.jpg);
+	background-size: cover;
+	background-attachment: fixed;
 	position: relative;
 }
 

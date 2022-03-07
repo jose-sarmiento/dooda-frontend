@@ -22,7 +22,7 @@ const Header = React.forwardRef((props, ref) => {
 			y: 0,
 			opacity: 1,
 			pointerEvents: "all",
-			delay: 3.4,
+			delay: 4,
 			ease: "expo.out",
 		});
 	}, []);

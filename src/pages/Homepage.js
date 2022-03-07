@@ -26,28 +26,28 @@ const Homepage = () => {
 	useEffect(() => {
 		tl.current = gsap
 			.timeline()
-			.to(q(".fh-banner__image--mountain"), {
-				y: 0,
+			.to(q(".overlay"), {
+				clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
 				opacity: 1,
 				duration: 1.2,
 				ease: "expo.out",
 			})
-			.to(
-				q(".fh-banner__image--swimming"),
-				{
-					y: 0,
-					opacity: 1,
-					duration: 1.2,
-					ease: "expo.out",
-				},
-				"-=1.2"
-			)
+			.delay(1)
+			// .to(
+			// 	q(".fh-banner__image--swimming"),
+			// 	{
+			// 		y: 0,
+			// 		opacity: 1,
+			// 		duration: 1.2,
+			// 		ease: "expo.out",
+			// 	},
+			// 	"-=1.2"
+			// )
 			.to(q(".stagger"), {
 				clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
 				opacity: 1,
-				duration: 1,
-				ease: "expo.out",
-				stagger: 0.4,
+				duration: 2,
+				stagger: 0.6,
 			});
 	}, [bannerRef, q]);
 
@@ -67,7 +67,7 @@ const Homepage = () => {
 	return (
 		<Layout ref={headerRef}>
 
-			<Hero />
+			<Hero ref={bannerRef} />
 
 			<Previews />
 

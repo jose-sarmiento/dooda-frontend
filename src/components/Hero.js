@@ -1,21 +1,42 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import {Link} from "react-router-dom"
-import heroimage from "../assets/images/hero-image.jpg"
+import heroimage from "../assets/images/contrasted.jpg"
 
 import woman from "../assets/images/woman.jpg"
 
-const Hero = () => {
+
+
+const Hero = React.forwardRef((props, ref) => {
+	const overlay = useRef()
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const scrollTop = overlay.current.scrollTop
+			console.log(scrollTop)
+			let elementHeight =overlay.current.clientHeight;
+	        let opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
+			// overlay.current.style.opacity = opacity
+		}
+
+		window.addEventListener("scroll", handleScroll)
+	  	return () => window.removeEventListener("scroll", handleScroll);
+	}, [])
+
+
 	return (
-		<div className="hero">
+		<div className="hero" ref={ref}>
+			<div className="overlay" ref={overlay}></div>
 			<div className="hero__container">
-				<div className="hero__content">
+				<div className="hero__content stagger">
 					<h1 className="hero__heading-1">DOODA</h1>				
-					<h1 className="hero__heading-2">Find your next destination</h1>
+					<h1 className="hero__heading-2">Book without worries</h1>
 					<span className="hero__bar"></span>	
 					<p className="hero__sub">Trusted by over 200,000 users all over Philippines</p>
 					<p className="hero__sub">With over 500,000 available bookings</p>
 					<Link to="/p/hotels" className="hero__cta">Explore now</Link>	
 				</div>	
+
+
 
 				<figure className="hero__image-wrapper">
 					<img src={heroimage} alt="travel bag with hat" className="hero__image" />
@@ -46,6 +67,6 @@ const Hero = () => {
 			</div>
 		</div>
 	)
-}
+})
 
 export default Hero
