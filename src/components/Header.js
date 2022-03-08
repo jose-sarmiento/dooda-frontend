@@ -19,7 +19,7 @@ const Header = React.forwardRef((props, ref) => {
 
 	useEffect(() => {
 		gsap.to(headerRef.current, {
-			y: 0,
+			scaleY: 1,
 			opacity: 1,
 			pointerEvents: "all",
 			delay: 4,
@@ -37,20 +37,22 @@ const Header = React.forwardRef((props, ref) => {
 		const hideHeaderOnScroll = () => {
 			const scrollTop = window.pageYOffset ||document.documentElement.scrollTop
 			if(scrollTop > lastScrollTop && headerRef.current) {
-				headerRef.current.style.clipPath = "polygon(0 0, 100% 0, 100% 0, 0 0)"
+				headerRef.current.style.transform = "scaleY(0)"
+				headerRef.current.style.opacity = 0
 			} else {
-				headerRef.current.style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
+				headerRef.current.style.transform = "scaleY(1)"
+				headerRef.current.style.opacity = 1
 			}
 			lastScrollTop = scrollTop
 		}
 		window.addEventListener("scroll", hideHeaderOnScroll)
 		// return window.removeEventListener("scroll", hideHeaderOnScroll)
-	})
+	},[headerRef])
 
 	return (
 		<header
 			className={location.pathname === "/" ? "header header--start-transparent" : "header"}
-			ref={location.pathname === "/" ? headerRef : null}
+			ref={headerRef}
 		>
 			<div className="header__container">
 				<Link to="/" className="header__logo-wrapper">

@@ -32,21 +32,20 @@ const Homepage = () => {
 				ease: "expo.out",
 			})
 			.delay(1)
-			// .to(
-			// 	q(".fh-banner__image--swimming"),
-			// 	{
-			// 		y: 0,
-			// 		opacity: 1,
-			// 		duration: 1.2,
-			// 		ease: "expo.out",
-			// 	},
-			// 	"-=1.2"
-			// )
 			.to(q(".stagger"), {
 				clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
 				opacity: 1,
 				duration: 2,
 				stagger: 0.6,
+			})
+			.fromTo(q(".float__item"), {
+				y: 20,
+				opacity: 0,
+			},{
+				delay: 1,
+				y: 0,
+				opacity: 1,
+				stagger: 0.2,
 			});
 	}, [bannerRef, q]);
 

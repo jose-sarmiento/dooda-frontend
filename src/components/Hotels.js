@@ -6,9 +6,10 @@ import { places } from "../mocks/links";
 
 const Hotels = () => {
 	const [isOpen, setIsOpen] = useState(false)
+	const [query, setQuery] = useState("hotel")
  
 	const [page, setPage] = useState(1);
-	const { results, loading, error, hasNext } = usePaginateFetch("hotel", page, 9);
+	const { results, loading, error, hasNext } = usePaginateFetch(query, page, 9);
 	const observer = useRef();
 	const lastElementRef = useCallback(
 		(node) => {
@@ -22,7 +23,7 @@ const Hotels = () => {
 			});
 			if (node) observer.current.observe(node);
 		},
-		[loading, hasNext]
+		[query, loading, hasNext]
 	); 
 
 	const close = (e) => setIsOpen(false)
