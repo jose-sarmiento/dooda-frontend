@@ -1,11 +1,13 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import CustomLink from "./CustomLink";
 import { places } from "../mocks/links";
 
 const SectionHeader = ({ toggle }) => {
 	return (
-		<div className="section-header container">
-			<ul className="item-categories">
+		<div className="section-header">
+
+			<ul className="item-categories item-categories--web">
 				{places.slice(0,8).map((link, idx) => (
 					<li className="item-categories__item" key={link.id}>
 						<CustomLink to={link.url}>{link.text}</CustomLink>
