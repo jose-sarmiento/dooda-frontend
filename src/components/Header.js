@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiSearch } from "react-icons/fi";
 import { gsap } from "gsap";
 import PlacesSubmenu from "./PlacesSubmenu";
 import HostSubmenu from "./HostSubmenu";
@@ -22,7 +22,7 @@ const Header = React.forwardRef((props, ref) => {
 			scaleY: 1,
 			opacity: 1,
 			pointerEvents: "all",
-			delay: 4,
+			delay: 5,
 			ease: "expo.out",
 		});
 	}, []);
@@ -33,25 +33,41 @@ const Header = React.forwardRef((props, ref) => {
 	}, [headerRef, ref]);
 
 	useEffect(() => {
-		let lastScrollTop = 0
+		let lastScrollTop = 0;
 		const hideHeaderOnScroll = () => {
-			const scrollTop = window.pageYOffset ||document.documentElement.scrollTop
-			if(scrollTop > lastScrollTop && headerRef.current) {
-				headerRef.current.style.transform = "scaleY(0)"
-				headerRef.current.style.opacity = 0
+			const scrollTop =
+				window.pageYOffset || document.documentElement.scrollTop;
+			if(location.pathname === "/") {
+				if (scrollTop > lastScrollTop && headerRef.current) {
+					headerRef.current.style.transform = "scaleY(0)";
+					headerRef.current.style.opacity = 0;
+				} else {
+					headerRef.current.style.transform = "scaleY(1)";
+					headerRef.current.style.opacity = 1;
+				}
 			} else {
-				headerRef.current.style.transform = "scaleY(1)"
-				headerRef.current.style.opacity = 1
+				// if (scrollTop > lastScrollTop && headerRef.current) {
+				// 	headerRef.current.style.height = "50px";
+				// 	headerRef.current.style.opacity = 1;
+				// } else {
+				// 	headerRef.current.style.height = "70px";
+				// 	headerRef.current.style.opacity = 1;
+				// }
 			}
-			lastScrollTop = scrollTop
-		}
-		window.addEventListener("scroll", hideHeaderOnScroll)
+
+			lastScrollTop = scrollTop;
+		};
+		window.addEventListener("scroll", hideHeaderOnScroll);
 		// return window.removeEventListener("scroll", hideHeaderOnScroll)
-	},[headerRef])
+	}, [headerRef]);
 
 	return (
 		<header
-			className={location.pathname === "/" ? "header header--start-transparent" : "header"}
+			className={
+				location.pathname === "/"
+					? "header header--start-transparent"
+					: "header"
+			}
 			ref={headerRef}
 		>
 			<div className="header__container">
@@ -60,67 +76,96 @@ const Header = React.forwardRef((props, ref) => {
 				</Link>
 
 				<ul className="nav nav--left">
-					<li className="nav__item">
-						<NavLink
-							to="/"
-							className={({ isActive }) =>
-								isActive ? "nav__link nav__link--active" : "nav__link"
-							}
-						>
-							Home
-						</NavLink>
-						
-						{/*<HomeSubmenu />*/}
-					</li>
-					<li className="nav__item">
+					{location.pathname === "/" ? (
+						<>
+						<li className="nav__item">
 						<NavLink
 							to="/p/hotels"
 							className={({ isActive }) =>
-								isActive ? "nav__link nav__link--active" : "nav__link"
+								isActive
+									? "nav__link nav__link--active"
+									: "nav__link"
 							}
 						>
 							Places to Stay
 						</NavLink>
 						<PlacesSubmenu />
 					</li>
-					{/*<li className="nav__item">
+
+					<li className="nav__item">
 						<NavLink
 							to="/p/hotels"
 							className={({ isActive }) =>
-								isActive ? "nav__link nav__link--active" : "nav__link"
+								isActive
+									? "nav__link nav__link--active"
+									: "nav__link"
 							}
 						>
-							Outdoor Experience
+							Experiences
 						</NavLink>
 						<PlacesSubmenu />
-					</li>*/}
+					</li>
+
 					<li className="nav__item">
 						<NavLink
 							to="/host/guide"
 							className={({ isActive }) =>
-								isActive ? "nav__link nav__link--active" : "nav__link"
+								isActive
+									? "nav__link nav__link--active"
+									: "nav__link"
 							}
 						>
 							Become a Host
 						</NavLink>
 						<HostSubmenu />
 					</li>
+						</>
+					) : (
+						<form className="nav-search">
+							<label 
+								htmlFor="nav-search" 
+								className="nav-search__label">
+								<FiSearch/>
+							</label>
+							<input 
+								type="search" 
+								id="nav-search"
+								placeholder="Where are you going?" 
+								className="nav-search__input" 
+							/>
+						</form>
+					)}
 				</ul>
 
 				<ul className="header-right">
-					<li className="header-right__item">
-						<Link to="/signin" className="nav__cta">
-							Login
-						</Link>
-					</li>
+					{location.pathname === "/" ? (
+						<li className="header-right__item">
+							<Link to="/signin" className="nav__cta">
+								Logout
+							</Link>
+						</li>
+					) : (
+						<li className="nav__item">
+							<Link to="/signin" className="nav__link">
+								Become a Host
+							</Link>
+						</li>
+					)}
 				</ul>
 
 				<div className="header__mobile">
 					<figure className="header__user">
-						<img src={user} alt="profile" className="header__user-image" />
+						<img
+							src={user}
+							alt="profile"
+							className="header__user-image"
+						/>
 					</figure>
 					<h6 className="header__username">JaneDoe</h6>
-					<button className="header__hamburger" onClick={() => openSidebar()}>
+					<button
+						className="header__hamburger"
+						onClick={() => openSidebar()}
+					>
 						<i className="fa-solid fa-bars header__hamburger-icon"></i>
 					</button>
 				</div>

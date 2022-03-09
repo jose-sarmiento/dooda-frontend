@@ -3,7 +3,7 @@ import React from "react";
 const CardSkeletonLoading = () => {
 	return (
 		<>
-			{[...Array(6).keys()].map((x, idx) => (
+			{[...Array(8).keys()].map((x, idx) => (
 				<div className="card card--noshadow" key={idx}>
 					<figure className="card__img-wrapper skeleton"></figure>
 					<div className="card__header card__header--skeleton">

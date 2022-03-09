@@ -38,11 +38,22 @@ const Homepage = () => {
 				duration: 2,
 				stagger: 0.6,
 			})
+			.to(q(".hero__content"), {
+				y: 40,
+				duration: 1,
+			})
+			.fromTo(q(".hero__search"), {
+				opacity: 0,
+				x: -50
+			}, {
+				duration: 1,
+				opacity: 1,
+				x: 0
+			}, "-=1")
 			.fromTo(q(".float__item"), {
 				y: 20,
 				opacity: 0,
 			},{
-				delay: 1,
 				y: 0,
 				opacity: 1,
 				stagger: 0.2,

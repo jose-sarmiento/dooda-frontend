@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import {Link} from "react-router-dom"
+import Search from "./Search"
 import heroimage from "../assets/images/contrasted.jpg"
 
 import woman from "../assets/images/woman.jpg"
@@ -24,10 +25,13 @@ const Hero = React.forwardRef((props, ref) => {
 	return (
 		<div className="hero" ref={ref}>
 			<div className="overlay" ref={overlay}></div>
+			<div className="hero__search">
+				<Search variant="hero"/>
+			</div>
 			<div className="hero__container">
 				<div className="hero__content stagger">
 					<h1 className="hero__heading-1">DOODA</h1>				
-					<h1 className="hero__heading-2">The Best Online Booking <br/> Platform</h1>
+					<h1 className="hero__heading-2">The <span className="itallic">Best Online</span> Booking <br/> Platform</h1>
 					<span className="hero__bar"></span>	
 					<p className="hero__sub">Trusted by over 200,000 users all over Philippines</p>
 					<p className="hero__sub">With over 500,000 available bookings</p>

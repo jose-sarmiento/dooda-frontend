@@ -7,7 +7,8 @@ const SectionHeader = ({ toggle }) => {
 	return (
 		<div className="section-header">
 
-			<ul className="item-categories item-categories--web">
+			<div className="section-header__container">
+				<ul className="item-categories item-categories--web">
 				{places.slice(0,8).map((link, idx) => (
 					<li className="item-categories__item" key={link.id}>
 						<CustomLink to={link.url}>{link.text}</CustomLink>
@@ -37,6 +38,7 @@ const SectionHeader = ({ toggle }) => {
 				>
 					Filters
 				</button>
+			</div>
 			</div>
 		</div>
 	);

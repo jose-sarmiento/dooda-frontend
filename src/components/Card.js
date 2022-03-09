@@ -14,10 +14,6 @@ const Card = React.forwardRef((props, ref) => {
         <div className="card fadein" ref={ ref || null}>
             <Link to={`/p/hotels/${data.id}`} className="card__img-wrapper">
                 <img src={data.image.large} alt="img1" className="card__img" />
-                <div className="card__discount">
-                    {/*<p className="card__amount">20% OFF</p>*/}
-                    {/*<p className="card__type">Christmas Week Offer</p>*/}
-                </div>
             </Link>
             <div className="card__header">
                 <div>
