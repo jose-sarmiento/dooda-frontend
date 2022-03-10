@@ -165,6 +165,78 @@
 	border: 1px solid $grey;
 }
 
+.header__mobile {
+	display: none;
+	align-items: center;
+
+	form {
+		width: 32rem;
+		display: flex;
+		align-items: center;
+		position: relative;
+		margin-right: 2rem;
+	}
+
+	input {
+		flex: 1;
+		display: block;
+		width: 100%;
+		padding: 1rem 2rem 1rem .5rem;
+		font-size: 1.4rem;
+		font-family: inherit;
+		color: $white;
+		background: transparent;
+		border: none;
+		opacity: 0;
+		pointer-events: none;
+		transition: all .5s;
+		animation-delay: .7s;
+	}
+
+	input::placeholder {
+		color: #777;
+		text-align: center;
+	}
+
+	input:focus {
+		outline: none;
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	.header__search-icon {
+		position: absolute;
+		right: .5rem;
+		border: none;
+		background: none;
+		font-size: 1.8rem;
+		color: $dark;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	.header__search-icon::before {
+		content: "";
+		height: 2px;
+		width: 32rem;
+		border-radius: 1rem;
+		position: absolute;
+		bottom: 0;
+		background: $primary-light;
+		transition: all .7s;
+		transform-origin: right;
+		transform: translateX(-30.5rem) scaleX(0);
+	}
+	input:focus ~ .header__search-icon::before {
+		transform: translateX(-30.5rem) scaleX(1);
+	}
+
+	input:focus::placeholder {
+		animation: showplaceholder .4s;
+	}
+}
+
 .header--dark {
 	box-shadow: none;
 	
@@ -204,6 +276,10 @@
 		color: $white;
 		border-bottom: 2px solid #f4f4f4;
 	}
+
+	.header__search-icon {
+		color: $white;
+	}
 }
 
 
@@ -213,34 +289,12 @@
 	transform: translateX(-50%) scale(1);
 }
 
-.header__mobile {
-	display: none;
-	align-items: center;
-}
 
-.header__user {
-	height: 3.2rem;
-	width: 3.2rem;
-	border-radius: 50%;
-	overflow: hidden;
-}
-.header__user-image {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	object-position: center center;
-}
-.header__username {
-	font-size: 1.4rem;
-	color: $dark;
-	display: inline-block;
-	margin-right: 2rem;
-	margin-left: 1rem;
-	border-bottom: 2px solid $grey3;
-	padding-bottom: .3rem;
-}
 
-@media (max-width: 780px) {
+@media (max-width: 874px) {
+	.header {
+		height: 5.5rem;
+	}
 	.header-right, 
 	.nav {
 		display: none;
@@ -258,4 +312,41 @@
 		width: 100%;
 		object-fit: cover;
 	}
+}
+
+
+@media (max-width: 506px) {
+	.header__mobile {
+		form {
+			max-width: 25rem;
+			margin-right: 1rem;
+			overflow: hidden;
+		}
+	}
+
+}
+
+@media (max-width: 430px) {
+	.header__mobile {
+		form {
+			max-width: 22rem;
+			margin-right: 1rem;
+			overflow: hidden;
+		}
+
+		input::placeholder {
+			display: none;
+			opacity: 0;
+		}
+	}
+
+}
+
+@media (max-width: 390px) {
+	.header__mobile {
+		form {
+			display: none;
+		}
+	}
+
 }

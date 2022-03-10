@@ -26,6 +26,7 @@ export default function usePaginateFetch(query, page, limit) {
          .catch((e) => {
             setLoading(false);
             setError(true);
+            console.log(e)
          });
    }, [query, page, limit]);
 

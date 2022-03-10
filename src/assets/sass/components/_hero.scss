@@ -234,100 +234,140 @@
 	}
 }
 
-@media (max-width: 780px) {
-	.float {display: none;}
-	// transform: translateY(-12%);
-}
-
-@media (max-width: 736px) {
-
+@media (max-width: 874px) {
+	// .float {display: none;}
 	.hero {
 
+		&__search {
+			display: none;
+		}
+
+		&__container {
+			// justify-content: center;
+		}
+
+		&__content {
+			margin: 0;
+			width: 100%;
+			padding-left: 6rem;
+		}
+
+		&__heading-2 {
+			font-size: 3.8rem;
+		}
+
+		br {
+			// display: none;
+		}
+	}
+}
+
+@media (max-width: 814px) {
+	.float {display: none;}
+}
+
+@media (max-width: 740px) {
+
+	.hero {
+		&__container {
+			width: 100%;
+		}
+		&__content {
+			margin: 0;
+			width: 100%;
+			padding: 6rem;
+		}
+	}
+}
+
+@media (max-width: 618px) {
+
+	.hero {
+		&__content {
+			padding: 4rem;
+		}
+	}
+}
+
+@media (max-width: 542px) {
+
+	.hero {
+		hr {
+			display: none;
+		}
+
+		&__content {
+			padding: 2rem;
+		}
 
 		&__heading-1 {
 			font-size: 1.4rem;
 		}
+
+		&__heading-2 {
+			font-size: 3.4rem;
+			line-height: 3.4rem;
+		}
+
+		&__bar {
+			width: 4rem;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+		}
+
+		&__sub {
+			line-height: 2.4rem;
+		}
+	}
+}
+
+
+@media (max-width: 468px) {
+
+	.hero {
 		&__heading-2 {
 			font-size: 3.2rem;
+			line-height: 3.4rem;
 		}
 
 		&__bar {
-			width: 4.5rem;
+			width: 4rem;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
 		}
 
 		&__sub {
+			line-height: 2.4rem;
+			font-weight: 400;
 			font-size: 1.4rem;
-			font-style: normal;
 		}
 
 		&__cta {
-			padding: 1.2rem 2.5rem;
-		}
-		&__content {
-			margin-left: 5rem;
+			padding: 1.2rem 2rem;
 		}
 	}
-
 }
 
-@media (max-width: 530px) {
+@media (max-width: 436px) {
 
 	.hero {
-		&__heading-1 {
-			font-size: 1.3rem;
-		}
 		&__heading-2 {
-			font-size: 2.8rem;
+			font-size: 3rem;
+			line-height: 3.4rem;
 		}
 
 		&__bar {
-			margin: 2rem 0;
-		}
-
-		&__sub {
-			font-size: 1.4rem;
-			font-style: normal;
-		}
-
-		&__cta {
-			padding: 1rem 2.2rem;
-		}
-		&__content {
-			margin-left: 5rem;
-		}
-	}
-
-}
-
-@media (max-width: 482px) {
-
-	.hero {
-		&__content {
-			margin-left: 2rem;
-		}
-
-		&__heading-1 {
-			line-height: 2rem;
-			font-size: 1.2rem;
-		}
-		&__heading-2 {
-			font-size: 2.6rem;
-			line-height: 3.2rem;
+			margin-top: 2.2rem;
+			margin-bottom: 2.2rem;
 		}
 
 		&__sub {
 			line-height: 2.2rem;
 		}
-	}
 
-}
-
-@media (max-width: 412px) {
-
-	.hero {
-		&__content {
-			margin-left: 1rem;
+		&__cta {
+			padding: 1.2rem 2rem;
 		}
 	}
-
 }
+

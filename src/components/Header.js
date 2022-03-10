@@ -140,14 +140,19 @@ const Header = React.forwardRef((props, ref) => {
 				</ul>
 
 				<div className="header__mobile">
-					<figure className="header__user">
-						<img
-							src={user}
-							alt="profile"
-							className="header__user-image"
+					<form>
+						<input 
+							type="text" 
+							placeholder="Where are you going?"
+							id="hm-search"
 						/>
-					</figure>
-					<h6 className="header__username">JaneDoe</h6>
+						<label 
+							className="header__search-icon"
+							htmlFor="hm-search"
+						>
+							<FiSearch/>
+						</label>
+					</form>					
 					<button
 						className="header__hamburger"
 						onClick={() => openSidebar()}
