@@ -113,11 +113,12 @@
 		font-size: 1.2rem;
 		text-transform: uppercase;
 		border: 2px solid $primary-dark;
+		border: 2px solid $dark;
 		font-family: inherit;
 		border-radius: 3rem;
-		color: $dark;
+		color: $white;
 		letter-spacing: .8px;
-		background: $white;
+		background: $dark;
 	}
 }
 

@@ -84,6 +84,7 @@
 		align-self: flex-start;
 		padding: 1.2rem 2rem;
 		border: 2px solid #946119;
+		border: 2px solid $dark;
 		text-align: left;
 		font-size: 1.2rem;
 		color: $white;
@@ -92,6 +93,7 @@
 		text-transform: uppercase;
 		background: $primary-dark;
 		background: #946119;
+		background: $dark;
 	}
 
 	&__cta:hover {
@@ -136,6 +138,7 @@
 		background: linear-gradient(to right, rgba(#000, .2), rgba(#000, .2)), url(../../images/treehouse.jpg);	
 		background-size: cover;
 		background-position: center center;	
+		padding: 3rem;
 	}
 
 	.features__left,
