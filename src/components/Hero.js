@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react'
 import {Link} from "react-router-dom"
 import Search from "./Search"
-import heroimage from "../assets/images/contrasted.jpg"
+import treehouse from "../assets/images/boat.png"
 
 import woman from "../assets/images/woman.jpg"
 
@@ -11,7 +11,6 @@ const Hero = React.forwardRef((props, ref) => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollTop = overlay.current.scrollTop
-			console.log(scrollTop)
 			let elementHeight =overlay.current.clientHeight;
 	        let opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
 			// overlay.current.style.opacity = opacity
@@ -37,6 +36,10 @@ const Hero = React.forwardRef((props, ref) => {
 					<p className="hero__sub">With over 500,000 available bookings</p>
 					<Link to="/p/hotels" className="hero__cta">Explore now</Link>	
 				</div>	
+
+				{/*<figure className="hero__image">
+					<img src={treehouse} alt="treehouse" className="hero__treehouse" />
+				</figure>*/}
 
 				<div className="float">
 					<Link to="/account/profile" className="float__item float__item--profile">

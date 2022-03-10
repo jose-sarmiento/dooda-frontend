@@ -14,7 +14,7 @@ const FilterDraggable = ({ isOpen, close }) => {
 
 	return (
 		<Draggable
-			handle=".handle"
+			handle=".filter-draggable"
 			defaultPosition={{ x: 0, y: 0 }}
 			scale={1}
 			onStart={handleStart}
@@ -27,7 +27,7 @@ const FilterDraggable = ({ isOpen, close }) => {
 				<span className="filter-draggable__close" onClick={() => close()}>
 					<i className="fa-solid fa-xmark"></i>
 				</span>
-				<div className="handle">Drag here to reposition</div>
+				<div className="handle">Drag anywhere to reposition</div>
 				<div className="filters">
 					<div className="filter__group">
 						<p className="filter__heading">Day/Time</p>

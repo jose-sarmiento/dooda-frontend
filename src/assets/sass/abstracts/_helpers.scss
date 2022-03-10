@@ -31,3 +31,17 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-column-gap: 1rem;
 }
+
+
+.itallic {
+	font-family: 'Playfair Display', sans-serif;
+	font-style: italic;
+}
+
+.grid-12 {
+	max-width: 1200px;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	margin: 0 auto;
+	height: 100%;
+}

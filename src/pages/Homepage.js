@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import {Link} from "react-router-dom"
 import hotels from "../mocks/hotels";
 import Layout from "./Layout";
-import { Card, Reviews, Steps, Features, Hero, Previews } from "../components";
+import { Card, Reviews, Steps, Features, Hero, Previews, HostOffer } from "../components";
 import useAppContext from "../hooks/useAppContext";
 
 import manmountain from "../assets/images/contrasted.jpg";
@@ -39,7 +39,7 @@ const Homepage = () => {
 				stagger: 0.6,
 			})
 			.to(q(".hero__content"), {
-				y: 40,
+				y: 10,
 				duration: 1,
 			})
 			.fromTo(q(".hero__search"), {
@@ -80,17 +80,23 @@ const Homepage = () => {
 
 			<Previews />
 
+			<section className="features">
+				<Features />
+			</section>
+
+			<section className="hostoffer">
+				<HostOffer />
+			</section>
+
+
 			<section className="section section-reviews">
 				<div className="container">
 					<Reviews />
 				</div>
 			</section>
 
-			<section className="section section--features">
-				<Features />
-			</section>
-
-			<section className="section-join-now">
+		
+			{/*<section className="section-join-now">
 				<div className="section-join-now__container">
 					<h2 className="section-join-now__heading">Want to Host Your Place ?</h2>
 					<span className="section-join-now__bar"></span>
@@ -98,7 +104,7 @@ const Homepage = () => {
 					<p className="section-join-now__sub">Benefit from the feautures provided by Dooda to Help your business grow</p>
 					<button className="section-join-now__cta">Learn How to Host Now</button>
 				</div>
-			</section>
+			</section>*/}
 		</Layout>
 	);
 };

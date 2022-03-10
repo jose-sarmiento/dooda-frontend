@@ -31,6 +31,7 @@ import Campers from "./Campers"
 import Islands from "./Islands"
 import Treehouses from "./Treehouses"
 import HouseBoats from "./HouseBoats"
+import HostOffer from "./HostOffer"
 
 
 export {
@@ -66,5 +67,6 @@ export {
 	Campers,
 	Islands,
 	Treehouses,
-	HouseBoats
+	HouseBoats,
+	HostOffer
 }

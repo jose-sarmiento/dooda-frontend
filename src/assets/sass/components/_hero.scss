@@ -14,7 +14,7 @@
 		width: 100%;
 		top: 0;
 		left: 0;
-  		background: radial-gradient(rgba(#001402, .7), rgba(#001402, .9));
+  		background: radial-gradient(rgba(#000, .8), rgba(#000, .9));
 		opacity: 0;
 		// transform: scale(0);
 		// transform-origin: center;
@@ -23,7 +23,7 @@
 
 	&__search {
 		position: absolute;
-		top: 10rem;
+		top: 8rem;
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 1200;
@@ -65,11 +65,6 @@
 		line-height: 4rem;
 		text-transform: capitalize;
 		color: $white;
-	}
-
-	.itallic {
-		font-family: 'Playfair Display', sans-serif;
-		font-style: italic;
 	}
 
 	&__bar {
@@ -114,6 +109,18 @@
     		opacity: 0;
 
    }
+
+  .hero__image {
+	  	height: 60rem;
+	  	width: 60rem;
+  }
+
+  .hero__treehouse {
+	  	height: 100%;
+	  	width: 100%;
+	  	object-fit: cover;
+	  	object-position: center center;
+  }
 
 .float {
 	position: absolute;

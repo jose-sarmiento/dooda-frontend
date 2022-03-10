@@ -1,15 +1,25 @@
 .card {
-	box-shadow: $shadow-light;
-	border-radius: .5rem;
+	// box-shadow: $shadow-light;
 	background-color: $white;
-	padding-bottom: 1rem;
+	padding-bottom: .5rem;
+	overflow: hidden;
+	position: relative;
 
 	&--noshadow {
 		box-shadow: none;
 	}
 
+	&__favorite {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 2rem;
+		z-index: 50;
+		color: $primary-dark;
+	}
+
 	&__img-wrapper {
-		height: 22rem;
+		height: 20rem;
 		display: block;
 		overflow: hidden;
 		position: relative;
@@ -56,18 +66,14 @@
 	}
 
 	&__header {
-		padding: 1rem 2rem;
-		font-size: 1.4rem;
-		font-weight: 600;
-		color: $primary;
+		padding: .8rem 0;
+		font-size: 1.3rem;
+		color: $grey3;
 		display: flex;
 		justify-content: space-between;
-		// background: #fff1f1;
-		margin-bottom: 1rem;
 	}
 
 	&__price {
-		font-size: 1.6rem;
 		font-weight: 400;
 		text-decoration: none;
 	}
@@ -81,10 +87,7 @@
 
 	&__body {
 		text-align: left;
-		padding: 0 2rem 2rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
+		padding: 0 0 1rem;		
 		background: $white;
 	}
 
@@ -94,8 +97,9 @@
 
 	&__name {
 		font-size: 1.6rem;
-		margin-bottom: 1rem;
-		color: $dark;
+		margin-bottom: .6rem;
+		color: $grey1;
+		font-weight: 500;
 	}
 
 	&__location {
@@ -107,12 +111,25 @@
 		color: $primary-dark;
 		margin-right: .6rem;
 	}
-}
 
+	&__book-now {
+		padding: .8rem;
+		text-align: center;
+		font-size: 1.4rem;
+		display: block;
+		width: 100%;
+		background: $primary-dark;
+		border: none;
+		color: $white;
+		margin-top: 1.5rem;
+		font-family: inherit;
+	}
+}
+/*
 @media (max-width: 980px) {
 	.card {
-		display: flex;
-		flex-direction: column;
+		// display: flex;
+		// flex-direction: column;
 	}
 
 	.card__img-wrapper {
@@ -145,7 +162,7 @@
 
 @media (max-width: 840px) {
 	.card__header {
-		flex-direction: column;
+		// flex-direction: column;
 		align-items: flex-start;
 		padding: 1rem;
 	}
@@ -186,4 +203,4 @@
 		display: inline-block;
 		text-align: center;
 	}
-}
+}*/

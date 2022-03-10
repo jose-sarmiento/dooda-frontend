@@ -44,6 +44,7 @@ const Hotels = () => {
 						}
 						return <Card key={data.id} data={data} />;
 					})}
+					{results.length === 0 && !loading && <h1>Temporarily Refresh the page if no results found maybe the error is in mock server i created.</h1>}
 					{loading && <CardSkeletonLoading />}
 				</div>
 			</section>
