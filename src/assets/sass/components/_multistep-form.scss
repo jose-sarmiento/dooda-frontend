@@ -8,11 +8,12 @@
 	// overflow: hidden;
 
 	&__heading {
-		color: $primary-dark;
+		color: $dark;
 		font-weight: 500;
 		font-size: 2.4rem;
 		margin-bottom: 1rem;
 		letter-spacing: .8px;
+		font-family: 'Montserrat', sans-serif;
 	}
 
 	&__subheading {
@@ -27,13 +28,14 @@
 		left: 0;
 		right: 0;
 		border: none;
-		box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
+		// box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
 		width: 100%;
 		margin: 0 auto;
 		padding: 4rem 3rem;
 		text-align: center;
 		background: $white;
 		border-radius: 1rem;
+		border: 1px solid #eee;
 		
 
 	}
@@ -117,15 +119,16 @@
 	}
 
 	&__group-label {
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		color: $dark;
 		display: inline-block;
 		margin-bottom: 1rem;
 	}
 
 	&__label {
-		font-size: 1.6rem;
-		color: $grey2;
+		font-size: 1.4rem;
+		font-weight: 500;
+		color: $grey1;
 		display: inline-block;
 		margin-bottom: 1rem;
 	}
@@ -165,8 +168,7 @@
 		padding: 1rem 2rem 1rem 4.5rem;
 		border-radius: .5rem;
 		font-family: inherit;
-		font-size: 1.2rem;
-		font-weight: 600;
+		font-size: 1.4rem;
 		color: $grey-light;
 		height: 4rem;
 

@@ -14,16 +14,16 @@ import img4 from "../assets/images/4.jpg";
 import img5 from "../assets/images/5.jpg";
 
 import { pesoFormat } from "../utils/pesoFormat";
-import useAppContext from "../hooks/useAppContext"
+import useAppContext from "../hooks/useAppContext";
 
 const ViewPlace = () => {
-	const {openModal} = useAppContext()
+	const { openModal } = useAppContext();
 
-	const handleModalOpen = () => openModal()
+	const handleModalOpen = () => openModal();
 
 	return (
 		<div className="sub-page">
-			<div className="hotel container">
+			<div className="hotel">
 				<Link to="/p/hotels" className="btn btn--back">
 					Go Back
 				</Link>
@@ -37,87 +37,228 @@ const ViewPlace = () => {
 					</div>
 					<div className="d-flex flex-between">
 						<div className="hotel-header__left">
-							<h1 className="hotel__name">Some random Hotel name</h1>
-							<h5 className="hotel__location">
-								<span className="hotel__location-icon">
-									<FaMapMarkerAlt />
-								</span>
+							<h1 className="hotel__name">
+								Some random Hotel name
+							</h1>
+							<p className="hotel__price">
+								{pesoFormat(1500)} per night
+							</p>
+							<p className="hotel__location">
 								5k killometers away
-							</h5>
+							</p>
 						</div>
 						<div className="hotel-header__right">
+							<button className="hotel-header__btn hotel-header__btn--addtoBtn">
+								Add to Wishlist
+							</button>
 							<button
-								className="btn btn--primary btn--small hotel-header__book-now"
+								className="hotel-header__btn hotel-header__btn--book-now"
 								onClick={handleModalOpen}
 							>
 								Book now
 							</button>
-							<h4 className="hotel__price">{pesoFormat(1500)} per night</h4>
 						</div>
 					</div>
 				</div>
 
-				
 				<div className="hotel__images">
 					<figure className="hotel__img-wrapper hotel__img-wrapper--1">
-						<img src={img1} alt="first image" className="hotel__image" />
+						<img
+							src={img1}
+							alt="first image"
+							className="hotel__image"
+						/>
 					</figure>
 					<figure className="hotel__img-wrapper hotel__img-wrapper--2">
-						<img src={img2} alt="second image" className="hotel__image" />
+						<img
+							src={img2}
+							alt="second image"
+							className="hotel__image"
+						/>
 					</figure>
 					<figure className="hotel__img-wrapper hotel__img-wrapper--3">
-						<img src={img3} alt="third image" className="hotel__image" />
+						<img
+							src={img3}
+							alt="third image"
+							className="hotel__image"
+						/>
 					</figure>
 					<figure className="hotel__img-wrapper hotel__img-wrapper--4">
-						<img src={img4} alt="fourth image" className="hotel__image" />
+						<img
+							src={img4}
+							alt="fourth image"
+							className="hotel__image"
+						/>
 					</figure>
 					<figure className="hotel__img-wrapper hotel__img-wrapper--5">
-						<img src={img5} alt="fifth image" className="hotel__image" />
+						<img
+							src={img5}
+							alt="fifth image"
+							className="hotel__image"
+						/>
 					</figure>
 				</div>
 
 				<div className="hotel__details">
 					<div className="hotel__description">
-						<h3 className="hotel__description-heading">Description</h3>
+						<h3 className="hotel__description-heading">
+							Description
+						</h3>
 						<p className="hotel__paragraph">
-							Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Id tempore
-							error quod, rem saepe aspernatur excepturi aperiam sequi beatae nesciunt
-							delectus quasi? Quos enim culpa consequuntur, cupiditate laudantium
-							necessitatibus fugiat, odit adipisci nulla iste excepturi magni veniam
-							officiis aspernatur facere!
+							Lorem, ipsum dolor, sit amet consectetur adipisicing
+							elit. Id tempore error quod, rem saepe aspernatur
+							excepturi aperiam sequi beatae nesciunt delectus
+							quasi? Quos enim culpa consequuntur, cupiditate
+							laudantium necessitatibus fugiat, odit adipisci
+							nulla iste excepturi magni veniam officiis
+							aspernatur facere!
 						</p>
 						<p className="hotel__paragraph">
-							In doloribus, pariatur, harum vero voluptates, dolorem placeat iste
-							totam officia earum eius, alias nemo accusamus modi et obcaecati magnam
-							ratione esse veritatis. Laborum iusto, amet. Amet esse quod, quae, ad
-							suscipit dolorum illum quos nisi consequuntur delectus, ut deserunt
-							saepe, dolorem obcaecati porro eius accusamus hic laudantium dolores
-							placeat sunt aliquid. Officiis, optio, inventore. Aliquid iure vero ea
-							suscipit, dolore voluptates dolorem odio officiis minus animi,
+							In doloribus, pariatur, harum vero voluptates,
+							dolorem placeat iste totam officia earum eius, alias
+							nemo accusamus modi et obcaecati magnam ratione esse
+							veritatis. Laborum iusto, amet. Amet esse quod,
+							quae, ad suscipit dolorum illum quos nisi
+							consequuntur delectus, ut deserunt saepe, dolorem
+							obcaecati porro eius accusamus hic laudantium
+							dolores placeat sunt aliquid. Officiis, optio,
+							inventore. Aliquid iure vero ea suscipit, dolore
+							voluptates dolorem odio officiis minus animi,
 							perferendis deserunt porro assumenda nisi!
 						</p>
 
-						<h4 className="hotel__description-heading-2">What this place offers?</h4>
+						<h4 className="hotel__description-heading-2">
+							Amenities
+						</h4>
 						<div className="hotel__offers">
-							<span className="hotel__offer">wifi connection</span>
+							<span className="hotel__offer">
+								wifi connection
+							</span>
 							<span className="hotel__offer">2 bedrooms</span>
 							<span className="hotel__offer">near airport</span>
-							<span className="hotel__offer">wifi connection</span>
+							<span className="hotel__offer">
+								wifi connection
+							</span>
 							<span className="hotel__offer">2 bedrooms</span>
 							<span className="hotel__offer">near airport</span>
-							<span className="hotel__offer">wifi connection</span>
+							<span className="hotel__offer">
+								wifi connection
+							</span>
 							<span className="hotel__offer">2 bedrooms</span>
 							<span className="hotel__offer">near airport</span>
-							<span className="hotel__offer">wifi connection</span>
+							<span className="hotel__offer">
+								wifi connection
+							</span>
+							<span className="hotel__offer">2 bedrooms</span>
+							<span className="hotel__offer">near airport</span>
+						</div>
+
+						<h4 className="hotel__description-heading-2">
+							Facilities
+						</h4>
+						<div className="hotel__offers">
+							<span className="hotel__offer">
+								wifi connection
+							</span>
+							<span className="hotel__offer">2 bedrooms</span>
+							<span className="hotel__offer">near airport</span>
+							<span className="hotel__offer">
+								wifi connection
+							</span>
+							<span className="hotel__offer">2 bedrooms</span>
+							<span className="hotel__offer">near airport</span>
+							<span className="hotel__offer">
+								wifi connection
+							</span>
+							<span className="hotel__offer">2 bedrooms</span>
+							<span className="hotel__offer">near airport</span>
+							<span className="hotel__offer">
+								wifi connection
+							</span>
 							<span className="hotel__offer">2 bedrooms</span>
 							<span className="hotel__offer">near airport</span>
 						</div>
 					</div>
-					<div className="hotel__map-wrapper">
-						<MyMap />
+					<div className="hotel__reviews-wrapper">
+						<div className="hotel-review">
+							<svg
+								viewBox="0 0 20 20"
+								className="hotel-review__quote"
+							>
+								<use xlinkHref="/iconsprites.svg#icon-quotes-left" />
+							</svg>
+							<div className="hotel-review__text-wrapper">
+								<p className="hotel-review__text">
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Aspernatur sed fuga amet
+									cum ab. Nostrum molestias unde repudiandae
+									molestiae, omnis.
+								</p>
+							</div>
+							<div className="hotel-review__footer">
+								<figure className="hotel-review__user">
+									<img
+										src={img5}
+										alt="user"
+										className="hotel-review__img"
+									/>
+								</figure>
+								<div className="hotel-review__middle">
+									<h4 className="hotel-review__name">
+										John Smith
+									</h4>
+									<span className="hotel-review__date">
+										February 14, 2021
+									</span>
+								</div>
+								<h4 className="hotel-review__rating">5.0</h4>
+							</div>
+						</div>
+
+						<div className="hotel-review">
+							<svg
+								viewBox="0 0 20 20"
+								className="hotel-review__quote"
+							>
+								<use xlinkHref="/iconsprites.svg#icon-quotes-left" />
+							</svg>
+							<div className="hotel-review__text-wrapper">
+								<p className="hotel-review__text">
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Aspernatur sed fuga amet
+									cum ab. Nostrum molestias unde repudiandae
+									molestiae, omnis.
+								</p>
+							</div>
+							<div className="hotel-review__footer">
+								<figure className="hotel-review__user">
+									<img
+										src={img5}
+										alt="user"
+										className="hotel-review__img"
+									/>
+								</figure>
+								<div className="hotel-review__middle">
+									<h4 className="hotel-review__name">
+										John Smith
+									</h4>
+									<span className="hotel-review__date">
+										February 14, 2021
+									</span>
+								</div>
+								<h4 className="hotel-review__rating">5.0</h4>
+							</div>
+						</div>
+
+						<button className="hotel-review__see-all">
+							See all <i class="fa-solid fa-arrow-right-long"></i>
+						</button>
 					</div>
 				</div>
-				<section className="hotel__review-section">
+
+				<div className="hotel__map-wrapper"></div>
+
+				{/*<section className="hotel__review-section">
 					<div className="hotel__reviews">
 						<div className="hotel__active-review">
 							<Review small={true} />
@@ -159,7 +300,7 @@ const ViewPlace = () => {
 							</div>
 						</div>
 					</div>
-				</section>
+				</section>*/}
 			</div>
 		</div>
 	);

@@ -87,25 +87,11 @@ const Header = React.forwardRef((props, ref) => {
 									: "nav__link"
 							}
 						>
-							Places to Stay
+							Destinations
 						</NavLink>
 						<PlacesSubmenu />
 					</li>
-
-					<li className="nav__item">
-						<NavLink
-							to="/p/hotels"
-							className={({ isActive }) =>
-								isActive
-									? "nav__link nav__link--active"
-									: "nav__link"
-							}
-						>
-							Experiences
-						</NavLink>
-						<PlacesSubmenu />
-					</li>
-
+					
 					<li className="nav__item">
 						<NavLink
 							to="/host/guide"
@@ -141,12 +127,12 @@ const Header = React.forwardRef((props, ref) => {
 					{location.pathname === "/" ? (
 						<li className="header-right__item">
 							<Link to="/signin" className="nav__cta">
-								Logout
+								Login
 							</Link>
 						</li>
 					) : (
 						<li className="nav__item">
-							<Link to="/signin" className="nav__link">
+							<Link to="/host/guide" className="nav__link">
 								Become a Host
 							</Link>
 						</li>

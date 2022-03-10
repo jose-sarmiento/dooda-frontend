@@ -21,14 +21,15 @@ const Features = () => {
 			</div>
 
 			<div className="hostoffer__hostoffer">
-				<h2 className="hostoffer__title">Whan't to <span className="itallic">Host your Place?</span></h2>
-				<h3 className="hostoffer__heading">Join 12000 other members around Philippines</h3>
+				<h2 className="hostoffer__title">Wan't to <span className="itallic">Host your Place?</span></h2>
+				<h3 className="hostoffer__heading">Trusted by over 15000 business owners all around Philippines</h3>
 				<p className="hostoffer__paragraph">
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, dolorem
 					praesentium fuga quas debitis. Quos amet facilis maxime enim dolore repellat
 					dolores deserunt libero nesciunt.
 				</p>
-				<Link to="/p/hotels" className="hostoffer__cta">
+				<p className="hostoffer__paragraph">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Iusto repellat excepturi magni exercitationem illum veniam!</p>
+				<Link to="/host/guide" className="hostoffer__cta">
 					Learn How <i className="fa fa-arrow-right-long hostoffer__cta-arrow"></i>
 				</Link>
 			</div>

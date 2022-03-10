@@ -1,5 +1,5 @@
 .payment-preview {
-	margin-top: 2rem;
+	margin-top: 3rem;
 
 	&__row {
 		display: grid;
@@ -10,22 +10,23 @@
 
 	&__label,
 	&__value {
-		font-size: 1.3rem;
-		font-weight: 500;
-		color: $grey;
+		font-size: 1.4rem;
+		color: $grey3;
 	}
 
 	&__label {
-		text-align: right;
+		text-align: left;
 	}
 
 	&__value {
 		text-align: left;
+		letter-spacing: 1px;
 	}
 
 	&__label--bold,
 	&__value--bold {
 		font-size: 1.4rem;
 		font-weight: 700;
+		text-transform: uppercase;
 	}
 }

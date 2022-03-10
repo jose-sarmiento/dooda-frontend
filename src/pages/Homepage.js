@@ -88,23 +88,11 @@ const Homepage = () => {
 				<HostOffer />
 			</section>
 
-
 			<section className="section section-reviews">
 				<div className="container">
 					<Reviews />
 				</div>
 			</section>
-
-		
-			{/*<section className="section-join-now">
-				<div className="section-join-now__container">
-					<h2 className="section-join-now__heading">Want to Host Your Place ?</h2>
-					<span className="section-join-now__bar"></span>
-					<p className="section-join-now__sub">Join as a host in Dooda now</p>
-					<p className="section-join-now__sub">Benefit from the feautures provided by Dooda to Help your business grow</p>
-					<button className="section-join-now__cta">Learn How to Host Now</button>
-				</div>
-			</section>*/}
 		</Layout>
 	);
 };

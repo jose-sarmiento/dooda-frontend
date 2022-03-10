@@ -3,26 +3,67 @@
 	position: relative;
 }
 
+.hotel-header {
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+	grid-column: 2/12;
+	padding: 1rem 0;
+
+	&__left {
+
+	}
+
+	&__right {
+		// display: flex;
+		// justify-content: center;
+		// flex-direction: column;
+	}
+
+	&__btn {
+		padding: 1rem 2rem;
+		border: 1px solid $grey3;
+		background: none;
+		font-size: 1.4rem;
+		text-transform: capitalize;
+		color: $dark;
+		font-family: inherit;
+		border-radius: 3rem;
+	}
+
+	&__btn--book-now {
+		background: $primary-dark;
+		color: $white;
+		margin-left: 1rem;
+		border: 1px solid $primary-dark;
+	}
+}
+
+
+
 .hotel {
 	border-bottom: 1px solid #eee;
 	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	max-width: 1200px;
+	margin: 0 auto;
 
 	&__name {
 		text-transform: capitalize;
 		font-size: 2.4rem; 
 		color: $dark;
 		font-family: 'Montserrat', sans-serif;
+		line-height: 3.4rem;
 	}
 
 	&__location {
-		margin-top: 1.5rem;
 		font-size: 1.6rem;
 		color: $grey3;
+		line-height: 2.6rem;
 	}
 
 	&__location-icon {
-		margin-right: 1.3rem;
-		// color: $primary-dark;
+		margin-right: 1.4rem;
 	}
 
 	&__favorite {
@@ -34,22 +75,22 @@
 	}
 
 	&__favorite-icon {
-		margin-right: .5rem;
+		margin-right: .2rem;
 	}
 
 	&__price {
-		font-size: 1.8rem;
-		color: $grey1;
-		margin-top: .5rem;
+		font-size: 1.6rem;
+		color: $grey3;
+		line-height: 2.6rem;
 	}
 
 	&__images {
+		grid-column: 1/-1;
 		display: grid;
 		grid-template-columns: 2fr 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		height: 45rem;
 		grid-gap: 1rem;
-		margin: 2rem 0;
 	}
 
 	&__img-wrapper {
@@ -59,6 +100,15 @@
 		&--1 {
 			grid-column: 1/2;
 			grid-row: 1/-1;
+			border-radius: 1rem 0 0 1rem;
+		}
+
+		&--3 {
+			border-radius: 0 1rem 0 0;
+		}
+
+		&--5 {
+			border-radius: 0 0 1rem 0;
 		}
 	}
 
@@ -68,22 +118,29 @@
 		object-fit: cover;
 		object-position: center center;
 		animation: pulsate .3s linear infinite;
+		transform: scale(1.1);
+ 		transition: transform .6s;
+	}
+
+	&__image:hover {
+		transform: scale(1);
 	}
 
 	&__details {
+		grid-column: 2/12;
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		min-height: 55rem;
-		grid-column-gap: 2rem;
-		max-width: 1000px;
-		margin: 4rem auto;
+		grid-column-gap: 1rem;
+		margin-top: 2rem;
+		margin-bottom: 4rem;
+		margin-top: 4rem;
 	}
 
 	&__description {
-		padding: 4rem;
-		// background: #f1f1f1;
-		border-radius: 1rem 0 0 1rem;
-		// box-shadow: $shadow-light/;
+		background: #f1f1f1;
+		padding: 2rem;
+		border-radius: 1rem;
 	}
 
 	&__description-heading,
@@ -92,6 +149,7 @@
 		font-family: 'Montserrat', sans-serif;
 		color: $grey1;
 		margin-bottom: 2rem;
+		font-weight: 500;
 	}
 
 	&__description-heading-2 {
@@ -105,7 +163,6 @@
 		color: $grey3;
 		text-indent: 3rem;
 		line-height: 2.6rem;
-		// font-family: 'Lato', sans-serif;
 	}
 
 	&__offers {
@@ -127,11 +184,11 @@
 		content: "\003E";
 		position: absolute;
 		left: -2rem;
-		height: 1.5rem;
-		width: 1.5rem;
+		height: 1.8rem;
+		width: 1.8rem;
 		background: $primary-dark;
 		-webkit-background-clip: text;
-		font-size: 1.6rem;
+		font-size: 1.8rem;
 		font-weight: 700;
 		display: flex;
 		align-items: center;
@@ -139,72 +196,55 @@
 		color: transparent;
 	}
 
+	&__reviews-wrapper {
+
+	}
+
 	&__map-wrapper {
-		background: #f2f2f2;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		border-radius: 0 1rem 1rem 0;
-		// height: 55rem;
-	}
-
-	&__review-section {
-		background: #f1f1f1;
-		padding: 3rem 3rem;
-		margin-bottom: 3rem;
-	}
-
-	&__reviews {
-		margin: 4rem auto;
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		grid-template-rows: 1fr 1fr;
-		grid-column-gap: 2rem;
-		grid-row-gap: 2rem;
-		max-width: 1200px;
 		height: 40rem;
+		background: #f1f1f1;
+		background-image: url(../../images/map.png);
+		grid-column: 1/-1;
+		background-size: cover;
+		background-position: center bottom;
+		margin-bottom: 4rem;
 	}
-
-	&__active-review {
-		background: $white;
-		grid-column: 1/2;
-		grid-row: 1/-1;
-		border-radius: 1rem;
-		padding: 2rem;
-	}
-
-
 }
+
 .hotel-review {
-	background: $white;
+	background: #f1f1f1;
 	border-radius: 1rem;
 	display: flex;
 	padding: 2rem;
 	flex-direction: column;
 	position: relative;
 
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
 	&__quote {
 		position: absolute;
 		left: 0;
 		top: 0;
-		height: 6rem;
-		fill: #fff1f1;
+		height: 4rem;
+		fill: #ffffff;
 		z-index: 1;
 	}
 
 	&__text-wrapper {
 		flex: 1;
 		z-index: 5;
-		padding: 1rem;
 	}
 
 	&__text {
 		font-size: 1.4rem;
-		color: #777;
-		line-height: 2rem
+		color: $grey3;
+		line-height: 2.6rem
 	}
 
 	&__footer {
+		margin-top: 1rem;
 		display: flex;
 		align-items: center;
 	}
@@ -230,8 +270,8 @@
 
 	&__name {
 		font-size: 1.4rem;
-		font-weight: 600;
-		color: $grey;
+		font-weight: 500;
+		color: $grey1;
 	}
 
 	&__date {
@@ -242,27 +282,19 @@
 	&__rating {
 		color: $primary-dark;
 		font-size: 1.8rem;
-		font-weight: 600;
-	}
-}
-
-.hotel-header {
-	max-width: 1000px;
-	margin: 0 auto;
-	margin-bottom: 3rem;
-
-	&__left {
-
+		font-weight: 500;
 	}
 
-	&__right {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
-
-	&__book-now {
-		align-self: flex-end;
+	&__see-all {
+		background: none;
+		font-size: 1.4rem;
+		font-family: inherit;
+		border: none;
+		display: block;
+		width: auto;
+		margin: 0 auto;
+		padding: 1rem 3rem;
+		border-bottom: 2px solid $primary-dark;
 	}
 }
 

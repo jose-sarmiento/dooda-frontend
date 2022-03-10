@@ -7,7 +7,7 @@ const Pools = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	const [page, setPage] = useState(1);
-	const { results, loading, error, hasNext } = usePaginateFetch("pool", page, 9);
+	const { results, loading, error, hasNext } = usePaginateFetch("pool", page, 12);
 	const observer = useRef();
 	const lastElementRef = useCallback(
 		(node) => {

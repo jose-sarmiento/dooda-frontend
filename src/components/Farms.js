@@ -6,7 +6,7 @@ import usePaginateFetch from "../hooks/usePaginateFetch";
 const Farms = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	const [page, setPage] = useState(1);
-	const { results, loading, error, hasNext } = usePaginateFetch("farm", page, 9);
+	const { results, loading, error, hasNext } = usePaginateFetch("farm", page, 12);
 	const observer = useRef();
 	const lastElementRef = useCallback(
 		(node) => {

@@ -7,7 +7,7 @@ const Houses = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	const [page, setPage] = useState(1);
-	const { results, loading, error, hasNext } = usePaginateFetch("house", page, 9);
+	const { results, loading, error, hasNext } = usePaginateFetch("house", page, 12);
 
 	const observer = useRef();
 	const lastElementRef = useCallback(
