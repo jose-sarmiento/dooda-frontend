@@ -19,6 +19,12 @@
 	}
 }
 
+@media (max-width: 874px) {
+	.section-header {
+		top: 5.5rem;
+	}
+}
+
 .item-categories {
 	display: flex;
 	list-style: none;

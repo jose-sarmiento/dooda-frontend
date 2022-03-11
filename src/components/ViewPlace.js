@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaMapMarkerAlt, FaHeart } from "react-icons/fa";
 
@@ -12,36 +12,58 @@ import img2 from "../assets/images/2.jpg";
 import img3 from "../assets/images/3.jpg";
 import img4 from "../assets/images/4.jpg";
 import img5 from "../assets/images/5.jpg";
+import men from "../assets/images/men.jpg";
+import woman from "../assets/images/woman.jpg";
 
 import { pesoFormat } from "../utils/pesoFormat";
 import useAppContext from "../hooks/useAppContext";
 
 const ViewPlace = () => {
 	const { openModal } = useAppContext();
+	const [currIndex, setCurrIndex] = useState(0);
+	const [paused, setPaused] = useState(false);
+
+	const images = [img1, img2, img3, img4, img5]
+
+	useEffect(() => {
+		if (currIndex > images.length - 1) {
+			setCurrIndex(0);
+		}
+	}, [currIndex, images]);
+
+	useEffect(() => {
+		if (paused) return;
+
+		const interval = setInterval(() => {
+			setCurrIndex(currIndex + 1);
+		}, 5000);
+
+		return () => {
+			clearInterval(interval);
+		};
+	}, [images, currIndex, paused]);
 
 	const handleModalOpen = () => openModal();
 
 	return (
 		<div className="sub-page">
 			<div className="hotel">
-				<Link to="/p/hotels" className="btn btn--back">
-					Go Back
-				</Link>
+				<div className="hotel__top">
+					<Link to="/p/hotels" className="btn btn--back">
+						Go Back
+					</Link>
+				</div>
 				<div className="hotel-header">
 					<div className="d-flex flex-between mb-1">
 						<Stars count={5} />
-						{/*<div className="hotel__favorite">
-							<FaHeart className="hotel__favorite-icon" />
-							add to wishlist
-						</div>*/}
 					</div>
 					<div className="d-flex flex-between">
 						<div className="hotel-header__left">
 							<h1 className="hotel__name">
-								Some random Hotel name
+								Catanduanes Midtown Inn
 							</h1>
 							<p className="hotel__price">
-								{pesoFormat(1500)} per night
+								{pesoFormat(1200)} per night
 							</p>
 							<p className="hotel__location">
 								5k killometers away
@@ -61,43 +83,48 @@ const ViewPlace = () => {
 					</div>
 				</div>
 
-				<div className="hotel__images">
-					<figure className="hotel__img-wrapper hotel__img-wrapper--1">
-						<img
-							src={img1}
-							alt="first image"
-							className="hotel__image"
-						/>
-					</figure>
-					<figure className="hotel__img-wrapper hotel__img-wrapper--2">
-						<img
-							src={img2}
-							alt="second image"
-							className="hotel__image"
-						/>
-					</figure>
-					<figure className="hotel__img-wrapper hotel__img-wrapper--3">
-						<img
-							src={img3}
-							alt="third image"
-							className="hotel__image"
-						/>
-					</figure>
-					<figure className="hotel__img-wrapper hotel__img-wrapper--4">
-						<img
-							src={img4}
-							alt="fourth image"
-							className="hotel__image"
-						/>
-					</figure>
-					<figure className="hotel__img-wrapper hotel__img-wrapper--5">
-						<img
-							src={img5}
-							alt="fifth image"
-							className="hotel__image"
-						/>
-					</figure>
+				<div className="hotel__images hotel__images--web">
+					{images.map((img, idx) =>(
+						<figure key={idx} className={`hotel__img-wrapper hotel__img-wrapper--${idx + 1}`}>
+							<img
+								src={img}
+								alt="first image"
+								className="hotel__image"
+							/>
+						</figure>
+					))}
 				</div>
+
+				<div className="hotel__images hotel__images--mobile">
+					{images.map((img, idx) => {
+						let position =
+								"hotel__img-wrapper hotel__img-wrapper--next";
+							if (idx === currIndex) {
+								position =
+									"hotel__img-wrapper hotel__img-wrapper--current";
+							}
+							if (
+								idx === currIndex - 1 ||
+								(currIndex === 0 &&
+									idx === images.length - 1)
+							) {
+								position =
+									"hotel__img-wrapper hotel__img-wrapper--prev";
+							}
+
+						return (
+							<figure key={idx} className={position}>
+								<img
+									src={img}
+									alt="first image"
+									className="hotel__image"
+								/>
+							</figure>
+						)
+					})}
+				</div>
+
+
 
 				<div className="hotel__details">
 					<div className="hotel__description">
@@ -250,9 +277,58 @@ const ViewPlace = () => {
 							</div>
 						</div>
 
+						<div className="hotel-review">
+							<svg
+								viewBox="0 0 20 20"
+								className="hotel-review__quote"
+							>
+								<use xlinkHref="/iconsprites.svg#icon-quotes-left" />
+							</svg>
+							<div className="hotel-review__text-wrapper">
+								<p className="hotel-review__text">
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Aspernatur sed fuga amet
+									cum ab. Nostrum molestias unde repudiandae
+									molestiae, omnis.
+								</p>
+							</div>
+							<div className="hotel-review__footer">
+								<figure className="hotel-review__user">
+									<img
+										src={img5}
+										alt="user"
+										className="hotel-review__img"
+									/>
+								</figure>
+								<div className="hotel-review__middle">
+									<h4 className="hotel-review__name">
+										John Smith
+									</h4>
+									<span className="hotel-review__date">
+										February 14, 2021
+									</span>
+								</div>
+								<h4 className="hotel-review__rating">5.0</h4>
+							</div>
+						</div>
+
+
 						<button className="hotel-review__see-all">
 							See all <i class="fa-solid fa-arrow-right-long"></i>
 						</button>
+
+						
+					</div>
+				</div>
+
+				<div className="recommended">
+					<p>Recommended by John, Mike, Sophia, Mark and 1200 others</p>
+					<div>
+						<figure><img src={men} alt="user1" /></figure>
+						<figure><img src={woman} alt="user1" /></figure>
+						<figure><img src={men} alt="user1" /></figure>
+						<figure><img src={woman} alt="user1" /></figure>
+						<figure><img src={woman} alt="user1" /></figure>
 					</div>
 				</div>
 
