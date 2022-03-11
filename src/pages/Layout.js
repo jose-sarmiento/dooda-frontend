@@ -1,15 +1,24 @@
 import React from "react";
-import { Header, Footer, Submenu, Modal, Sidebar } from "../components";
+import {
+	Header,
+	Footer,
+	Submenu,
+	Modal,
+	Sidebar,
+	CustomCalendar,
+} from "../components";
+import useAppContext from "../hooks/useAppContext";
 
 const Layout = React.forwardRef((props, ref) => {
+	const { isOpenCalendar } = useAppContext();
+
 	return (
 		<>
 			<Header ref={ref || null} />
 			<Modal />
 			<Sidebar />
-			<div className="main">
-			{props.children}
-			</div>
+			{isOpenCalendar && <CustomCalendar />}
+			<div className="main">{props.children}</div>
 			<Footer />
 		</>
 	);

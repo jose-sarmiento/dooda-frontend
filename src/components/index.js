@@ -32,6 +32,7 @@ import Islands from "./Islands"
 import Treehouses from "./Treehouses"
 import HouseBoats from "./HouseBoats"
 import HostOffer from "./HostOffer"
+import CustomCalendar from "./CustomCalendar"
 
 
 export {
@@ -68,5 +69,6 @@ export {
 	Islands,
 	Treehouses,
 	HouseBoats,
-	HostOffer
+	HostOffer,
+	CustomCalendar
 }

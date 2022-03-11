@@ -5,8 +5,11 @@ import treehouse from "../assets/images/boat.png"
 
 import woman from "../assets/images/woman.jpg"
 
+import useAppContext from "../hooks/useAppContext";
+
 const Hero = React.forwardRef((props, ref) => {
 	const overlay = useRef()
+	const {openCalendar, closeCalendar, isOpenCalendar} = useAppContext() 
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -19,6 +22,14 @@ const Hero = React.forwardRef((props, ref) => {
 		window.addEventListener("scroll", handleScroll)
 	  	return () => window.removeEventListener("scroll", handleScroll);
 	}, [])
+
+	const handleOpenCalendar = () => {
+		if(isOpenCalendar) {
+			closeCalendar()
+		} else {
+			openCalendar()
+		}
+	}
 
 
 	return (
@@ -54,7 +65,8 @@ const Hero = React.forwardRef((props, ref) => {
 						<i class="fa-solid fa-heart"></i>
 						<div className="float__tooltips">Wishlists</div>
 					</Link>
-					<button className="float__item float__item--calendar">
+					<button className="float__item float__item--calendar" 
+					onClick={handleOpenCalendar}>
 						<i class="fa-solid fa-calendar-days"></i>
 						<div className="float__tooltips">Calendar</div>
 					</button>

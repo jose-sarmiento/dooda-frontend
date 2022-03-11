@@ -20,6 +20,7 @@ const FilterDraggable = ({ isOpen, close }) => {
 			onStart={handleStart}
 			onDrag={handleDrag}
 			onStop={handleStop}
+			bounds="parent"
 		>
 			<div
 				className={isOpen ? "filter-draggable filter-draggable--show" : "filter-draggable"}
