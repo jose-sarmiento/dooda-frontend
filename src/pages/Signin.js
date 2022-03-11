@@ -6,7 +6,7 @@ const Signin = () => {
 		<div className="signin">
 			<div className="signin__container">
 				<div className="signin__form">
-					<div>
+					<div className="signin__form-container">
 					<h4 className="signin__sub1">START FOR FREE</h4>
 					<h1 className="signin__heading">Signin to your account</h1>
 					<h4 className="signin__sub2">Don't have an account? <Link to="/signup" className="signin__link">Register</Link></h4>

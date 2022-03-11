@@ -1,5 +1,3 @@
-
-
 .signin {
 	height: 100vh;
 	background: $lightblue;
@@ -15,18 +13,19 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		background: linear-gradient(
-				to right, 
-				$darkblue 0%, 
-				$darkblue 30%, 
-				rgba($darkblue, 1) 45%, 
-				rgba($darkblue, .9) 60%, 
-				rgba($darkblue, 0) 100%, 
-			) , url(../../images/woman-with-computer.jpg);
+				to right,
+				$darkblue 0%,
+				$darkblue 30%,
+				rgba($darkblue, 1) 45%,
+				rgba($darkblue, 0.9) 60%,
+				rgba($darkblue, 0) 100%
+			),
+			url(../../images/woman-with-computer.jpg);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		overflow: hidden;
 		background-repeat: no-repeat;
-		background-position:center right;
+		background-position: center right;
 	}
 
 	&__form {
@@ -64,118 +63,250 @@
 }
 
 ._form {
-   display: block;
-   width: 40rem;
+	display: block;
+	width: 40rem;
 
-   &__group {
-  
-   }
+	&__group {
+	}
 
-   &__group:not(:last-child) {
-      margin-bottom: 1rem;
-   }
+	&__group:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 
-   &__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 1rem;
-   }
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
+	}
 
-   &__input {
-      font-size: 1.4rem;
-      padding: 1rem 2rem;
-      font-family: inherit;
-      color: $white;
-      border-radius: 2px;
-      background: #323644;
-      border: none;
-      border-bottom: 2px solid transparent;
-      width: 100%;
-      display: block;
-      transition: all .3s;
+	&__input {
+		font-size: 1.4rem;
+		padding: 1rem 2rem;
+		font-family: inherit;
+		color: $white;
+		border-radius: 2px;
+		background: #323644;
+		border: none;
+		border-bottom: 2px solid transparent;
+		width: 100%;
+		display: block;
+		transition: all 0.3s;
 
-      &:focus {
-         outline: none;
-         border-bottom: 2px solid $green;
-      }
+		&:focus {
+			outline: none;
+			border-bottom: 2px solid $green;
+		}
 
-      &:focus:invalid {
-         border-bottom: 2px solid $primary-dark;
-      }
+		&:focus:invalid {
+			border-bottom: 2px solid $primary-dark;
+		}
 
-      &::-webkit-input-placeholder {
-         color: #c7d3d6;
-      }
-   }
+		&::-webkit-input-placeholder {
+			color: #c7d3d6;
+		}
+	}
 
-   &__label {
-      color: $white;
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin-left: 2rem;
-      margin-top: .5rem;
-      display: block;
-      transition: all .3s;
-   }
+	&__label {
+		color: $white;
+		font-size: 1.4rem;
+		font-weight: 500;
+		margin-left: 2rem;
+		margin-top: 0.5rem;
+		display: block;
+		transition: all 0.3s;
+	}
 
-   &__grid-label {
-      font-size: 1.2rem;
-      color: blue;
-      font-weight: 700;
-   }
+	&__grid-label {
+		font-size: 1.2rem;
+		color: blue;
+		font-weight: 700;
+	}
 
-   &__input:placeholder-shown + &__label {
-       opacity: 0;
-       visibility: hidden;
-       transform: translateY(-2.5rem);
-   }
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-2.5rem);
+	}
 
-   textarea {
-   	resize: none;
-   	height: 8rem;
-   }
+	textarea {
+		resize: none;
+		height: 8rem;
+	}
 
-   &__submit {
-   		padding: 1.2rem 3rem;
-   		display: inline-block;
-  		text-align: center;
-	    // font-weight: 600;
-  		background: linear-gradient(to right, darken($primary-dark, 10%), darken($primary-dark, 5%));
-  		border: none;
-  		cursor: pointer;
-  		border-radius: 3rem;
-  		color: $white;
-  		font-family: inherit;
-  		text-transform: uppercase;
-  		letter-spacing: .8px;
-  		font-size: 1.2rem;
-   }
+	&__submit {
+		padding: 1.2rem 3rem;
+		display: inline-block;
+		text-align: center;
+		// font-weight: 600;
+		background: linear-gradient(
+			to right,
+			darken($primary-dark, 10%),
+			darken($primary-dark, 5%)
+		);
+		border: none;
+		cursor: pointer;
+		border-radius: 3rem;
+		color: $white;
+		font-family: inherit;
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+		font-size: 1.2rem;
+	}
 
-   &__submit-btn:disabled {
-      background: blue;
-      cursor: default;
-      pointer-events: none;
-   }
+	&__submit-btn:disabled {
+		background: blue;
+		cursor: default;
+		pointer-events: none;
+	}
 
-   &__submit--back {
-   		margin-left: 2rem;
-   		background: transparent;
-   		border: 1px solid $primary-dark;
-   		color: $white;
-  		font-family: inherit;
-  		text-transform: uppercase;
-  		letter-spacing: .8px;
-   }
+	&__submit--back {
+		margin-left: 2rem;
+		background: transparent;
+		border: 1px solid transparent;
+		color: $white;
+		font-family: inherit;
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+	}
 
-   &__submit:hover {
-   		background: darken($primary-dark, 20%);
-   }
+	&__submit:hover {
+		background: darken($primary-dark, 20%);
+	}
 
-
+	&__submit--back:hover {
+		border: 1px solid darken($primary-dark, 20%);
+		background: none;
+	}
 }
 
+@media (max-width: 1200px) {
+	.signin {
+		&__container {
+			width: 100%;
+			height: 100%;
+			border-radius: 0;
+		}
+	}
+}
 
+@media (max-width: 1000px) {
+	.signin {
+		&__container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
+		&__form {
+			transform: translateX(-50%);
+		}
+	}
+}
 
+@media (max-width: 880px) {
+	.signin {
+		&__form {
+			transform: translateX(-20%);
+		}
+	}
+}
 
+@media (max-width: 770px) {
+	.signin {
+		&__container {
+			background: linear-gradient(
+					to right,
+					rgba($darkblue, 0.8),
+					rgba($darkblue, 0.8)
+				),
+				url(../../images/woman-with-computer.jpg);
+			background-size: cover;
+			background-position: center center;
+		}
 
+		&__form {
+			transform: translateX(0);
+			background: rgba($darkblue, 0.9);
+			padding: 4rem 2rem;
+			border-radius: 1rem;
+		}
+	}
+}
+@media (max-width: 432px) {
+	.signin {
+		&__heading,
+		&__sub1,
+		&__sub2 {
+			font-size: 1.4rem;
+		}
+
+		&__heading {
+			font-size: 2.8rem;
+		}
+
+		&__form-container {
+			width: 100%;
+		}
+
+		&__container {
+			width: 100%;
+			background: $darkblue;
+		}
+
+		&__form {
+			padding: 0;
+			width: 100%;
+			padding: 2rem;
+		}
+	}
+	._form {
+		width: 100%;
+		&__submit--back {
+			margin-left: 1rem;
+		}
+
+		&__submit {
+			padding: 0.8rem 2rem;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+@media (max-width: 364px) {
+
+	.signin {
+		&__form {
+			padding: 1rem;
+			width: 100%;
+		}
+	}
+	._form {
+
+		&__grid {
+			grid-template-columns: 1fr;
+			grid-gap: 0;
+		}
+
+		&__group:nth-child(2) {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+@media (max-width: 334px) {
+	.signin {
+		&__form {
+			// padding: 1rem;
+		}
+
+		&__heading,
+		&__sub1,
+		&__sub2 {
+			font-size: 1.3rem;
+		}
+
+		&__heading {
+			font-size: 2.4rem;
+		}
+	}
+}
