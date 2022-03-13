@@ -2,8 +2,6 @@
 	animation: fadein .6s ease-in;
 }
 
-
-
 @keyframes fadein {
 	from {
 		transform: translateY(20px);
@@ -102,5 +100,16 @@
 	}	
 	to {
 		transform: translateX(10px);
+	}
+}
+
+@keyframes slidefrombottom {
+	from {
+		transform: translateY(5rem);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
 	}
 }

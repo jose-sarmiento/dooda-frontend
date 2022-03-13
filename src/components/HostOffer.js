@@ -28,10 +28,16 @@ const Features = () => {
 					praesentium fuga quas debitis. Quos amet facilis maxime enim dolore repellat
 					dolores deserunt libero nesciunt.
 				</p>
-				<p className="hostoffer__paragraph">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Iusto repellat excepturi magni exercitationem illum veniam!</p>
-				<Link to="/host/guide" className="hostoffer__cta">
-					Learn How <i className="fa fa-arrow-right-long hostoffer__cta-arrow"></i>
-				</Link>
+				<p className="hostoffer__paragraph mb-2">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Iusto repellat excepturi magni exercitationem illum veniam!</p>
+				<div className="cta">
+					<span className="cta__icon">
+						<i className="fa fa-arrow-right-long"></i>
+					</span>
+					<div className="cta__right">
+						<span className="cta__text">Setup your host account, it's easy</span>
+						<Link to="/host/guide" className="cta__link">Learn how</Link>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

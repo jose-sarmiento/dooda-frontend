@@ -1,7 +1,6 @@
 .header {
-	padding: 0 1rem;
 	z-index: 1500;
-	height: 7rem;
+	height: 6rem;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -73,15 +72,15 @@
 
 	&__link {
 		padding: 1.2rem 2rem;
-		font-size: 1.6rem;
-		color: $grey2;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.4rem;
+		color: #1c1c1c;
+		font-weight: 500;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 100%;
 		transition: color .4s ease;
-		letter-spacing: .8px;
-		font-family: 'Lato', sans-serif;
 	}
 
 	&__link--active {
@@ -109,16 +108,12 @@
 	}
 
 	&__cta {
-		padding: .6rem 2.5rem;
-		font-size: 1.2rem;
-		text-transform: uppercase;
-		border: 2px solid $primary-dark;
-		border: 2px solid $dark;
-		font-family: inherit;
-		border-radius: 3rem;
-		color: $white;
-		letter-spacing: .8px;
-		background: $dark;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.4rem;
+		color: $dark;
+		font-weight: 500;
+		// letter-spacing: .8px;
+		// font-family: 'Montserrat', sans-serif;
 	}
 }
 
@@ -135,7 +130,7 @@
 
 	&__link {
 		color: inherit;
-		font-weight: 600;
+		// font-weight: 600;
 	}
 
 	&__button {
@@ -247,8 +242,8 @@
 	}
 	
 	.nav__link {
-		color: #c7c7c7;
-		font-weight: 400;
+		color: #e8e8e8;
+		font-weight: 500;
 	}
 
 	.nav__link--active {
@@ -264,9 +259,9 @@
 	}
 
 	.nav__cta {
-		border: 2px solid $primary-dark;
+		border: none;
 		background: transparent;
-		color: #dedede;
+		color: #ededed;
 	}
 
 	.header-right__button {

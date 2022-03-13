@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom"
 import treehouse from "../assets/images/treehouse.jpg";
+import room from "../assets/images/1.jpg";
 
 const Features = () => {
 	const [focus, setFocus] = useState(1);
@@ -13,7 +14,7 @@ const Features = () => {
 	return (
 		<div className="grid-12">
 			<div className="features__left">
-				<div className="features__image-wrapper">
+				<div className="features__image-wrapper features__image-wrapper--1">
 					<img src={treehouse} alt="img1" className="features__image" />
 				</div>
 			</div>
@@ -31,9 +32,16 @@ const Features = () => {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, maiores
 					vitae, accusantium qui minima exercitationem.
 				</p>
-				<Link to="/p/hotels" className="features__cta">
-					Browse now <i className="fa fa-arrow-right-long features__cta-arrow"></i>
-				</Link>
+
+				<div className="cta">
+					<span className="cta__icon">
+						<i className="fa fa-arrow-right-long"></i>
+					</span>
+					<div className="cta__right">
+						<span className="cta__text">Get started with dooda</span>
+						<Link to="/p/hotels" className="cta__link">Browse now</Link>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
