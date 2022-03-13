@@ -1,6 +1,4 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
-import girl from "../assets/images/woman.jpg";
 import Review from "./Review"
 
 const Reviews = () => {

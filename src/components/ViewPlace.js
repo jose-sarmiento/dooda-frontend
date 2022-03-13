@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { FaMapMarkerAlt, FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import Stars from "./Stars";
-import MyMap from "./MyMap";
-import Review from "./Review";
-import Modal from "./Modal";
 
 import img1 from "../assets/images/1.jpg";
 import img2 from "../assets/images/2.jpg";
@@ -29,7 +25,7 @@ const ViewPlace = () => {
 		if (currIndex > images.length - 1) {
 			setCurrIndex(0);
 		}
-	}, [currIndex, images]);
+	}, [currIndex]);
 
 	useEffect(() => {
 		if (paused) return;
@@ -41,7 +37,7 @@ const ViewPlace = () => {
 		return () => {
 			clearInterval(interval);
 		};
-	}, [images, currIndex, paused]);
+	}, [currIndex, paused]);
 
 	const handleModalOpen = () => openModal();
 

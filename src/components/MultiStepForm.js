@@ -3,11 +3,8 @@ import {
 	FaUserPlus,
 	FaCalendarCheck,
 	FaCalendarMinus,
-	FaPaypal,
-	FaCreditCard,
 } from "react-icons/fa";
 import { pesoFormat } from "../utils/pesoFormat";
-import Loader from "./Loader";
 import {ReactComponent as Paymongo} from '../assets/svgs/paymongo.svg';
 
 const MultiStepForm = ({ currStep, setCurrStep, closeModal }) => {

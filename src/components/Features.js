@@ -3,12 +3,6 @@ import {Link} from "react-router-dom"
 import treehouse from "../assets/images/treehouse.jpg";
 
 const Features = () => {
-	const [focus, setFocus] = useState(1);
-
-	const handleMouseOver = (n) => {
-		if (n === focus) return;
-		setFocus(n);
-	};
  
 	return (
 		<div className="grid-12">

@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useRef, useCallback } from "react";
 import { Card, CardSkeletonLoading, SectionHeader, FilterDraggable } from "../components";
 import usePaginateFetch from "../hooks/usePaginateFetch";
 
@@ -7,7 +6,7 @@ const Pools = () => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	const [page, setPage] = useState(1);
-	const { results, loading, error, hasNext } = usePaginateFetch("pool", page, 12);
+	const { results, loading, hasNext } = usePaginateFetch("pool", page, 12);
 	const observer = useRef();
 	const lastElementRef = useCallback(
 		(node) => {

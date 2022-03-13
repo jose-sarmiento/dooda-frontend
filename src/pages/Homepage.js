@@ -1,17 +1,8 @@
 import React, { useRef, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
 import { gsap } from "gsap";
-import {Link} from "react-router-dom"
-import hotels from "../mocks/hotels";
 import Layout from "./Layout";
-import { Card, Reviews, Steps, Features, Hero, Previews, HostOffer } from "../components";
+import { Reviews, Features, Hero, Previews, HostOffer } from "../components";
 import useAppContext from "../hooks/useAppContext";
-
-import manmountain from "../assets/images/contrasted.jpg";
-import manswimming from "../assets/images/contrasted2.jpg";
-import outdoor from "../assets/images/cliford.jpg";
-import room from "../assets/images/4.jpg";
-
 
 const Homepage = () => {
 	const { closeSubmenu, isSubmenuOpen } = useAppContext();
@@ -68,10 +59,6 @@ const Homepage = () => {
 
 		observer.observe(bannerRef.current.querySelector(".hero__heading-1"));
 	}, [headingRef, headerRef]);
-
-	const handleMouseOver = () => {
-		if (isSubmenuOpen) closeSubmenu();
-	};
 
 	return (
 		<Layout ref={headerRef}>

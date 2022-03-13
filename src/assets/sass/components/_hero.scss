@@ -125,7 +125,8 @@
 .float {
 	position: absolute;
 	right: 0;
-	bottom: 6rem;
+	top: 50%;
+	transform: translateY(-50%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;

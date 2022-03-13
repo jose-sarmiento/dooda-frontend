@@ -5,7 +5,6 @@ import Profile from "./Profile";
 import Notifications from "./Notifications";
 import Wishlists from "./Wishlists";
 import RecentBookings from "./RecentBookings";
-import Settings from "./Settings";
 
 import user from "../assets/images/woman.jpg";
 

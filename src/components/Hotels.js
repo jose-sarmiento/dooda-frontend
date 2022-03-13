@@ -1,15 +1,13 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useRef, useCallback } from "react";
 import { Card, CardSkeletonLoading, SectionHeader, FilterDraggable } from "../components";
 import usePaginateFetch from "../hooks/usePaginateFetch";
-import { places } from "../mocks/links";
 
 const Hotels = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	const [query, setQuery] = useState("hotel")
  
 	const [page, setPage] = useState(1);
-	const { results, loading, error, hasNext } = usePaginateFetch(query, page, 12);
+	const { results, loading, hasNext } = usePaginateFetch(query, page, 12);
 	const observer = useRef();
 	const lastElementRef = useCallback(
 		(node) => {
@@ -23,7 +21,7 @@ const Hotels = () => {
 			});
 			if (node) observer.current.observe(node);
 		},
-		[query, loading, hasNext]
+		[loading, hasNext]
 	); 
 
 	const close = (e) => setIsOpen(false)

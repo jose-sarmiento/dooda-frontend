@@ -1,12 +1,8 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import CustomLink from "./CustomLink";
-import Search from "./Search";
 import { places } from "../mocks/links";
 
 const SectionHeader = ({ toggle }) => {
-	const [navWidth, setNavWidth] = useState(0);
-	const [itemWidth, setItemWidth] = useState(0);
 
 	const container = useRef();
 

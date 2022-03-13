@@ -56,9 +56,10 @@
 		padding: 1.2rem 2rem 1.2rem 5rem;
 		border: 2px solid $white;
 		color: $dark;
-		background: rgba($white, .3);
+		background: rgba($white, .1);
 		transition: all .5s;
 		border: none;
+		backdrop-filter: blur(10px);
 	}
 
 	.nav-search__input::placeholder {
@@ -69,7 +70,7 @@
 
 	.nav-search__input:focus {
 		outline: none;
-		background: #f1f1f1;
+		background: rgba($white, .3);
 	}
 
 	.nav-search__input:focus::placeholder {

@@ -1,15 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { FiMenu, FiSearch } from "react-icons/fi";
+import {FiSearch } from "react-icons/fi";
 import { gsap } from "gsap";
 import PlacesSubmenu from "./PlacesSubmenu";
 import HostSubmenu from "./HostSubmenu";
-import MyAccountSubmenu from "./MyAccountSubmenu";
 
 import useAppContext from "../hooks/useAppContext";
 
 import logo from "../assets/images/doadasvglogo.svg";
-import user from "../assets/images/woman.jpg";
 
 const Header = React.forwardRef((props, ref) => {
 	const headerRef = useRef();
@@ -45,21 +43,13 @@ const Header = React.forwardRef((props, ref) => {
 					headerRef.current.style.transform = "scaleY(1)";
 					headerRef.current.style.opacity = 1;
 				}
-			} else {
-				// if (scrollTop > lastScrollTop && headerRef.current) {
-				// 	headerRef.current.style.height = "50px";
-				// 	headerRef.current.style.opacity = 1;
-				// } else {
-				// 	headerRef.current.style.height = "70px";
-				// 	headerRef.current.style.opacity = 1;
-				// }
 			}
 
 			lastScrollTop = scrollTop;
 		};
 		window.addEventListener("scroll", hideHeaderOnScroll);
 		// return window.removeEventListener("scroll", hideHeaderOnScroll)
-	}, [headerRef]);
+	}, [headerRef, location]);
 
 	return (
 		<header

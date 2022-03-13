@@ -6,7 +6,6 @@ const FilterDraggable = ({ isOpen, close }) => {
 	const [min, setMin] = useState(15000);
 	const [max, setMax] = useState(40000);
 
-	const [daytime, setDaytime] = useState("both");
 
 	const handleStart = () => {};
 	const handleDrag = () => {};

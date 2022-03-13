@@ -15,7 +15,7 @@ const Previews = () => {
 		if (currIndex > activeImages.length - 1) {
 			setCurrIndex(0);
 		}
-	}, [currIndex, activeImages]);
+	}, [currIndex]);
 
 	useEffect(() => {
 		if (paused) return;
@@ -27,7 +27,7 @@ const Previews = () => {
 		return () => {
 			clearInterval(interval);
 		};
-	}, [activeImages, currIndex, paused]);
+	}, [currIndex, paused]);
 
 
 	return (

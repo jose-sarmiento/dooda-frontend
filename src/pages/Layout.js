@@ -2,7 +2,6 @@ import React from "react";
 import {
 	Header,
 	Footer,
-	Submenu,
 	Modal,
 	Sidebar,
 	CustomCalendar,

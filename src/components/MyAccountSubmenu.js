@@ -1,8 +1,6 @@
 import React from "react";
-import { FaUser, FaBook, FaBell, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import place from "../assets/images/bg-small.jpg"
 import woman from "../assets/images/woman.jpg"
 
 const MyAccountSubmenu = () => {

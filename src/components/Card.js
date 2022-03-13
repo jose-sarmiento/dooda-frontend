@@ -26,7 +26,7 @@ const Card = React.forwardRef((props, ref) => {
             </div>
             <div className="card__body">
                 <div className="card__body-container">
-                    <h3 className="card__name">{data.name.length > 32 ? data.name.slice(0, 32) + "..." : data.name}</h3>
+                    <h3 className="card__name">{data.name.length > 30 ? data.name.slice(0, 30) + "..." : data.name}</h3>
                     <h6 className="card__location">
                         <FaMapMarkerAlt className="card__location-icon" />
                         {data.address.street + " " + data.address.city }

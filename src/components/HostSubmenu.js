@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import womanwithcomputer from "../assets/images/woman-with-computer.jpg";
 

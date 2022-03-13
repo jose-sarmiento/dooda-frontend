@@ -1,7 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import {Link} from "react-router-dom"
 import Search from "./Search"
-import treehouse from "../assets/images/boat.png"
 
 import woman from "../assets/images/woman.jpg"
 
@@ -15,8 +14,6 @@ const Hero = React.forwardRef((props, ref) => {
 		const handleScroll = () => {
 			const scrollTop = overlay.current.scrollTop
 			let elementHeight =overlay.current.clientHeight;
-	        let opacity = ((1 - (elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
-			// overlay.current.style.opacity = opacity
 		}
 
 		window.addEventListener("scroll", handleScroll)
@@ -29,7 +26,7 @@ const Hero = React.forwardRef((props, ref) => {
 		} else {
 			openCalendar()
 		}
-	}
+	} 
 
 
 	return (

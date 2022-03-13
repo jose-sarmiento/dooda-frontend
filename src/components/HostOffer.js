@@ -1,16 +1,9 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom"
-import img1 from "../assets/images/cliford.jpg";
 import img2 from "../assets/images/woman-with-computer.jpg";
-import img3 from "../assets/images/lens.jpg";
 
 const Features = () => {
 	const [focus, setFocus] = useState(1);
-
-	const handleMouseOver = (n) => {
-		if (n === focus) return;
-		setFocus(n);
-	};
  
 	return (
 		<div className="grid-12">
