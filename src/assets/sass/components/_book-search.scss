@@ -1,0 +1,62 @@
+.book-search {
+	width: 80rem;
+	padding: 3rem;
+	margin: 0 auto;
+	background: $white;
+	border-radius: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 5rem;
+	align-items: center;
+	box-shadow: $shadow;
+	transition: all .5s;
+
+	&__item {
+		display: grid;
+		grid-template-columns: 3rem 1fr;
+	}
+
+	&__icon {
+		font-size: 1.6rem;
+		color: $grey3;
+		padding: 0;
+		margin: 0;
+	}
+
+	&__form {
+
+	}
+
+	&__select {
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $dark;
+		margin-bottom: 1.5rem;
+		padding: 0;
+		display: flex;
+		align-items: center;
+	}
+
+	&__angle {
+		margin-left: 1.5rem;
+	}
+
+	&__value {
+		font-size: 1.4rem;
+		font-weight: 500;
+		color: $grey3;
+	}
+
+	button {
+		height: 4rem;
+		width: 4rem;
+		border-radius: 50%;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.6rem;
+		font-weight: 500;
+		color: $white;
+		background: $primary-dark;
+	}
+}

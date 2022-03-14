@@ -1,34 +1,22 @@
 .features {
-	background: #f1f1f1;
+	background: radial-gradient(circle farthest-corner at top, #f5f5f5, #fff);
 	height: 90vh;
 	position: relative;
 	z-index: 1;
 
 	&__left {
-		grid-column: 1/7;
+		grid-column: 2/7;
 		display: flex;
 		align-items: center;
 		position: relative;
 	}
 
-	&__left::before {
-		content: "";
-		height: 35rem;
-		border-radius: 0 0 1rem 0;
-		width: 25rem;
-		background: #66515b;
-		background: rgba(#946119, .4);
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: -1;
-	}
-
 	&__image-wrapper {
-		height: 80%;
-		width: 40rem;
-		margin-left: 3rem;
+		height: 70%;
+		width: 35rem;
 		z-index: 40;
+		border-radius: 1rem;
+		overflow: hidden;
 	}
 
 	&__image {
@@ -44,7 +32,7 @@
 
 
 	&__offers {
-		grid-column: 7/-1;
+		grid-column: 7/12;
 		text-align: left;
 		color: $grey;
 		display: flex;
@@ -54,23 +42,24 @@
 
 	&__title {
 		margin-bottom: 4rem;
-		font-size: 2.6rem;
-		color: $dark;
+		font-size: 3.2rem;
+		color: #1c1c1c;
 		font-family: 'Montserrat', sans-serif;
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	&__heading {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 		text-transform: uppercase;
-		color: $grey1;
+		color: #1c1c1c;
+		font-family: 'Montserrat', sans-serif;
 		// color: #e6e6e6;
 		font-weight: 500;
 	}
 
 	&__paragraph {
 		margin: .8rem 0 2.5rem;
-		color: $grey3;
+		color: $grey2;
 		// color: #d9d9d9;
 		font-size: 1.4rem;
 		font-weight: 400;
@@ -83,17 +72,17 @@
 		display: inline-block;
 		align-self: flex-start;
 		padding: 1.2rem 2rem;
-		border: 2px solid #946119;
-		border: 2px solid $dark;
+		// border: 2px solid #946119;
+		border-left: 4px solid $primary-dark;
 		text-align: left;
 		font-size: 1.2rem;
-		color: $white;
+		color: $dark;
 		cursor: pointer;
 		// border-radius: 3rem;
 		text-transform: uppercase;
-		background: $primary-dark;
-		background: #946119;
-		background: $dark;
+		// background: linear-gradient(to right, rgba($primary-dark, 5%), $primary-dark);
+		// background: #946119;
+		background: none;
 	}
 
 	&__cta:hover {
@@ -166,5 +155,45 @@
 	}
 	.features__offers {
 		padding: 2rem;		
+	}
+}
+
+.cta {
+	display: flex;
+	align-items: center;
+	margin-top: 1.5rem;
+
+	&__icon {
+		height: 4rem;
+		width: 4rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.6rem;
+		font-weight: 500;
+		margin-right: 1.2rem;
+		background: $primary-dark;
+		color: $white;
+	}
+
+	&__right {
+
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		font-weight: 500;
+		color: $grey3;
+		display: block;
+		margin-bottom: .5rem;
+		display: block;
+	}
+
+	&__link {
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $dark;
+		text-decoration: underline;
 	}
 }

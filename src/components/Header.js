@@ -20,7 +20,7 @@ const Header = React.forwardRef((props, ref) => {
 			scaleY: 1,
 			opacity: 1,
 			pointerEvents: "all",
-			delay: 5,
+			delay: 4.2,
 			ease: "expo.out",
 		});
 	}, []);
@@ -35,7 +35,7 @@ const Header = React.forwardRef((props, ref) => {
 		const hideHeaderOnScroll = () => {
 			const scrollTop =
 				window.pageYOffset || document.documentElement.scrollTop;
-			if(location.pathname === "/") {
+			if (location.pathname === "/") {
 				if (scrollTop > lastScrollTop && headerRef.current) {
 					headerRef.current.style.transform = "scaleY(0)";
 					headerRef.current.style.opacity = 0;
@@ -44,12 +44,15 @@ const Header = React.forwardRef((props, ref) => {
 					headerRef.current.style.opacity = 1;
 				}
 			}
-
 			lastScrollTop = scrollTop;
 		};
 		window.addEventListener("scroll", hideHeaderOnScroll);
+<<<<<<< HEAD
 		// return window.removeEventListener("scroll", hideHeaderOnScroll)
 	}, [headerRef, location]);
+=======
+	}, [headerRef]);
+>>>>>>> rework
 
 	return (
 		<header
@@ -66,48 +69,19 @@ const Header = React.forwardRef((props, ref) => {
 				</Link>
 
 				<ul className="nav nav--left">
-					{location.pathname === "/" ? (
-						<>
-						<li className="nav__item">
-						<NavLink
-							to="/p/hotels"
-							className={({ isActive }) =>
-								isActive
-									? "nav__link nav__link--active"
-									: "nav__link"
-							}
-						>
-							Destinations
-						</NavLink>
-						<PlacesSubmenu />
-					</li>
-					
-					<li className="nav__item">
-						<NavLink
-							to="/host/guide"
-							className={({ isActive }) =>
-								isActive
-									? "nav__link nav__link--active"
-									: "nav__link"
-							}
-						>
-							Become a Host
-						</NavLink>
-						<HostSubmenu />
-					</li>
-						</>
-					) : (
+					{location.pathname !== "/" && (
 						<form className="nav-search">
-							<label 
-								htmlFor="nav-search" 
-								className="nav-search__label">
-								<FiSearch/>
+							<label
+								htmlFor="nav-search"
+								className="nav-search__label"
+							>
+								<FiSearch />
 							</label>
-							<input 
-								type="search" 
+							<input
+								type="search"
 								id="nav-search"
-								placeholder="Where are you going?" 
-								className="nav-search__input" 
+								placeholder="Where are you going?"
+								className="nav-search__input"
 							/>
 						</form>
 					)}
@@ -115,11 +89,18 @@ const Header = React.forwardRef((props, ref) => {
 
 				<ul className="header-right">
 					{location.pathname === "/" ? (
-						<li className="header-right__item">
-							<Link to="/signin" className="nav__cta">
-								Login
-							</Link>
-						</li>
+						<>
+							<li className="nav__item">
+								<Link to="/host/guide" className="nav__link">
+									Become a Host
+								</Link>
+							</li>
+							<li className="header-right__item">
+								<Link to="/signin" className="nav__cta">
+									Sign in | Sign up
+								</Link>
+							</li>
+						</>
 					) : (
 						<li className="nav__item">
 							<Link to="/host/guide" className="nav__link">
@@ -131,18 +112,18 @@ const Header = React.forwardRef((props, ref) => {
 
 				<div className="header__mobile">
 					<form>
-						<input 
-							type="text" 
+						<input
+							type="text"
 							placeholder="Where are you going?"
 							id="hm-search"
 						/>
-						<label 
+						<label
 							className="header__search-icon"
 							htmlFor="hm-search"
 						>
-							<FiSearch/>
+							<FiSearch />
 						</label>
-					</form>					
+					</form>
 					<button
 						className="header__hamburger"
 						onClick={() => openSidebar()}

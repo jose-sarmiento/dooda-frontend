@@ -1,4 +1,9 @@
 import React, { useRef, useEffect } from "react";
+<<<<<<< HEAD
+=======
+import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
+import { FiSearch } from "react-icons/fi";
+>>>>>>> rework
 import { gsap } from "gsap";
 import Layout from "./Layout";
 import { Reviews, Features, Hero, Previews, HostOffer } from "../components";
@@ -10,6 +15,7 @@ const Homepage = () => {
 	const bannerRef = useRef();
 	const headingRef = useRef();
 	const headerRef = useRef();
+	const bookSearchRef = useRef();
 
 	const q = gsap.utils.selector(bannerRef);
 	const tl = useRef();
@@ -18,37 +24,22 @@ const Homepage = () => {
 		tl.current = gsap
 			.timeline()
 			.to(q(".overlay"), {
-				opacity: 1,
-				duration: 1,
-				ease: "expo.out",
-			})
-			.delay(1)
-			.to(q(".stagger"), {
-				clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-				opacity: 1,
-				duration: 2,
-				stagger: 0.6,
-			})
-			.to(q(".hero__content"), {
-				y: 10,
-				duration: 1,
-			})
-			.fromTo(q(".hero__search"), {
+				transform: "scale(0)",
 				opacity: 0,
-				x: -50
-			}, {
-				duration: 1,
-				opacity: 1,
-				x: 0
-			}, "-=1")
-			.fromTo(q(".float__item"), {
-				y: 20,
-				opacity: 0,
-			},{
+				duration: .5
+			})
+			.delay(1.2)
+			.to(q(".hero__image"), {
 				y: 0,
 				opacity: 1,
-				stagger: 0.2,
-			});
+				duration: .6
+			}, "-=.4")
+			.to(q(".stagger"), {
+				x: 0,
+				opacity: 1,
+				duration: .5,
+				stagger: 0.3,
+			})
 	}, [bannerRef, q]);
 
 	useEffect(() => {
@@ -60,12 +51,61 @@ const Homepage = () => {
 		observer.observe(bannerRef.current.querySelector(".hero__heading-1"));
 	}, [headingRef, headerRef]);
 
+<<<<<<< HEAD
+=======
+	useEffect(() => {
+		let observer = new IntersectionObserver((entries) => {
+			if (entries[0].isIntersecting) {
+				bookSearchRef.current.style.transform = "translateY(-50%)"
+			} else {
+				bookSearchRef.current.style.transform = "translateY(0)"
+			}
+		}, {
+			threshold: 1
+		});
+
+		observer.observe(bookSearchRef.current);
+	}, [bookSearchRef]);
+
+	const handleMouseOver = () => {
+		if (isSubmenuOpen) closeSubmenu();
+	};
+
+>>>>>>> rework
 	return (
 		<Layout ref={headerRef}>
 
 			<Hero ref={bannerRef} />
 
-			<Previews />
+			<div className="book-search" ref={bookSearchRef}>
+				<div className="book-search__item">
+					<FaMapMarkerAlt className="book-search__icon" />
+
+					<div className="book-search__form">
+						<div className="book-search__select">Location <span className="book-search__angle"><i className="fa-solid fa-angle-down"></i></span></div>
+						<span className="book-search__value">Virac, Catanduanes</span>
+					</div>
+				</div>
+				<div className="book-search__item">
+					<FaMapMarkerAlt className="book-search__icon" />
+
+					<div className="book-search__form">
+						<div className="book-search__select">Places <span className="book-search__angle"><i className="fa-solid fa-angle-down"></i></span></div>
+						<span className="book-search__value">Beach Resort</span>
+					</div>
+				</div>
+				<div className="book-search__item">
+					<FaMapMarkerAlt className="book-search__icon" />
+
+					<div className="book-search__form">
+						<div className="book-search__select">Date <span className="book-search__angle"><i className="fa-solid fa-angle-down"></i></span></div>
+						<span className="book-search__value">Feb 14, 2022</span>
+					</div>
+				</div>
+				<div className="book-search__item">
+					<button><FiSearch/></button>
+				</div>
+			</div>
 
 			<section className="features">
 				<Features />
@@ -75,11 +115,6 @@ const Homepage = () => {
 				<HostOffer />
 			</section>
 
-			<section className="section section-reviews">
-				<div className="container">
-					<Reviews />
-				</div>
-			</section>
 		</Layout>
 	);
 };
