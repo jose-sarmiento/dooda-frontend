@@ -1,9 +1,8 @@
 import React, { useRef, useEffect } from "react";
-<<<<<<< HEAD
-=======
+
 import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
->>>>>>> rework
+
 import { gsap } from "gsap";
 import Layout from "./Layout";
 import { Reviews, Features, Hero, Previews, HostOffer } from "../components";
@@ -51,8 +50,7 @@ const Homepage = () => {
 		observer.observe(bannerRef.current.querySelector(".hero__heading-1"));
 	}, [headingRef, headerRef]);
 
-<<<<<<< HEAD
-=======
+
 	useEffect(() => {
 		let observer = new IntersectionObserver((entries) => {
 			if (entries[0].isIntersecting) {
@@ -71,7 +69,7 @@ const Homepage = () => {
 		if (isSubmenuOpen) closeSubmenu();
 	};
 
->>>>>>> rework
+
 	return (
 		<Layout ref={headerRef}>
 

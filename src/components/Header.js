@@ -47,12 +47,8 @@ const Header = React.forwardRef((props, ref) => {
 			lastScrollTop = scrollTop;
 		};
 		window.addEventListener("scroll", hideHeaderOnScroll);
-<<<<<<< HEAD
 		// return window.removeEventListener("scroll", hideHeaderOnScroll)
 	}, [headerRef, location]);
-=======
-	}, [headerRef]);
->>>>>>> rework
 
 	return (
 		<header

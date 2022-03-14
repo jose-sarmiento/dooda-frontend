@@ -1,11 +1,10 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {Link} from "react-router-dom"
 import Search from "./Search"
-<<<<<<< HEAD
-=======
+
 import treehouse from "../assets/images/boat.png"
 import logo from "../assets/images/doadasvglogo.svg"
->>>>>>> rework
+
 
 import woman from "../assets/images/girlwithbackpack.jpg"
 
@@ -16,7 +15,7 @@ const Hero = React.forwardRef((props, ref) => {
 	const overlay = useRef()
 	const {openCalendar, closeCalendar, isOpenCalendar} = useAppContext() 
 
-<<<<<<< HEAD
+
 	useEffect(() => {
 		const handleScroll = () => {
 			const scrollTop = overlay.current.scrollTop
@@ -27,8 +26,7 @@ const Hero = React.forwardRef((props, ref) => {
 	  	return () => window.removeEventListener("scroll", handleScroll);
 	}, [])
 
-=======
->>>>>>> rework
+
 	const handleOpenCalendar = () => {
 		if(isOpenCalendar) {
 			closeCalendar()
