@@ -15,7 +15,7 @@ const Card = React.forwardRef((props, ref) => {
         <div className="card fadein" ref={ ref || null}>
             <FiHeart className="fa-light fa-heart card__favorite" />
             <Link to={`/p/hotels/${data.id}`} className="card__img-wrapper">
-                <img src={data.image.large} alt="img1" className="card__img" />
+                <img src={data.image.medium} alt="img1" className="card__img" />
             </Link>
             <div className="card__header">
                 <div>
