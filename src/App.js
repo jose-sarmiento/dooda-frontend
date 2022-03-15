@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useLayoutEffect } from 'react'
+import { Routes, Route, useLocation } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import PlacesToStay from "./pages/PlacesToStay";
 import Signin from "./pages/Signin";
@@ -22,6 +22,7 @@ import {
 
 function App() {
     return (
+        <Wrapper>
         <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/p/*" element={<PlacesToStay />}>
@@ -53,7 +54,16 @@ function App() {
             <Route path="/about" element={<h1>About Page</h1>} />
             <Route path="/*" element={<h1>404 Not Found</h1>} />
         </Routes>
+        </Wrapper>
     );
 }
+
+const Wrapper = ({children}) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children
+} 
 
 export default App;

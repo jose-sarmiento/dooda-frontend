@@ -1,46 +1,15 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React from 'react'
 import {Link} from "react-router-dom"
-import Search from "./Search"
 
-import treehouse from "../assets/images/boat.png"
 import logo from "../assets/images/doadasvglogo.svg"
-
-
 import woman from "../assets/images/girlwithbackpack.jpg"
 
-import useAppContext from "../hooks/useAppContext";
 
 const Hero = React.forwardRef((props, ref) => {
 
-	const overlay = useRef()
-	const {openCalendar, closeCalendar, isOpenCalendar} = useAppContext() 
-
-
-	useEffect(() => {
-		const handleScroll = () => {
-			const scrollTop = overlay.current.scrollTop
-			let elementHeight =overlay.current.clientHeight;
-		}
-
-		window.addEventListener("scroll", handleScroll)
-	  	return () => window.removeEventListener("scroll", handleScroll);
-	}, [])
-
-
-	const handleOpenCalendar = () => {
-		if(isOpenCalendar) {
-			closeCalendar()
-		} else {
-			openCalendar()
-		}
-	} 
-
-
 	return (
 		<div className="hero" ref={ref}>
-			<div className="overlay">
-				<img src={logo} alt="logo" />
-			</div>
+
 			<div className="hero__container">
 				<div className="hero__image">
 					<img src={woman} alt="girl with backpack" />

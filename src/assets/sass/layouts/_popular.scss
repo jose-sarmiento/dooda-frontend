@@ -1,0 +1,120 @@
+.popular-section {
+	min-height: 30rem;
+	padding: 6rem 0;
+	background: radial-gradient(circle at top right, #fff, #f5f5f5, #fff);
+
+	&__container {
+		max-width: 1200px;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+	}
+
+	&__header,
+	&__populars {
+		grid-column: 2/12
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__subheading {
+		font-size: 1.6rem;
+		color: $grey2;
+	}
+
+	&__heading {
+		font-size: 3.2rem;
+		color: $dark;
+		font-weight: 600;
+		font-family: 'Montserrat', sans-serif;
+
+	}
+
+	&__populars {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+		grid-column-gap: 1.5rem;
+		margin-top: 4rem;
+		// overflow-x: auto;
+	}
+
+	// &__populars::-webkit-scrollbar {    display: none;}
+}
+
+.arrow-link {
+	display: inline-block;
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: blue;
+	border-bottom: 1px solid blue;
+	padding-bottom: .4rem;
+}
+
+._card {
+	padding: .8rem;
+	padding-bottom: 1.2rem;
+	border-radius: 1rem;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, .05);
+	background: transparent;
+	transition: all .5s;
+
+	// &:nth-child(odd) {
+	// 	background: linear-gradient(to bottom right, #f5f5f5, #f5f5f5);
+	// 	background-position: top right;
+	// }
+
+	// &:nth-child(even) {
+	// 	background: linear-gradient(to top left, #f5f5f5, #f5f5f5);
+	// 	background-position: top left;
+	// }
+
+	&:hover {
+		transform: translateY(-1rem);
+	}
+
+
+	&__img-wrapper {
+		height: 20rem;
+		width: 100%;
+		border-radius: 1rem;
+		overflow: hidden;
+	}
+
+	&__img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+
+	&__place {
+		margin-top: 1rem;
+		font-size: 1.2rem;
+		color: $grey3;
+		text-transform: uppercase;
+		line-height: 1;
+	}
+
+	&__name {
+		margin-top: .8rem;
+		font-size: 1.6rem;
+		font-weight: 600;
+		color: $dark;
+		line-height: 1;
+	}
+
+	&__cta {
+		display: inline-block;
+		font-size: 1.2rem;
+		margin-top: .8rem;
+		font-family: inherit;
+		text-transform: capitalize;
+		font-weight: 600;
+		color: $primary-dark;
+		padding: .2rem;
+		border-bottom: 1px solid $primary-dark;
+	}
+}

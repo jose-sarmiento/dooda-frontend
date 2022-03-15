@@ -2,8 +2,8 @@
 	background: radial-gradient(circle farthest-corner at bottom, #f5f5f5, #fff);
 	height: 90vh;
 	position: relative;
-	z-index: 1;
-	overflow: hidden;
+	z-index: -1;
+	// overflow: hidden;
 
 	&__left {
 		grid-column: 7/12;

@@ -33,6 +33,8 @@ import Treehouses from "./Treehouses"
 import HouseBoats from "./HouseBoats"
 import HostOffer from "./HostOffer"
 import CustomCalendar from "./CustomCalendar"
+import BookingSearch from "./BookingSearch"
+import Popular from "./Popular"
 
 
 export {
@@ -70,5 +72,7 @@ export {
 	Treehouses,
 	HouseBoats,
 	HostOffer,
-	CustomCalendar
+	CustomCalendar,
+	BookingSearch,
+	Popular
 }

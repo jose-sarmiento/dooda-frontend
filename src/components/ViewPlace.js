@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import Stars from "./Stars";
 
 import img1 from "../assets/images/1.jpg";
@@ -20,6 +19,7 @@ const ViewPlace = () => {
 	const [paused, setPaused] = useState(false);
 
 	const images = [img1, img2, img3, img4, img5]
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (currIndex > images.length - 1) {
@@ -45,9 +45,9 @@ const ViewPlace = () => {
 		<div className="sub-page">
 			<div className="hotel">
 				<div className="hotel__top">
-					<Link to="/p/hotels" className="btn btn--back">
+					<button onClick={() => navigate(-1)} className="btn btn--back">
 						Go Back
-					</Link>
+					</button>
 				</div>
 				<div className="hotel-header">
 					<div className="d-flex flex-between mb-1">

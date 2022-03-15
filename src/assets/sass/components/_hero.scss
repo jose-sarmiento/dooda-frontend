@@ -1,27 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 .hero {
 	height: 100vh;
 	width: 100%;
 	position: relative;
 	background: #1c1c1c;
-
-	.overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		z-index: 2000;
-		background: #1c1c1c;
-		transform-origin: center;
-
-		img {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%);
-			height: 5rem;
-		}
-	}
 
 	&__container {
 		height: 100%;
@@ -34,8 +16,9 @@
 	&__image {
 		position: relative;
 		overflow: hidden;
-		transform: translateY(10%);
+		transform: translateY(6rem);
 		opacity: 0;
+		clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 
 		img {
 			height: 100%;
@@ -53,7 +36,11 @@
 		content: "";
 		height: 100%;
 		width: 100%;
-		background: radial-gradient(circle farthest-corner, transparent 50%, #1c1c1c);
+		background: radial-gradient(
+			circle farthest-corner,
+			transparent 50%,
+			#1c1c1c
+		);
 		background-position: top;
 	}
 
@@ -75,15 +62,16 @@
 		line-height: 4rem;
 		text-transform: none;
 		color: #c7c7c7;
-		letter-spacing: .8px;
-		margin-bottom: .5rem;
+		letter-spacing: 0.8px;
+		margin-bottom: 0.5rem;
 	}
 	&__heading-2 {
-		font-family: montserrat, lato, "helvetica neue", Helvetica, Arial, sans-serif;
+		font-family: montserrat, lato, "helvetica neue", Helvetica, Arial,
+			sans-serif;
 		font-size: 4rem;
 		font-style: normal;
 		font-weight: 400;
-		letter-spacing: 1px;	
+		letter-spacing: 1px;
 		line-height: 4.6rem;
 		color: $white;
 		margin-bottom: 3rem;
@@ -113,12 +101,12 @@
 	&__cta {
 		border: none;
 		color: $white;
-		font-family: 'Montserrat', sans-serif;
+		font-family: "Montserrat", sans-serif;
 		font-size: 1.2rem;
 		font-weight: 500;
 		background: none;
 		margin-top: 3rem;
-		letter-spacing: .8px;
+		letter-spacing: 0.8px;
 		width: auto;
 		display: flex;
 		align-items: center;
@@ -126,7 +114,7 @@
 		// background: linear-gradient(to right, darken($primary-dark, 5%), $primary-dark);
 		text-transform: uppercase;
 		border: 2px solid $primary-dark;
-		transition: all .5s;
+		transition: all 0.5s;
 	}
 
 	.fa-play {
@@ -136,7 +124,11 @@
 
 	&__cta:hover {
 		color: $dark;
-		background: linear-gradient(to right, rgba($primary-dark, 5%), $primary-dark);
+		background: linear-gradient(
+			to right,
+			rgba($primary-dark, 5%),
+			$primary-dark
+		);
 	}
 
 	&__cta:hover .fa-play {
@@ -145,23 +137,21 @@
 }
 
 .stagger {
-     		transform: translateX(-10rem);
-    		opacity: 0;
-   }
-
+	transform: translateY(3rem);
+	opacity: 0;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
 
 @media (max-width: 1225px) {
-
 	.hero {
 		&__content {
 			margin-left: 12rem;
 			// transform: translateY(-12%);
 		}
-
 	}
 	.float {
 		right: 2rem;
-		bottom: 2rem
+		bottom: 2rem;
 	}
 }
 
@@ -171,14 +161,12 @@
 			margin-left: 10rem;
 			// transform: translateY(-12%);
 		}
-
 	}
 }
 
 @media (max-width: 874px) {
 	// .float {display: none;}
 	.hero {
-
 		&__search {
 			display: none;
 		}
@@ -204,11 +192,12 @@
 }
 
 @media (max-width: 814px) {
-	.float {display: none;}
+	.float {
+		display: none;
+	}
 }
 
 @media (max-width: 740px) {
-
 	.hero {
 		&__container {
 			width: 100%;
@@ -222,7 +211,6 @@
 }
 
 @media (max-width: 618px) {
-
 	.hero {
 		&__content {
 			padding: 4rem;
@@ -231,7 +219,6 @@
 }
 
 @media (max-width: 542px) {
-
 	.hero {
 		hr {
 			display: none;
@@ -262,9 +249,7 @@
 	}
 }
 
-
 @media (max-width: 468px) {
-
 	.hero {
 		&__heading-2 {
 			font-size: 3.2rem;
@@ -290,7 +275,6 @@
 }
 
 @media (max-width: 436px) {
-
 	.hero {
 		&__heading-2 {
 			font-size: 3rem;
@@ -313,43 +297,43 @@
 }
 
 .loading {
-    margin-inline: auto;
+	margin-inline: auto;
 }
 
 .loading {
-    --height: 30px;
-    --loader-color: black;
-    --animation-duration: 0.5s;
-    display: flex;
-    align-items: flex-end;
-    gap: calc(var(--height) / 4);
-    height: calc(var(--height) * 1.75);
-    width: max-content;
+	--height: 30px;
+	--loader-color: black;
+	--animation-duration: 0.5s;
+	display: flex;
+	align-items: flex-end;
+	gap: calc(var(--height) / 4);
+	height: calc(var(--height) * 1.75);
+	width: max-content;
 }
 .loading:before,
 .loading:after {
-    content: "";
+	content: "";
 }
 .loading > div,
 .loading:before,
 .loading:after {
-    height: var(--height);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: red;
-    animation: bounce var(--animation-duration) ease-in-out infinite alternate;
+	height: var(--height);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: red;
+	animation: bounce var(--animation-duration) ease-in-out infinite alternate;
 }
 .loading:after {
-    animation-delay: calc(var(--animation-duration) / 2);
+	animation-delay: calc(var(--animation-duration) / 2);
 }
 .loading > div {
-    animation-delay: calc(var(--animation-duration) / 4);
+	animation-delay: calc(var(--animation-duration) / 4);
 }
 @keyframes bounce {
-    from {
-        transform: translateY(0%);
-    }
-    to {
-        transform: translateY(-75%);
-    }
+	from {
+		transform: translateY(0%);
+	}
+	to {
+		transform: translateY(-75%);
+	}
 }
