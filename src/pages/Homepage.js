@@ -30,6 +30,7 @@ const Homepage = () => {
 					opacity: 1,
 					duration: 2.2,
 					delay: .2,
+					ease: "power4.inOut"
 				})
 			.to(q(".stagger"), {
 				y: 0,

@@ -14,9 +14,9 @@
 	transition: all .5s;
 
 	&--start-transparent {
-		transform: scaleY(0);
+		// transform: scaleY(0);
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 		opacity: 0;
-		pointer-events: none;
 	}
 
 	&--dark {
@@ -262,6 +262,10 @@
 		border: none;
 		background: transparent;
 		color: #ededed;
+	}
+
+	.nav__cta:hover {
+		color: #bfb2b7;
 	}
 
 	.header-right__button {

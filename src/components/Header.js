@@ -17,9 +17,8 @@ const Header = React.forwardRef((props, ref) => {
 
 	useEffect(() => {
 		gsap.to(headerRef.current, {
-			scaleY: 1,
+			'clip-path': "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
 			opacity: 1,
-			pointerEvents: "all",
 			delay: 5,
 			ease: "expo.out",
 		});
@@ -37,10 +36,10 @@ const Header = React.forwardRef((props, ref) => {
 				window.pageYOffset || document.documentElement.scrollTop;
 			if (location.pathname === "/") {
 				if (scrollTop > lastScrollTop && headerRef.current) {
-					headerRef.current.style.transform = "scaleY(0)";
+					headerRef.current.style.clipPath = "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)";
 					headerRef.current.style.opacity = 0;
 				} else {
-					headerRef.current.style.transform = "scaleY(1)";
+					headerRef.current.style.clipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 					headerRef.current.style.opacity = 1;
 				}
 			}

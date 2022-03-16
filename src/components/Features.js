@@ -1,10 +1,21 @@
-import React, {useState} from "react";
+import React, {useEffect, useRef} from "react";
 import {Link} from "react-router-dom"
 import treehouse from "../assets/images/treehouse.jpg";
 import room from "../assets/images/1.jpg";
 
 const Features = () => {
- 
+ 	const content = useRef([])
+
+	useEffect(() => {
+		const options = {threshold: .3}
+		const observer = new IntersectionObserver(callback, options)
+		
+	}, [content.current])
+
+	const callback = (entries) => {
+
+	}
+
 	return (
 		<div className="grid-12">
 			<div className="features__left">

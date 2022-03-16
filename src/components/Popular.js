@@ -1,9 +1,22 @@
-import React from 'react'
+import React, {useRef, useEffect} from 'react'
 import {Link} from "react-router-dom"
 import {populars} from "../mocks"
 
 const Popular = () => {
-	
+	const cards = useRef([])
+
+	useEffect(() => {
+		const options = {threshold: .3}
+		const observer = new IntersectionObserver(callback, options)
+		cards.current.forEach(card => observer.observe(card))
+	}, [cards.current])
+
+	const callback = (entries) => {
+		entries.forEach(entry => {
+			entry.target.classList.toggle("onScreen", entry.isIntersecting)			
+		})
+	}
+
 	return (
 		<div className="popular-section">
 			<div className="grid-12">
@@ -19,7 +32,7 @@ const Popular = () => {
 				</div>
 				<div className="popular-section__populars">
 					{populars.map((pop, idx) => (
-						<div className="_card" key={idx}>
+						<div className="_card" key={idx} ref={(element) => {cards.current[idx] = element}}>
 							<figure className="_card__img-wrapper">
 								<img src={pop.img} alt={pop.name} className="_card__img" />
 							</figure>

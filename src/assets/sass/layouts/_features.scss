@@ -40,6 +40,7 @@
 		justify-content: center;
 	}
 
+
 	&__title {
 		margin-bottom: 4rem;
 		font-size: 3.2rem;
@@ -96,6 +97,20 @@
 	&__cta-arrow {
 		margin-left: 1rem;
 	}
+
+	.cliphhide {
+		opacity: 0;
+		transform: translateY(2rem);
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);	
+		transition: all .4s ease-out;
+	}
+
+	.cliphshow {
+		opacity: 1;
+		transform: translateY(0);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);	
+	}
+
 }
 
 @media (max-width: 942px) {
