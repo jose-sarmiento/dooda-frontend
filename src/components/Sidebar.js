@@ -11,7 +11,7 @@ const Sidebar = () => {
 			<button className="sidebar__close" onClick={() => closeSidebar()}>
 				Close
 			</button>
-			<Search />
+		
 			<ul className="sidebar__links">
 				<li className="sidebar__item">
 					<NavLink
@@ -37,7 +37,7 @@ const Sidebar = () => {
 						}
 					>
 						<i className="fa-solid fa-shoe-prints"></i>
-						Destinations
+						Places to Stay
 					</NavLink>
 				</li>
 
@@ -70,12 +70,12 @@ const Sidebar = () => {
 				</li>
 			</ul>
 
-			<div className="sidebar__item">
+		{/*	<div className="sidebar__item">
 				<Link to="#" className="sidebar__link">
 					<i className="fa-solid fa-gear sidebar__cog"></i>
 					Settings
 				</Link>
-			</div>
+			</div>*/}
 		</div>
 	);
 };

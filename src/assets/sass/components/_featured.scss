@@ -1,0 +1,88 @@
+.featured {
+	padding: 2rem;
+	padding-bottom: 1rem;
+
+	&__header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__heading {
+		font-size: 1.4rem;
+		color: $white;
+		font-weight: 400;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	&__link {
+		color: #eee;
+		font-size: 1.2rem;
+		display: inline-block;
+		width: auto;
+		flex-shrink: 0;
+	}
+
+	&__wrapper {
+		width: 14rem;
+		height: 15rem;
+		margin: 0 auto;
+		position: relative;
+		display: flex;
+	}
+
+}
+
+.feat-card {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	transform-origin: bottom;
+	transition: all .5s ease-out;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(to bottom right, $grey1, $dark);
+	padding: .5rem;
+
+	&--prev {
+		transform: translateX(-100%) scale(.9);
+	}
+	&--current {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transform: translateX(0) scale(1);
+	}
+	&--next {
+		transform: translateX(100%) scale(.9);
+	}
+
+	&__img-wrapper {
+		flex: 1;
+		overflow: hidden;
+	}
+	&__img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center center;
+	}
+	&__place {
+		font-size: 1.2rem;
+		color: #ccc;
+	}
+	&__name {
+		font-size: 1.2rem;
+		font-weight: 500;
+		color: $white;
+	}
+}
+
+
+
+
+
+

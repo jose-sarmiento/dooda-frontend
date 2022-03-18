@@ -1,9 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import {FiSearch } from "react-icons/fi";
+import {RiMenu3Line } from "react-icons/ri";
 import { gsap } from "gsap";
-import PlacesSubmenu from "./PlacesSubmenu";
-import HostSubmenu from "./HostSubmenu";
 
 import useAppContext from "../hooks/useAppContext";
 
@@ -36,11 +35,24 @@ const Header = React.forwardRef((props, ref) => {
 				window.pageYOffset || document.documentElement.scrollTop;
 			if (location.pathname === "/") {
 				if (scrollTop > lastScrollTop && headerRef.current) {
-					headerRef.current.style.clipPath = "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)";
-					headerRef.current.style.opacity = 0;
+					if(window.innerWidth <= 911) {
+						// show search form only
+						headerRef.current.classList.remove("scroll-up")
+						headerRef.current.classList.add("scroll-down")
+					} else {
+						headerRef.current.style.clipPath = "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)";
+						headerRef.current.style.opacity = 0;
+					}
 				} else {
-					headerRef.current.style.clipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
-					headerRef.current.style.opacity = 1;
+					if(window.innerWidth <= 911) {
+						// scroll down
+						// hide search form
+						headerRef.current.classList.remove("scroll-down")
+						headerRef.current.classList.add("scroll-up")
+					} else {
+						headerRef.current.style.clipPath = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
+						headerRef.current.style.opacity = 1;
+					}
 				}
 			}
 			lastScrollTop = scrollTop;
@@ -63,69 +75,44 @@ const Header = React.forwardRef((props, ref) => {
 					<img src={logo} alt="Dooda logo" className="header__logo" />
 				</Link>
 
-				<ul className="nav nav--left">
-					{location.pathname !== "/" && (
-						<form className="nav-search">
-							<label
-								htmlFor="nav-search"
-								className="nav-search__label"
-							>
-								<FiSearch />
-							</label>
-							<input
-								type="search"
-								id="nav-search"
-								placeholder="Where are you going?"
-								className="nav-search__input"
-							/>
-						</form>
-					)}
-				</ul>
+				<form className="nav-search">
+					<label
+						htmlFor="nav-search"
+						className="nav-search__label"
+					>
+						<FiSearch />
+					</label>
+					<input
+						type="search"
+						id="nav-search"
+						placeholder="Where are you going?"
+						className="nav-search__input"
+					/>
+				</form>
 
-				<ul className="header-right">
-					{location.pathname === "/" ? (
-						<>
-							<li className="nav__item">
-								<Link to="/host/guide" className="nav__link">
-									Become a Host
-								</Link>
-							</li>
-							<li className="header-right__item">
-								<Link to="/signin" className="nav__cta">
-									Sign in | Sign up
-								</Link>
-							</li>
-						</>
-					) : (
-						<li className="nav__item">
-							<Link to="/host/guide" className="nav__link">
-								Become a Host
-							</Link>
-						</li>
-					)}
-				</ul>
-
-				<div className="header__mobile">
-					<form>
-						<input
-							type="text"
-							placeholder="Where are you going?"
-							id="hm-search"
-						/>
-						<label
-							className="header__search-icon"
-							htmlFor="hm-search"
-						>
-							<FiSearch />
-						</label>
-					</form>
+				<ul className="nav">
+					<li className="nav__item">
+						<Link to="/host/guide" className="nav__link">
+							My Account
+						</Link>
+					</li>
+					<li className="nav__item">
+						<Link to="/host/guide" className="nav__link">
+							Become a Host
+						</Link>
+					</li>
+					<li className="nav__item">
+						<Link to="/signin" className="nav__link">
+							Sign in | Sign up
+						</Link>
+					</li>
 					<button
 						className="header__hamburger"
 						onClick={() => openSidebar()}
 					>
-						<i className="fa-solid fa-bars header__hamburger-icon"></i>
+						<RiMenu3Line className="header__hamburger-icon" />
 					</button>
-				</div>
+				</ul>
 			</div>
 		</header>
 	);

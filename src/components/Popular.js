@@ -6,7 +6,7 @@ const Popular = () => {
 	const cards = useRef([])
 
 	useEffect(() => {
-		const options = {threshold: .3}
+		const options = {threshold: .2}
 		const observer = new IntersectionObserver(callback, options)
 		cards.current.forEach(card => observer.observe(card))
 	}, [cards.current])
@@ -26,7 +26,7 @@ const Popular = () => {
 						<h2 className="popular-section__heading">Inspiration for your <span className="itallic">Next Trip</span></h2>
 					</div>
 
-					<Link to="/p/hotels" className="arrow-link">
+					<Link to="/p/hotels" className="arrow-link arrow-link--web">
 						<span className="arrow-link__text">See all <i className="fa-solid fa-arrow-right-long ml-1"></i></span>
 					</Link>
 				</div>
@@ -41,6 +41,12 @@ const Popular = () => {
 							<Link to="/p/hotels/217w82178" className="_card__cta">see details</Link>
 						</div>
 					))}
+				</div>
+
+				<div className="popular-section__link-mobile">
+					<Link to="/p/hotels" className="arrow-link arrow-link--mobile">
+						<span className="arrow-link__text">See all <i className="fa-solid fa-arrow-right-long ml-1"></i></span>
+					</Link>
 				</div>
 			</div>
 		</div>

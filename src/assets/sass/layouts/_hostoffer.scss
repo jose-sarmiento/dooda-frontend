@@ -1,9 +1,9 @@
 .hostoffer {
-	background: radial-gradient(circle farthest-corner at bottom, #f5f5f5, #fff);
-	height: 90vh;
+	background: radial-gradient(circle farthest-corner at top,#fff, #f5f5f5, #fff);
+	// height: 90vh;
 	position: relative;
 	z-index: -1;
-	// overflow: hidden;
+	padding: 4rem 0;
 
 	&__left {
 		grid-column: 7/12;
@@ -15,8 +15,8 @@
 	}
 
 	&__image-wrapper {
-		height: 80%;
-		width: 35rem;
+		// height: 80%;
+		width: 30rem;
 		z-index: 40;
 		border-radius: 1rem;
 		overflow: hidden;
@@ -38,7 +38,6 @@
 		flex-direction: column;
 		justify-content: center;
 		grid-row: 1/-1;
-		padding-left: 3rem;
 		max-height: 100%;
 	}
 
@@ -73,92 +72,124 @@
 		margin-bottom: .8rem;
 	}
 
-	&__cta {
-		margin-top: 3rem;
-		display: inline-block;
-		align-self: flex-start;
-		padding: 1.2rem 2rem;
-		border: 2px solid #5184d6;
-		border: 2px solid $dark;
-		text-align: left;
-		font-size: 1.2rem;
-		color: $white;
-		cursor: pointer;
-		// border-radius: 3rem;
-		text-transform: uppercase;
-		background: $primary-dark;
-		background: #5184d6;
-		background: $dark;
+	@media (max-width: 665px) {
+		&__title {
+			font-size: 2.4rem;
+		}
+
+		&__heading {
+			font-size: 1.2rem;
+		}
 	}
 
+	@media (max-width: 375px) {
+		&__title {
+			font-size: 2.4rem;
+			margin-bottom: 3rem;
+			color: $dark;
 
-	&__cta:hover {
-		// background: $grey2;
+		}
+
+		&__heading {
+			font-size: 1.2rem;
+			line-height: 2rem
+		}
+
+		&__paragraph {
+			// line-height: 2.4rem;
+		}
+
+		&__heading:nth-of-type(2),
+		&__paragraph:nth-of-type(2) {
+			display: none;
+		}
 	}
 
-	&__cta:hover .features__cta-arrow {
-		animation: slidehorizontal .4s linear infinite alternate;
-	}
+	@media (max-width: 320px) {
+		&__title {
+			font-size: 2.2rem;
+			margin-bottom: 2.5rem;
+		}
 
-	&__cta-arrow {
-		margin-left: 1rem;
+		&__paragraph {
+			display: none;
+		}
 	}
 }
 
 
-@media (max-width: 942px) {
+@media (max-width: 955px) {
 	.hostoffer {
-	
-		&__left {
-			grid-column: 8/-1;
-		}
+		position: relative;
 
-		&__left::before {
-			display: none;
+		&__left {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			grid-column: 2/12;
+			grid-row: 1/-1;
+			z-index: -1;
 		}
 
 		&__image-wrapper {
-			margin-right: 0;
-			height: 80%;
-			max-width: 90%;
+			opacity: .4;
 		}
 
 		&__hostoffer {
-			grid-column: 1/8;
+			grid-column: 2/9;
+			grid-row: 1/-1;
+		}
+	}
+}
+
+@media (max-width: 837px) {
+	.hostoffer {
+		&__hostoffer {
+			grid-column: 2/10;
+		}
+	}
+}
+
+@media (max-width: 691px) {
+	.hostoffer {
+		&__image-wrapper {
+			opacity: .2;
+		}
+
+		&__hostoffer {
+			grid-column: 2/12;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.hostoffer {
+		padding: 0;
+
+		&__left {
+			grid-column: 1/-1;
+			grid-row: 1/-1;
+			z-index: -1;
+		}
+
+		&__image-wrapper {
+			border-radius: 0;
+			width: 100%;
+		}
+
+		&__hostoffer {
+			padding: 2rem;
+			grid-column: 1/-1;
 		}
 	}
 }
 
 
-@media (max-width: 624px) {
-	.hostoffer__hostoffer {
-		grid-column: 1/-1;	
-		background: linear-gradient(to right, rgba(#000, .2), rgba(#000, .2)), url(../../images/woman-with-computer.jpg);	
-		background-size: cover;
-		background-position: center center;
-	}
-
-	.hostoffer__left,
-	.hostoffer__paragraph {
-		display: none;
-	}
-
-	.hostoffer__title {
-		color: $white;
-		margin-bottom: 2rem;
-	}
-
-	.hostoffer__heading {
-		color: #eee;
-		text-transform: capitalize;
-	}
-}
-
-@media (max-width: 582px) {
+@media (max-width: 320px) {
 	.hostoffer {
-		min-height: 100vh;
-	}
-	.hostoffer__hostoffer {
-		padding: 2rem;		
+	
+		&__hostoffer {
+			padding: 2rem 1rem;
+		}
 	}
 }

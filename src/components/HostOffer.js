@@ -21,7 +21,7 @@ const Features = () => {
 					praesentium fuga quas debitis. Quos amet facilis maxime enim dolore repellat
 					dolores deserunt libero nesciunt.
 				</p>
-				<p className="hostoffer__paragraph mb-2">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Iusto repellat excepturi magni exercitationem illum veniam!</p>
+				<p className="hostoffer__paragraph">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Iusto repellat excepturi magni exercitationem illum veniam!</p>
 				<div className="cta">
 					<span className="cta__icon">
 						<i className="fa fa-arrow-right-long"></i>

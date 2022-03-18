@@ -33,7 +33,6 @@ const BookingSearch = () => {
 	}, [bookSearchRef]);
 
 	const handleLocationSelect = (e) =>{
-		console.log('click')
 		setInputs({...inputs, location: e.target.textContent})
 	}
 	const handleLocationChange = (e) => setInputs({...inputs, location: e.target.value})
