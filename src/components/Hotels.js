@@ -7,8 +7,8 @@ const Hotels = () => {
 	const [query, setQuery] = useState("hotel")
  
 	const [page, setPage] = useState(1);
-	const { results, loading, hasNext, error } = usePaginateFetch(query, page, 12);
-	console.log(error)
+	const { results, loading, hasNext } = usePaginateFetch(query, page, 12);
+
 	const observer = useRef();
 	const lastElementRef = useCallback(
 		(node) => {
