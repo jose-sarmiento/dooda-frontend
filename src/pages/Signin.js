@@ -45,13 +45,13 @@ const Signin = () => {
 							</div>
 						</div>
 
-						<div className="_form__group">
+						<div className="_form__group _form__group--actions mt-2">
 							<button type="submit" className="_form__submit">
-								Signin
+								Sign in
 							</button>
 
 							<Link to="/" className="_form__submit _form__submit--back">
-								Back to home
+								Back to Home
 							</Link>
 						</div>
 					</form>

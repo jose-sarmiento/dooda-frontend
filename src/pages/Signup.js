@@ -93,7 +93,7 @@ const Signin = () => {
 							</div>
 						</div>
 
-						<div className="_form__group">
+						<div className="_form__group _form__group--actions mt-2">
 							<button type="submit" className="_form__submit">
 								Register
 							</button>

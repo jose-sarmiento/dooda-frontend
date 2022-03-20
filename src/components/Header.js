@@ -92,7 +92,7 @@ const Header = React.forwardRef((props, ref) => {
 
 				<ul className="nav">
 					<li className="nav__item">
-						<Link to="/host/guide" className="nav__link">
+						<Link to="/account/profile" className="nav__link">
 							My Account
 						</Link>
 					</li>

@@ -19,7 +19,7 @@ const CardSkeletonLoading = () => {
 								<span className="skeleton skeleton--text"></span>
 							</span>
 						</div>
-						<button className="btn btn--small skeleton card__btn--skeleton"></button>
+						{/*<button className="btn btn--small skeleton card__btn--skeleton"></button>*/}
 					</div>
 				</div>
 			))}

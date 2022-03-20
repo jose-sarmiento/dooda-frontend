@@ -6,9 +6,31 @@
 	font-size: 1.6rem;
 	color: $grey3;
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: 1fr 25rem;
 	grid-column-gap: 2rem;
 	list-style: circle;
+
+	// @media (max-width: 1054px) {
+	// 	& {
+	// 		padding: 0 2rem;
+	// 	}
+	// }
+
+	@media (max-width: 768px) {
+		& {
+			grid-template-columns: 1fr 20rem;
+			padding: 0;
+			grid-column-gap: 1rem;
+			padding: 0 2rem;
+		}
+	}
+
+	@media (max-width: 659px) {
+		& {
+			grid-template-columns: 1fr;
+		}
+	}
+
 
 	&__section {
 		// padding: 1rem 0;
@@ -17,14 +39,32 @@
 
 	&__tutorial {
 		padding: 2rem;
-		border: 1px solid #ccc;
+		border: 1px solid #f5f5f5;
 		border-radius: 1rem;
+	}
 
+	@media (max-width: 1100px) {
+		&__tutorial {
+			border: none;
+		}
 	}
 
 	&__tableofcontents {
 		padding: 2rem;
 		position: relative;
+	}
+
+	@media (max-width: 768px) {
+		&__tutorial,
+		&__tableofcontents {
+			padding: 0;
+		}
+	}
+
+	@media (max-width: 659px) {
+		&__tableofcontents {
+			display: none;
+		}
 	}
 
 	&__table-wrapper {
@@ -60,6 +100,12 @@
 		list-style: circle;
 	}
 
+	@media (max-width: 425px) {
+		ul {
+			padding-left: 4rem;
+		}
+	}
+
 	li {
 		line-height: 2.6rem;
 	}
@@ -68,6 +114,48 @@
 		color: blue;
 		display: inline-block;
 		margin-left: .5rem;
+	}
+
+	@media (max-width: 768px) {
+		h2 {
+			font-size: 1.8rem;
+		}
+
+		h4 {
+			font-size: 1.8rem;
+			margin-bottom: 1.5rem;
+			color: $dark;
+		}
+
+		li {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
+
+	@media (max-width: 320px) {
+		h2 {
+			font-size: 1.6rem;
+		}
+
+		h4 {
+			font-size: 1.6rem;
+			margin-bottom: 1.5rem;
+			color: $dark;
+		}
+
+		li {
+			font-size: 1.4rem;
+			line-height: 2.2rem;
+		}
+
+		p {
+			font-size: 1.4rem;
+			line-height: 2.2rem;
+		}
 	}
 }
 
@@ -93,12 +181,28 @@
 		display: inline-block;
 	}
 
+	@media (max-width: 768px) {
+		&__link {
+			padding-left: 1rem;
+		}
+	}
+
 	&__link--active {
 		border-left: 4px solid $primary-dark;
 	}
 
 	&__link:hover {
 		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		&__link {
+			font-size: 1.5rem;
+		}
+
+		&__link--active {
+			border-left: 2px solid $primary-dark;
+		}
 	}
 }
 

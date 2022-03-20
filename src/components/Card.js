@@ -20,19 +20,21 @@ const Card = React.forwardRef((props, ref) => {
             <div className="card__header">
                 <div>
                     {discounted && <span className="card__price--discounted">{pesoFormat(data.price)}</span>}
-                    <span className="card__price">{pesoFormat(data.price)}</span>
+                    <span className="card__price">{pesoFormat(data.price)} per night/day</span>
                 </div>
                 <Stars count={data.stars} />
             </div>
             <div className="card__body">
                 <div className="card__body-container">
-                    <h3 className="card__name">{data.name.length > 30 ? data.name.slice(0, 30) + "..." : data.name}</h3>
+                    <Link to={`/p/hotels/${data.id}`} className="card__name">
+                        {data.name.length > 30 ? data.name.slice(0, 30) + "..." : data.name}
+                    </Link>
                     <h6 className="card__location">
                         <FaMapMarkerAlt className="card__location-icon" />
                         {data.address.street + " " + data.address.city }
                     </h6>
                 </div>
-                <button className="card__book-now" onClick={() => openModal()}>Book now</button>
+                {/*<button className="card__book-now" onClick={() => openModal()}>See details</button>*/}
             </div>
         </div>
     );

@@ -45,12 +45,13 @@
 	}
 
 	&__heading {
-		font-size: 3.2rem;
+		font-size: 2.8rem;
 		color: $white;
 		letter-spacing: 1px;
 	}
 
 	&__sub1 {
+		font-size: 1.2rem;
 	}
 
 	&__sub2 {
@@ -147,10 +148,9 @@
 		cursor: pointer;
 		border-radius: 3rem;
 		color: $white;
-		font-family: inherit;
-		text-transform: uppercase;
+		font-family: 'Lato', sans-serif;
 		letter-spacing: 0.8px;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 
 	&__submit-btn:disabled {
@@ -165,7 +165,7 @@
 		border: 1px solid transparent;
 		color: $white;
 		font-family: inherit;
-		text-transform: uppercase;
+		font-size: 1.4rem;
 		letter-spacing: 0.8px;
 	}
 
@@ -211,8 +211,20 @@
 	}
 }
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
 	.signin {
+		&__heading {
+			font-size: 2.6rem;
+			color: $white;
+		}
+
+		&__sub1 {
+			font-size: 1.2rem;
+		}
+
+		&__sub2 {
+			margin-bottom: 3.5rem;
+		}
 		&__container {
 			background: linear-gradient(
 					to right,
@@ -231,19 +243,26 @@
 			border-radius: 1rem;
 		}
 	}
+
+	._form {
+		&__submit {
+			padding: 1rem 2.5rem;
+		}
+
+		&__submit--back {
+			margin-left: 1rem;
+		}
+	}
 }
+
+@media (max-width: 477px) {
+	.signin__container {
+		padding: 2rem;
+	}
+}
+
 @media (max-width: 432px) {
 	.signin {
-		&__heading,
-		&__sub1,
-		&__sub2 {
-			font-size: 1.4rem;
-		}
-
-		&__heading {
-			font-size: 2.8rem;
-		}
-
 		&__form-container {
 			width: 100%;
 		}
@@ -256,7 +275,7 @@
 		&__form {
 			padding: 0;
 			width: 100%;
-			padding: 2rem;
+			padding: 0;
 		}
 	}
 	._form {
@@ -272,12 +291,57 @@
 	}
 }
 
+
+@media (max-width: 425px) {
+	.signin {
+		&__heading {
+			font-size: 2.4rem;
+			color: $white;
+		}
+
+		&__sub1 {
+			font-size: 1.2rem!important;
+		}
+
+		&__sub2 {
+			margin-bottom: 3.5rem;
+			font-size: 1.2rem;
+		}
+		&__container {
+			background: $darkblue;
+		}
+
+		&__form {
+			transform: translateX(0);
+			background: rgba($darkblue, 0.9);
+			padding: 0;
+			border-radius: 1rem;
+			width: 100%;
+		}
+	}
+
+	._form {
+		&__submit {
+			padding: 1rem 2.5rem;
+		}
+
+		&__submit--back {
+			margin-left: 1rem;
+		}
+	}
+}
+
+
 @media (max-width: 364px) {
 
 	.signin {
 		&__form {
-			padding: 1rem;
+			padding: 0;
 			width: 100%;
+		}
+
+		&__container {
+			padding: 1rem;
 		}
 	}
 	._form {
@@ -293,20 +357,52 @@
 	}
 }
 
-@media (max-width: 334px) {
+@media (max-width: 320px) {
 	.signin {
-		&__form {
-			// padding: 1rem;
-		}
-
 		&__heading,
 		&__sub1,
 		&__sub2 {
-			font-size: 1.3rem;
+			margin-bottom: 1rem;
 		}
 
 		&__heading {
-			font-size: 2.4rem;
+			font-size: 2.2rem;
+			color: $white;
+			letter-spacing: 1px;
 		}
+
+		&__sub1 {
+			font-size: 1.2rem;
+		}
+
+		&__sub2 {
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	._form {
+		&__input {
+			font-size: 1.2rem;
+		}
+
+		&__label {
+			font-size: 1.2rem;
+		}
+
+		&__group:not(:last-child) {
+			margin-bottom: .6rem;
+		}
+	}
+}
+
+@media (max-width: 268px) {
+	._form__group--actions {
+		display: flex!important;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	._form__submit {
+		width: 100%;
 	}
 }
