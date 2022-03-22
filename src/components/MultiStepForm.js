@@ -25,6 +25,7 @@ const MultiStepForm = ({ currStep, setCurrStep, closeModal }) => {
 			>
 				<h2 className="form__heading">Choose your reservation</h2>
 				<h4 className="form__subheading">Fill up based on your needs</h4>
+					
 				<div className="grid-2">
 					<div className="form__group">
 						<label className="form__label" htmlFor="checkin">
@@ -116,9 +117,6 @@ const MultiStepForm = ({ currStep, setCurrStep, closeModal }) => {
 						: "form__step form__step--2 form__step--next"
 				}
 			>
-				<button type="button" className="form__back" onClick={() => setCurrStep(1)}>
-					<i className="form__back-icon fa fa-arrow-left-long"></i>Back
-				</button>
 				<h2 className="form__heading">Payment Method</h2>
 				<h4 className="form__subheading">Select your preferred payment method.</h4>
 

@@ -29,6 +29,8 @@ const Modal = () => {
 							}
 						>
 							{currStep > 1 ? <FaCheck /> : "1"}
+
+							<span className="booking-steps__description">Booking</span>
 						</div>
 						<div
 							className={
@@ -39,6 +41,7 @@ const Modal = () => {
 						>
 							<div className="booking-steps__bar booking-steps__bar-2"></div>
 							{currStep > 2 ? <FaCheck /> : "2"}
+							<span className="booking-steps__description">Payment</span>
 						</div>
 						<div
 							className={
@@ -49,6 +52,7 @@ const Modal = () => {
 						>
 							<div className="booking-steps__bar booking-steps__bar-3"></div>
 							3
+							<span className="booking-steps__description">Summary</span>
 						</div>
 					</div>
 

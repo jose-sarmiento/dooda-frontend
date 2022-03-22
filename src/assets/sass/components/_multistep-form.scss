@@ -1,23 +1,29 @@
 .form {
 	display: flex;
-	max-width: 50rem;
+	max-width: 45rem;
 	min-height: 55rem;
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
-	// overflow: hidden;
+
+	@media (max-width: 425px) {
+		.grid-2 {
+			display: block;
+		}
+	}
 
 	&__heading {
 		color: $dark;
-		font-weight: 500;
-		font-size: 2.4rem;
-		margin-bottom: 1rem;
+		text-transform: capitalize;
+		font-weight: 600;
+		font-size: 2rem;
+		margin-bottom: .8rem;
 		letter-spacing: .8px;
 		font-family: 'Montserrat', sans-serif;
 	}
 
 	&__subheading {
-		margin-bottom: 4rem;
+		margin-bottom: 3.5rem;
 		color: $grey3;
 		font-size: 1.4rem;
 	}
@@ -28,14 +34,13 @@
 		left: 0;
 		right: 0;
 		border: none;
-		// box-shadow: 0px 0px 1.5rem rgba(0, 0, 0, .1);
 		width: 100%;
 		margin: 0 auto;
-		padding: 4rem 3rem;
+		padding: 3rem 2rem;
 		text-align: center;
 		background: $white;
 		border-radius: 1rem;
-		border: 1px solid #eee;
+		border: 1px solid #f5f5f5;
 		
 
 	}
@@ -113,9 +118,10 @@
 	}
 
 	&__group {
-		width: 100%;
+		max-width: 100%;
 		text-align: left;
 		margin-bottom: 2rem;
+		overflow: hidden;
 	}
 
 	&__group-label {
@@ -127,8 +133,8 @@
 
 	&__label {
 		font-size: 1.4rem;
-		font-weight: 500;
-		color: $grey1;
+		font-weight: 600;
+		color: $grey2;
 		display: inline-block;
 		margin-bottom: 1rem;
 	}
@@ -195,8 +201,7 @@
 		padding: 1rem 2rem 1rem 5.5rem;
 		border-radius: .5rem;
 		font-family: inherit;
-		font-size: 1.3rem;
-		font-weight: 600;
+		font-size: 1.4rem;
 		color: $grey-light;
 		height: 4rem;
 		position: relative;
@@ -239,6 +244,7 @@
 	}
 
 	&__action {
+		margin-top: 1rem;
 		display: inline-block;
 		height: 4rem;
 		width: 10rem;
@@ -248,11 +254,99 @@
 		text-transform: capitalize;
 		font-weight: 600;
 		color: $white;
-		margin-top: 1.5rem;
 
 		&:focus,
 		&:active {
 			outline: none;
+		}
+	}
+
+	@media (max-width: 425px) {
+		.form {
+			&__heading {
+				font-size: 1.8rem;
+			}
+			&__subheading {
+				margin-bottom: 2rem;
+				font-size: 1.2rem;
+			}
+			&__group {
+				margin-bottom: 1rem;
+			}
+
+			&__group-label {
+				font-size: 1.4rem;
+				margin-bottom: 1.5rem;
+			}
+
+			&__label {
+				font-size: 1.4rem;
+				font-weight: 500;
+				color: $dark;
+			}
+
+
+			&__input-icon--paymongo {
+				width: 2rem;
+			}
+
+			&__input {
+				padding: 1rem 2rem 1rem 4.5rem;
+				font-size: 1.4rem;
+				height: 4rem;
+			}
+
+			&__radio-group:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+
+	@media (max-width: 320px) {
+		.form {
+
+			&__step {
+				padding: 2rem 1rem;
+			}
+
+			&__heading {
+				font-size: 1.8rem;
+				margin-bottom: .2;
+			}
+			&__subheading {
+				margin-bottom: 2rem;
+				font-size: 1.2rem;
+			}
+			&__group {
+				margin-bottom: .7rem;
+			}
+
+			&__group-label {
+				font-size: 1.4rem;
+				margin-bottom: 1.5rem;
+			}
+
+			&__label {
+				font-size: 1.4rem;
+				margin-bottom: .6rem;
+			}
+
+
+			&__input-icon--paymongo {
+				width: 2rem;
+			}
+
+			&__input {
+				padding: .8rem 1.2rem .8rem 4.5rem;
+				font-size: 1.4rem;
+				height: 4rem;
+			}
+
+			&__radio-label {
+				padding: .8rem 2rem .8rem 5.5rem;
+				color: $grey-light;
+				height: 3.8rem;
+			}
 		}
 	}
 }

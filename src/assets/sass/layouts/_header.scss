@@ -152,12 +152,11 @@
 		transition: color .4s ease;
 	}
 
-	// @media (max-width: 425px) {
-	// 	&__link {
-	// 		font-size: 1.2rem;
-	// 		font-weight: 500;
-	// 	}
-	// }
+	@media (max-width: 425px) {
+		&__link {
+			font-size: 1.4rem;
+		}
+	}
 
 	&__link--active {
 		color: $black;

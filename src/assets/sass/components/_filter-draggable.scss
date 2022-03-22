@@ -3,7 +3,7 @@
 	top: 20%;
 	right: 5%;
 	min-height: 50rem;
-	width: 60rem;
+	max-width: 60rem;
 	background: $white;
 	z-index: 1600;
 	border-radius: .5rem;
@@ -12,6 +12,15 @@
 	padding-top: 4rem;
 	opacity: 0;
 	pointer-events: none;
+}
+
+
+
+@media (max-width: 600px) {
+	& {
+		height: 100%;
+		width: 100%;
+	}
 }
 
 .filter-draggable--show {
@@ -59,8 +68,21 @@ ul {
 	list-style: none;
 }
 
-.filters {
+.__filters {
+	background: $white;
+	padding: 2rem;
+	max-width: 60rem;
+	margin: 0 auto;
+	border-radius: .5rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height: 100%;
+}
 
+@media (max-width: 320px) {
+	.__filters {
+		padding: 1rem;
+	}
 }
 
 .filter {
@@ -112,6 +134,48 @@ ul {
 
 	&__radio-input:checked ~ .filter__radio-label .filter__radio-checkbox {
 		background: $primary-dark;
+	}
+}
+
+@media (max-width: 425px) {
+	.filter {
+
+		&__group {
+			margin-bottom: 2rem;
+		}
+
+		&__heading {
+			font-size: 1.4rem;
+			margin-bottom: 1rem;
+		}
+
+		&__input-container {
+			padding-left: 1rem;
+		}
+
+		&__radio-group {
+			margin-bottom: .6rem;
+		}
+
+		&__radio-label{
+			display: flex;
+			align-items: center;
+			display: block;
+			padding-left: 3rem;
+			position: relative;
+			font-size: 1.4rem;
+		}
+		&__radio-checkbox{
+			height: 1.4rem;
+			width: 1.4rem;
+		}
+	}
+
+}
+
+@media (max-width: 420px) {
+	.filter__input-container .grid-2 {
+		grid-template-columns: 1fr;
 	}
 }
 

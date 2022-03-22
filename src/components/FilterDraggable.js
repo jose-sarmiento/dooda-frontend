@@ -28,7 +28,7 @@ const FilterDraggable = ({ isOpen, close }) => {
 					<i className="fa-solid fa-xmark"></i>
 				</span>
 				<div className="handle">Drag anywhere to reposition</div>
-				<div className="filters">
+				<div className="__filters">
 					<div className="filter__group">
 						<p className="filter__heading">Day/Time</p>
 						<ul className="filter__input-container">

@@ -4,11 +4,14 @@ export const AppContext = React.createContext()
 
 const AppProvider = ({children}) => {
 	const [isOpenModal, setIsOpenModal] = useState(false);
+	const [isOpenFilterModal, setIsOpenFilterModal] = useState(false);
 	const [isOpenCalendar, setIsOpenCalendar] = useState(false);
 	const [isOpenSidebar, setIsOpenSidebar] = useState(false);
 
 	const openModal = () => setIsOpenModal(true)
 	const closeModal = () => setIsOpenModal(false)
+	const openFilterModal = () => setIsOpenFilterModal(true)
+	const closeFilterModal = () => setIsOpenFilterModal(false)
 	const openCalendar = () => setIsOpenCalendar(true)
 	const closeCalendar = () => setIsOpenCalendar(false)
 	const openSidebar = () => setIsOpenSidebar(true)
@@ -19,6 +22,9 @@ const AppProvider = ({children}) => {
 			isOpenModal,
 			openModal,
 			closeModal,
+			isOpenFilterModal,
+			openFilterModal,
+			closeFilterModal,
 			isOpenCalendar,
 			openCalendar,
 			closeCalendar,

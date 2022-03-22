@@ -11,7 +11,7 @@
 	z-index: 500;
 
 	&__container {
-		padding: 1rem 0 2rem;
+		padding: 1rem 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -21,7 +21,14 @@
 
 	@media (max-width: 1200px) {
 		&__container {
-			padding: 1rem 2rem 2rem;
+			padding: 1rem 2rem;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		&__container {
+			display: grid!important;
+			grid-template-columns: 16rem 1fr;
 		}
 	}
 }
@@ -45,6 +52,10 @@
 	flex-shrink: 0;
 }
 
+@media (max-width: 768px) {
+	.active-category {display: none;}
+}
+
 .active-category::before {
 	content: "";
 	position: absolute;
@@ -56,58 +67,80 @@
 	background: $primary-dark;
 }
 
-.item-categories {
-	display: flex;
-	list-style: none;
+.item-categories__wrapper {
 	border-left: 2px solid #eee;
-	border-right: 2px solid #eee;
-	padding-left: 1rem;
 	flex: 1;
 	flex-shrink: 1;
-	overflow: hidden;
 	position: relative;
+	overflow: hidden;
+
+}
+
+@media (max-width: 768px) {
+	.item-categories__wrapper {grid-column: 1/-1; border-left: none;}
+
+}
+
+.item-categories {
+	overflow: hidden;
+	display: flex;
+	list-style: none;
+
+	&--mobile {
+		display: none;
+		overflow-x: auto;
+		-ms-overflow-style: none;  /* IE and Edge */
+	  scrollbar-width: none;  /* Firefox */
+	}
+
+	&--mobile::-webkit-scrollbar {
+	  display: none;
+	}
+
+	@media (max-width: 768px) {
+		&--mobile {
+			display: flex;
+		}
+
+		&--web {
+			display: none;
+		}
+	}
 
 	&__previous,
 	&__next {
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		width: 6rem;
+		width: 3rem;
 		height: 100%;
-		z-index: -1;
-		opacity: 0;
-		pointer-events: none;
-		display: flex;
+		display: none;
 		align-items: center;
+		cursor: pointer;
+		z-index: 1;
 	}
 
 	&__previous.show,
 	&__next.show {
-		z-index: 1!important;
-		opacity: 1!important;
-		pointer-events: all;
+		display: flex;
 	}
 
 	&__previous {
 		left: 0;
-		background: linear-gradient(to left, transparent, white 90%);
+		background: linear-gradient(to left, transparent, white 50%);
 		justify-content: flex-start;
 		padding-left: .5rem;
 	}
 
 	&__next {
 		right: 0;
-		background: linear-gradient(to right, transparent, white 90%);
+		background: linear-gradient(to right, transparent, white 20%);
 		justify-content: flex-end;
 		padding-right: .5rem;
 	}
 
 	&__nav-icons {
 		font-size: 1.6rem;
-	}
-
-	&--mobile {
-		display: none;
 	}
 
 	&__item {
@@ -125,6 +158,12 @@
 		padding: 1rem;
 		position: relative;
 	}
+
+	@media (max-width: 425px) {
+		&__link {
+			font-size: 1.4rem;
+		}
+	};
 
 	&__link--more {
 		text-transform: lowercase;
@@ -170,28 +209,43 @@
 .filters {
 	display: flex;
 	align-items: center;
-	margin-left: 1rem;
+	margin-left: 4rem;
 	flex-shrink: 0;
+
+	&--mobile {display: none;}
+
+	@media (max-width: 768px) {
+		& {
+			margin-left: 0;
+		}
+	}
+
+	@media (max-width: 375px) {
+		&--web {display: none;}
+		&--mobile {display: flex;}
+	}
+
+	&__toggler {
+		border: none;
+		align-self: center;
+		font-size: 1.4rem;
+		padding: .8rem 1.2rem;
+		color: $grey3;
+		background: $white;
+		font-weight: 500;
+		border-radius: 3rem;
+		border: 1px solid $grey3;
+	}
 
 	&__select {
 		height: 4rem;
 		width: 12rem;
-		display: flex;
-		align-items: center;
-		font-size: 1.5rem;
-		color: $grey3;
-		padding: 1rem 1.5rem 1rem .5rem;
-		border-radius: .4rem;
-		position: relative;
+		z-index: 50;
 	}
 
-	&__select-icon {
-		position: absolute;
-		top: 50%;
-		right: 0;
-		font-size: 1.5rem;
-		transform: translateY(-50%);
-		margin-right: .5rem;
+	&--mobile .filters__select:first-of-type {
+		z-index: 100;
+		margin-top: 1rem;
 	}
 
 	&__button {
@@ -208,5 +262,45 @@
 	&__button-icon {
 		font-size: 1.2rem;
 		margin-right: .5rem;
+	}
+
+	@media (max-width: 1024px) {
+		& {
+			margin-top: .5rem;
+			grid-column: 1/-1;
+			justify-content: flex-end;
+		}
+	}
+
+	@media (max-width: 425px) {
+		& {
+			margin-left: 0;
+		}
+		&__select {
+			height: 3.5rem;
+		}
+
+		&__button {
+			font-size: 1.4rem;
+			padding: .8rem 1.2rem;
+		}
+	}
+
+	@media (max-width: 385px) {
+		& {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		&__select {
+			width: 20rem;
+		}
+
+		&__select,
+		&__button {
+			margin-left: 0;
+			margin-bottom: 1rem;
+		}
 	}
 }

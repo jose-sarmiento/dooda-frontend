@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from "react";
-import { Card, CardSkeletonLoading, SectionHeader, FilterDraggable } from "../components";
+import { Card, CardSkeletonLoading, SectionHeader, FilterDraggable, FilterModal } from "../components";
 import usePaginateFetch from "../hooks/usePaginateFetch";
 
 const Hotels = () => {
@@ -33,7 +33,8 @@ const Hotels = () => {
 
 	return (
 		<div className="sub-page">
-			<FilterDraggable isOpen={isOpen} close={close} />
+			{/*<FilterDraggable isOpen={isOpen} close={close} />*/}
+			<FilterModal isOpen={isOpen} close={close} />
 			<SectionHeader toggle={toggle}/>
 			<section className="list-items-wrapper container">
 				<div className="card-wrapper">

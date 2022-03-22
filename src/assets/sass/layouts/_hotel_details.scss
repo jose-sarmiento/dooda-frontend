@@ -70,6 +70,7 @@
 	&__name {
 		text-transform: capitalize;
 		font-size: 2.4rem;
+		font-weight: 500;
 		color: $dark;
 		font-family: "Montserrat", sans-serif;
 		line-height: 3.4rem;
@@ -469,7 +470,7 @@
 }
 @media (max-width: 730px) {
 	.hotel-header {
-		padding: 0 2rem;
+		// padding: 0 2rem;
 	}
 	
 	.hotel-header__btn--book-now {
@@ -479,7 +480,7 @@
 
 @media (max-width: 600px) {
 	.hotel-header {
-		padding: 0;
+		// padding: 0;
 	}
 	.hotel__details {		
 		padding: 0;
@@ -488,7 +489,7 @@
 
 @media (max-width: 646px) {
 	.hotel__top {
-		padding-left: 0;
+		padding-left: 2rem;
 	}
 	.hotel-header {
 		padding-left: 2rem;
@@ -500,7 +501,7 @@
 		display: flex;
 		flex-direction: row-reverse;
 		justify-content: flex-end;
-		margin-top: 1rem;
+		margin-top: 2rem;
 	}
 
 	.hotel-header__btn--book-now {
@@ -544,12 +545,6 @@
 		&__map-wrapper {
 			height: 30rem;
 		}
-	}
-}
-
-@media (max-width: 650px) {
-	.hotel-header__right {
-		// display: none;
 	}
 }
 
@@ -643,8 +638,15 @@
 	}
 }
 
-@media (max-width: 420px) {
+@media (max-width: 425px) {
 .hotel {
+	&__top {
+		padding-left: 1rem;
+	}
+
+	&-header {
+		padding-left: 1rem;
+	}
 	&__images {
 		height: 25rem;
 	}
@@ -653,7 +655,7 @@
 
 @media (max-width: 394px) {
 	.hotel-header {
-		padding-left: 0;
+		// padding-left: 0;
 	}
 
 }
@@ -669,6 +671,12 @@
 }
 
 @media (max-width: 338px) {
+	.hotel__top {
+		padding-left: 0;
+	}
+	.hotel-header {
+		padding-left: 0;
+	}
 	.hotel__name {
 		font-size: 2rem;
 	}
@@ -676,5 +684,11 @@
 	.hotel__location {
 		font-size: 1.4rem;
 		line-height: 2rem;
+	}
+}
+
+@media (max-width: 254px) {
+	.hotel-header__right {
+		flex-direction: column;
 	}
 }

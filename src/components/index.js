@@ -35,6 +35,7 @@ import HostOffer from "./HostOffer"
 import CustomCalendar from "./CustomCalendar"
 import BookingSearch from "./BookingSearch"
 import Popular from "./Popular"
+import FilterModal from "./FilterModal"
 
 
 export {
@@ -74,5 +75,6 @@ export {
 	HostOffer,
 	CustomCalendar,
 	BookingSearch,
-	Popular
+	Popular,
+	FilterModal
 }

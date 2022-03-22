@@ -61,7 +61,7 @@
 	}
 
 	&__select {
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		font-weight: 600;
 		color: $dark;
 		margin-bottom: 1.5rem;
@@ -87,7 +87,7 @@
 	} 
 
 	&__value {
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		color: $dark;
 	}
 
@@ -125,7 +125,7 @@
 		border-radius: .5rem;
 		border: none;
 		transition: all .2s;
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		font-family: inherit;
 		text-transform: capitalize;
 	}
@@ -263,7 +263,7 @@
 
 	.option {
 		padding: .8rem 1rem;
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		color: $grey3;
 		cursor: pointer;
 		text-transform: capitalize;
@@ -279,6 +279,16 @@
 
 	.option.selected {
 		border-left: 4px solid $primary-dark;
+	}
+
+	@media (max-width: 425px) {
+		.value {
+			font-size: 1.4rem;
+		}
+
+		.option {
+			font-size: 1.4rem;
+		}
 	}
 }
 
