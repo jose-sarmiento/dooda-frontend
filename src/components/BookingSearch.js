@@ -13,6 +13,17 @@ const BookingSearch = () => {
 		place: "pools",
 		date: "",
 	})
+
+	const [bookDate, setBookDate] = useState("")
+
+	useEffect(() => {
+		var curr = new Date();
+		curr.setDate(curr.getDate() + 3);
+		const date = curr.toISOString().substr(0,10);
+		setBookDate(date)
+	}, [])
+
+
 	const [activeField, setActiveField] = useState();
 
 	const bookSearchRef = useRef();
@@ -62,7 +73,8 @@ const BookingSearch = () => {
 			</div>
 
 			<div className="book-search__item">
-				<FaMapMarkerAlt className="book-search__icon" />
+				{/*<FaMapMarkerAlt className="book-search__icon" />*/}
+				<i className="fa-solid fa-house book-search__icon"></i>
 				<div className="book-search__form">
 					<div className="book-search__select">Place</div>
 
@@ -78,9 +90,10 @@ const BookingSearch = () => {
 			</div>
 
 
-
+ 
 			<div className="book-search__item">
-				<FaMapMarkerAlt className="book-search__icon" />
+				{/*<FaMapMarkerAlt className="book-search__icon" />*/}
+				<i className="fa-solid fa-calendar-check book-search__icon"></i>
 
 				<div className="book-search__form">
 					<div className="book-search__select">
@@ -89,7 +102,8 @@ const BookingSearch = () => {
 							<i className="fa-solid fa-angle-down"></i>
 						</span>
 					</div>
-					<span
+					<input type="date" className="book-search__date" value={bookDate} onChange={e => setBookDate(e.target.value)} />
+					{/*<span
 						className={
 							false
 								? "book-search__value"
@@ -97,7 +111,7 @@ const BookingSearch = () => {
 						}
 					>
 						Feb 14, 2022
-					</span>
+					</span>*/}
 				</div>
 			</div>
 			<div className="book-search__item">

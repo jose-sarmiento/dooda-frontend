@@ -3,6 +3,7 @@
 	// height: 80vh;
 	position: relative;
 	padding: 4rem 0;
+	z-index: 1;
 
 	&__left {
 		grid-column: 2/6;
