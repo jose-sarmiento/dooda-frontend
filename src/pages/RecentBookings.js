@@ -16,7 +16,7 @@ const RecentBookings = () => {
 			img: img1,
 			date: "February 20 - 26, 2022",
 			guest: 2,
-			days: 6
+			price: 4390
 		},
 		{
 			name: "Costa Palmera Resort",
@@ -24,7 +24,7 @@ const RecentBookings = () => {
 			img: img1,
 			date: "January 3 - 6, 2021",
 			guest: 4,
-			days: 5
+			price: 7620
 		},
 	]
 

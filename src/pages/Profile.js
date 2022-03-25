@@ -25,7 +25,7 @@ const Profile = () => {
 						<div className="booking__header-left">
 							<Link to="/p/hotels/ey32e9837839" className="booking__name">Catanduanes Twin Rock Beach Resort</Link>
 							<p>Igang Virac Catanduanes 4800</p>
-							<p>5.0 <Stars/></p>
+							<p className="booking__stars">5.0 <Stars/></p>
 						</div>
 						<div className="booking__header-right">
 							<p>March 23 - 27 2022</p>

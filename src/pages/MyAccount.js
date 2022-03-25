@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
+import {FaBars} from "react-icons/fa"
 import Layout from "./Layout";
 import Profile from "./Profile";
 import Notifications from "./Notifications";
@@ -9,10 +10,13 @@ import RecentBookings from "./RecentBookings";
 import user from "../assets/images/woman.jpg";
 
 const MyAccount = () => {
+	const [open, setOpen] = useState(false)
+
 	return (
 		<Layout>
 			<div className="myaccount">
-				<div className="myaccount__left">
+				<div className={open ? "myaccount__left myaccount__left--active" : "myaccount__left"}>
+					<FaBars className="myaccount__menu-icon" onClick={() => setOpen(prev => !prev)}/>
 					<div className="myaccount__profile">
 						<figure className="myaccount__profile-image-wrapper">
 							<img src={user} alt="jane" className="myaccount__profile-image" />
@@ -31,7 +35,7 @@ const MyAccount = () => {
 								}
 							>
 								<i className="fa-solid fa-user myaccount__link-icon"></i>
-								Profile
+								<span className="myaccount__link-text">Profile</span>
 							</NavLink>
 						</li>
 						<li className="myaccount__item">
@@ -44,7 +48,7 @@ const MyAccount = () => {
 								}
 							>
 								<i className="fa-solid fa-heart myaccount__link-icon"></i>
-								Wishlists
+								<span className="myaccount__link-text">Wishlists</span>
 							</NavLink>
 						</li>
 						<li className="myaccount__item">
@@ -57,7 +61,7 @@ const MyAccount = () => {
 								}
 							>
 								<i className="fa-solid fa-book myaccount__link-icon"></i>
-								Recent Bookings
+								<span className="myaccount__link-text">Recent Bookings</span>
 							</NavLink>
 						</li>
 					</ul>
