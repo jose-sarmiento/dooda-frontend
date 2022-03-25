@@ -1,4 +1,6 @@
 import React from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
 	Header,
 	Footer,
@@ -16,6 +18,10 @@ const Layout = React.forwardRef((props, ref) => {
 			<Header ref={ref || null} />
 			<Modal />
 			<Sidebar />
+			<ToastContainer
+				type="success"
+				style={{fontSize: "14px"}}
+				/>			
 			{isOpenCalendar && <CustomCalendar />}
 			<div className="main">{props.children}</div>
 			<Footer />

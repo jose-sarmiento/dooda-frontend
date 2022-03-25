@@ -9,11 +9,11 @@ import useAppContext from "../hooks/useAppContext"
 
 const Card = React.forwardRef((props, ref) => {
     const {data, discounted=false} = props
-    const { openModal } = useAppContext()
+    const { openModal, notify } = useAppContext()
 
     return (
         <div className="card fadein" ref={ ref || null}>
-            <FiHeart className="fa-light fa-heart card__favorite" />
+            <FiHeart className="fa-light fa-heart card__favorite" onClick={() => notify("Added to wishlist")} />
             <Link to={`/p/hotels/${data.id}`} className="card__img-wrapper">
                 <img src={data.image.medium} alt="img1" className="card__img" />
             </Link>

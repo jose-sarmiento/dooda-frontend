@@ -30,21 +30,8 @@ const MyAccount = () => {
 										: "myaccount__link"
 								}
 							>
-								<i className="fa-solid fa-user"></i>
+								<i className="fa-solid fa-user myaccount__link-icon"></i>
 								Profile
-							</NavLink>
-						</li>
-						<li className="myaccount__item">
-							<NavLink
-								to="notifications"
-								className={({ isActive }) =>
-									isActive
-										? "myaccount__link myaccount__link--active"
-										: "myaccount__link"
-								}
-							>
-								<i className="fa-solid fa-bell"></i>
-								Notifications
 							</NavLink>
 						</li>
 						<li className="myaccount__item">
@@ -56,7 +43,7 @@ const MyAccount = () => {
 										: "myaccount__link"
 								}
 							>
-								<i className="fa-solid fa-heart"></i>
+								<i className="fa-solid fa-heart myaccount__link-icon"></i>
 								Wishlists
 							</NavLink>
 						</li>
@@ -69,7 +56,7 @@ const MyAccount = () => {
 										: "myaccount__link"
 								}
 							>
-								<i className="fa-solid fa-book"></i>
+								<i className="fa-solid fa-book myaccount__link-icon"></i>
 								Recent Bookings
 							</NavLink>
 						</li>

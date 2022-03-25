@@ -14,7 +14,7 @@ import { pesoFormat } from "../utils/pesoFormat";
 import useAppContext from "../hooks/useAppContext";
 
 const ViewPlace = () => {
-	const { openModal } = useAppContext();
+	const { openModal, notify } = useAppContext();
 	const [currIndex, setCurrIndex] = useState(0);
 	const [paused, setPaused] = useState(false);
 
@@ -66,7 +66,9 @@ const ViewPlace = () => {
 							</p>
 						</div>
 						<div className="hotel-header__right">
-							<button className="hotel-header__btn hotel-header__btn--addtoBtn">
+							<button
+								onClick={() => notify("Added to wishlist")} 
+								className="hotel-header__btn hotel-header__btn--addtoBtn">
 								Add to Wishlist
 							</button>
 							<button

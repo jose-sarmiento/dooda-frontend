@@ -6,9 +6,11 @@ import {
 } from "react-icons/fa";
 import { pesoFormat } from "../utils/pesoFormat";
 import {ReactComponent as Paymongo} from '../assets/svgs/paymongo.svg';
+import useAppContext from "../hooks/useAppContext"
 
 const MultiStepForm = ({ currStep, setCurrStep, closeModal }) => {
 	const [payment, setPayment] = useState("paymongo")
+	const {notify} = useAppContext()
 
 	const handlePaymentChange = (e) => setPayment(e.target.value)
 
@@ -211,7 +213,11 @@ const MultiStepForm = ({ currStep, setCurrStep, closeModal }) => {
 					<button
 						type="button"
 						className="form__action form__action--next"
-						onClick={() => closeModal()}
+						onClick={() => {
+
+							closeModal()
+							notify("Booking Success")
+						}}
 					>
 						Ok
 					</button>

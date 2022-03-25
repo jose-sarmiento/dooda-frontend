@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {toast} from "react-toastify"
 
 export const AppContext = React.createContext()
 
@@ -7,6 +8,8 @@ const AppProvider = ({children}) => {
 	const [isOpenFilterModal, setIsOpenFilterModal] = useState(false);
 	const [isOpenCalendar, setIsOpenCalendar] = useState(false);
 	const [isOpenSidebar, setIsOpenSidebar] = useState(false);
+
+	const notify = (message) => toast(message);
 
 	const openModal = () => setIsOpenModal(true)
 	const closeModal = () => setIsOpenModal(false)
@@ -30,7 +33,8 @@ const AppProvider = ({children}) => {
 			closeCalendar,
 			isOpenSidebar,
 			openSidebar,
-			closeSidebar
+			closeSidebar,
+			notify
 		}}>
 			{children}
 		</AppContext.Provider>

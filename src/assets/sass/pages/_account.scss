@@ -1,10 +1,11 @@
 .myaccount {
 	margin: 0 auto;
-	margin-top: 8rem;
+	margin-top: 6rem;
 	max-width: 1200px;
-	min-height: 80vh;
+	min-height: calc(100vh - 60px);
 	display: grid;
 	grid-template-columns: 22rem 1fr;
+	grid-column-gap: 4rem;
 
 	&__left {
 		background: #f1f1f1;
@@ -12,7 +13,7 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		padding: 2rem 1rem;
+		padding: 2rem 0;
 	}
 
 	&__profile-image-wrapper {
@@ -30,8 +31,8 @@
 	}
 
 	&__name {
-		font-size: 1.8rem;
-		font-weight: 400;
+		font-size: 1.6rem;
+		font-weight: 600;
 		color: $dark;
 		margin-top: 1.5rem;
 	}
@@ -39,7 +40,7 @@
 	&__job {
 		font-weight: 400;
 		color: $grey;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 	}
 
 	&__links {
@@ -55,26 +56,40 @@
 
 
 	&__link {
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 		font-weight: 400;
 		color: inherit;
 		display: block;
 		width: 100%;
-		padding: .5rem;
+		padding: .8rem;
 		display: grid;
 		grid-template-columns: 3rem 1fr;
+		border-left: 3px solid transparent;
+		padding-left: 1.5rem;
 	}
 
 	&__link:hover {
 		background: #eee;
+		border-left: 3px solid $primary-dark;
+		color: $dark;
+		font-weight: 500;
+	}
+
+	&__link:hover .myaccount__link-icon {
+		color: $primary-dark;
 	}
 
 	&__link--active {
+		border-left: 3px solid $primary-dark;
+		color: $dark;
+		font-weight: 500;
+	}
+
+	&__link--active .myaccount__link-icon {
 		color: $primary-dark;
 	}
 
 	&__right {
-		padding: 2rem 1rem;
 	}
 }
 

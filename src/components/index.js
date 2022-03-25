@@ -36,6 +36,7 @@ import CustomCalendar from "./CustomCalendar"
 import BookingSearch from "./BookingSearch"
 import Popular from "./Popular"
 import FilterModal from "./FilterModal"
+import BookItem from "./BookItem"
 
 
 export {
@@ -76,5 +77,6 @@ export {
 	CustomCalendar,
 	BookingSearch,
 	Popular,
-	FilterModal
+	FilterModal,
+	BookItem
 }
